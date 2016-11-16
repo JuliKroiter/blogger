@@ -10,8 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require users
- *= require posts
- *= require comments
+ *= require bootstrap
+ *= require bootstrap.min
+ *= require admin/users
+ *= require admin/posts
+ *= require admin/comments
+ *= require dataTables/jquery.dataTables
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
  *= require_self
  */

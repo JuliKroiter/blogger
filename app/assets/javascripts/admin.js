@@ -13,6 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require users
-//= require posts
-//= require comments
+//= require dataTables/jquery.dataTables
+//= require dataTables/extras/dataTables.responsive
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require bootstrap
+//= require bootstrap.min
+//= require admin/main
+//= require admin/users
+//= require admin/posts
+//= require admin/comments
