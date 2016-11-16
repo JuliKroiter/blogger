@@ -1,5 +1,4 @@
-console.log('ready')
-$(document).ready(function() {
+$(document).on('ready', function() {
   $('#posts-datatable').dataTable({
     pagingType: 'full_numbers'
   });

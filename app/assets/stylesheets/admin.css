@@ -12,6 +12,9 @@
  *
  *= require bootstrap
  *= require bootstrap.min
+ *= require admin/main
+ *= require admin/metisMenu.min
+ *= require font-awesome
  *= require admin/users
  *= require admin/posts
  *= require admin/comments

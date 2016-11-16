@@ -1,2 +1,9 @@
-<p><%= comment.content %></p>
-<p><%= link_to 'Destroy', admin_post_comment_path(:post, comment), method: :delete, data: { confirm: 'Are you sure?' }%></p>
+<li class="right clearfix">
+  <div class="chat-body clearfix">
+    <%= comment.content %>
+  </div>
+  <span class="chat-img pull-right">
+    <%= link_to 'Destroy', admin_post_comment_path(:post, comment),
+                method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default'%>
+  </span>
+</li>

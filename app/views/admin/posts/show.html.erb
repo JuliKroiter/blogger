@@ -1,18 +1,40 @@
-<p>
-  <strong>Title:</strong>
+<%= content_for :header do %>
   <%= @post.title %>
-</p>
+<% end %>
+<%= content_for :create_button do %>
+  <%= link_to 'New Post', new_admin_post_path, class: 'btn btn-outline btn-success' %>
+<% end %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= @post.title %>
+      </div>
 
-<p>Comments: </p>
+      <div class="panel-body">
+        <%= @post.content %>
 
-<%= render @post.comments%>
+        <%= link_to 'Edit', edit_admin_post_path(@post), class: 'btn btn-default' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Comments
+      </div>
+
+      <div class="panel-body">
+        <ul class="chat">
+          <%= render @post.comments %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render 'admin/comments/form'%>
-
-<%= link_to 'Edit', edit_admin_post_path(@post) %> |
-<%= link_to 'Back', admin_posts_path %>
