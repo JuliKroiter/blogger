@@ -1,25 +1,28 @@
 class Admin::CommentsController < Admin::AdminController
-  # def index
-  # end
-  #
-  # def new
-  # end
-  #
+  def index
+    @comments = Comment.all
+  end
+
+  def show
+    @comment = Comment.find(params[:id])
+  end
+
   def create
-    @post = Post.find(params[:post_id])
-    @post.comments.create(comment_params)
+    @comment = Comment.create(comment_params)
 
     redirect_to :back
   end
-  #
-  # def edit
-  # end
-  #
-  # def update
-  # end
-  #
-  # def destroy
-  # end
+
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+
+    redirect_to admin_comments_path
+  end
 
   def destroy
     @comment = Comment.find(params[:id])
@@ -31,6 +34,6 @@ class Admin::CommentsController < Admin::AdminController
   private
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content, :post_id)
   end
 end
