@@ -23,3 +23,4 @@
 //= require admin/users
 //= require admin/posts
 //= require admin/comments
+//= require admin/categories
