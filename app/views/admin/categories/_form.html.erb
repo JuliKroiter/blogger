@@ -1,0 +1,11 @@
+ <div class="col-lg-6">
+    <%= form_for [:admin, @category] do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_area :title, class: 'form-control' %>
+      </div>
+
+      <%= f.submit class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>
