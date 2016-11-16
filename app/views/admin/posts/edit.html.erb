@@ -1,5 +1,7 @@
 <h1>Edit Post</h1>
 
 <%= render 'form' %>
+<%= render @post.comments %>
+<%= render 'admin/comments/form' %>
 
 <%= link_to 'Back', admin_posts_path %>

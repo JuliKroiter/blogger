@@ -1,1 +1,2 @@
 <p><%= comment.content %></p>
+<p><%= link_to 'Destroy', admin_post_comment_path(:post, comment), method: :delete, data: { confirm: 'Are you sure?' }%></p>

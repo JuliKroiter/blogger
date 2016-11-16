@@ -20,11 +20,6 @@
     <%= f.text_area :content %>
   </div>
 
-  <p>Comments: </p>
-  <%= f.fields_for :comments do |comment| %>
-    <%= render 'admin/comments/form', f: comment %>
-  <% end %>
-
   <div class="actions">
     <%= f.submit %>
   </div>
