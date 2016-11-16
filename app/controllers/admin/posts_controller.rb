@@ -39,6 +39,6 @@ class Admin::PostsController < Admin::AdminController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, comments_attributes: [:content])
+    params.require(:post).permit(:title, :content, :category_id, comments_attributes: [:content])
   end
 end
