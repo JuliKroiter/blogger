@@ -16,7 +16,8 @@
       <%= yield :create_button %>
     </li>
     <li>
-      <%= link_to fa_icon('sign-out', class: 'fa-2x'), ''%>
+      <span>Hello, <%= current_user.email %></span>
+      <%= link_to fa_icon('sign-out', class: 'fa-2x'), destroy_user_session_path%>
     </li>
   </ul>
   <!-- /.navbar-top-links -->
