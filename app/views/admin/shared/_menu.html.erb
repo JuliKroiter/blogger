@@ -13,11 +13,13 @@
 
   <ul class="nav navbar-top-links navbar-right">
     <li>
-      <%= yield :create_button %>
+      <span>Hello, <%= current_user.email %></span>
     </li>
     <li>
-      <span>Hello, <%= current_user.email %></span>
       <%= link_to fa_icon('sign-out', class: 'fa-2x'), destroy_user_session_path%>
+    </li>
+    <li>
+      <%= yield :create_button %>
     </li>
   </ul>
   <!-- /.navbar-top-links -->

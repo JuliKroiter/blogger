@@ -4,19 +4,19 @@ class Admin::CategoriesController < Admin::AdminController
   def create
     @category.save
 
-    redirect_to admin_categories_path
+    redirect_to admin_categories_path, flash: {success: "User created"}
   end
 
   def update
     @category.update(category_params)
 
-    redirect_to admin_categories_path
+    redirect_to admin_categories_path, flash: {success: "User updated"}
   end
 
   def destroy
     @category.destroy
 
-    redirect_to admin_categories_path
+    redirect_to admin_categories_path, flash: {success: "User destroyed"}
   end
 
   private

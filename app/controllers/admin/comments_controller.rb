@@ -4,19 +4,19 @@ class Admin::CommentsController < Admin::AdminController
   def create
     @comment = Comment.create(comment_params)
 
-    redirect_to :back
+    redirect_to :back, flash: {success: "User created"}
   end
 
   def update
     @comment.update(comment_params)
 
-    redirect_to admin_comments_path
+    redirect_to admin_comments_path, flash: {success: "User updated"}
   end
 
   def destroy
     @comment.destroy
 
-    redirect_to :back
+    redirect_to :back, flash: {success: "User destroyed"}
   end
 
   private

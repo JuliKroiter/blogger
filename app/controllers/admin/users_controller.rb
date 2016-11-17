@@ -1,17 +1,11 @@
 class Admin::UsersController < Admin::AdminController
   load_and_authorize_resource :user, param_method: :user_params
 
-  def create
-    @user.save
-
-    redirect_to admin_users_path
-  end
-
   def update
     @user.update(user_params)
 
     if @user.valid?
-      redirect_to admin_users_path
+      redirect_to admin_users_path, flash: {success: "User updated"}
     else
       render :'admin/users/edit'
     end
@@ -20,7 +14,7 @@ class Admin::UsersController < Admin::AdminController
   def destroy
     @user.destroy
 
-    redirect_to admin_users_path
+    redirect_to admin_users_path, flash: {success: "User destroyed"}
   end
 
   private
