@@ -2,6 +2,10 @@
   Edit Category
 <% end %>
 
+<%= content_for :create_button do %>
+  <%= link_to 'New Category', new_admin_category_path, class: 'btn btn-outline btn-success' %>
+<% end %>
+
 <div class="row">
   <div class="col-lg-12">
     <div class="panel panel-default">
