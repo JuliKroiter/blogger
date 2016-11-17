@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'cancancan'
 gem 'enum_help'
 
 group :development, :test do
