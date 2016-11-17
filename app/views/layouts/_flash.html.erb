@@ -1,1 +1,9 @@
-<p id="notice"><%= notice %></p>
+<%- if flash %>
+  <%- flash.each do |type, content| %>
+
+    <div class="<%= flash_class(type) %>">
+      <%= content %>
+      <button class="close" type="button" data-dismiss="alert" aria-hidden="true">×</button>
+    </div>
+  <% end %>
+<% end %>
