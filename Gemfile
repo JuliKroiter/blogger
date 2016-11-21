@@ -26,6 +26,9 @@ gem 'rmagick'
 # https
 gem 'rack-ssl', :require => 'rack/ssl'
 
+gem "sidekiq"
+gem "sidekiq-cron", "~> 0.4.0"
+
 gem 'instagram'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

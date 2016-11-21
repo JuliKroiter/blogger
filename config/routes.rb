@@ -1,3 +1,6 @@
+require 'sidekiq/web'
+require 'sidekiq/cron/web'
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -15,6 +18,10 @@ Rails.application.routes.draw do
       end
     end
     resources :topics
+
+    authenticate :user, lambda { |u| u.admin? } do
+      mount Sidekiq::Web => '/sidekiq'
+    end
   end
 
   scope :api do

@@ -25,6 +25,5 @@ module Blogger
     config.assets.paths += ["#{Rails.root}/app/assets/fonts"]
   #   For Heroku
     config.assets.initialize_on_precompile = false
-
   end
 end

@@ -1,0 +1,4 @@
+instagram_update_job:
+  cron: "*/30 * * * *"
+  class: "Cron::InstagramUpdate"
+  queue: default
