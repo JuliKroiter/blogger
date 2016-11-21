@@ -8,19 +8,19 @@ class Admin::PostsController < Admin::AdminController
   def create
     @post.save
 
-    redirect_to admin_posts_path, flash: {success: "User created"}
+    redirect_to admin_posts_path, flash: {success: "Post created"}
   end
 
   def update
     @post.update(post_params)
 
-    redirect_to admin_posts_path, flash: {success: "User updated"}
+    redirect_to admin_posts_path, flash: {success: "Post updated"}
   end
 
   def destroy
     @post.destroy
 
-    redirect_to admin_posts_path, flash: {success: "User destroyed"}
+    redirect_to admin_posts_path, flash: {success: "Post destroyed"}
   end
 
   private
