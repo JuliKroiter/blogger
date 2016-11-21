@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   accepts_nested_attributes_for :comments, reject_if: :all_blank, allow_destroy: true
+
+  enum from: [:site, :instagram, :facebook]
 end
