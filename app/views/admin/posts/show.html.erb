@@ -13,34 +13,43 @@
       </div>
 
       <div class="panel-body">
-        <div class="row">
-          <div class="col-lg-3">
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
             Title:
           </div>
-          <div class="col-lg-9">
+          <div class="col-md-9 form-control-static">
             <%= @post.title %>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3">
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
             Content:
           </div>
-          <div class="col-lg-9">
+          <div class="col-md-9 form-control-static">
             <%= @post.content %>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-3">
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Image:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= image_tag(@post.image_url(:thumb)) %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-3">
             Category:
           </div>
-          <div class="col-lg-9">
+          <div class="col-md-9">
             <%= @post.category.try(:title) %>
           </div>
         </div>
 
-        <%= link_to 'Edit', edit_admin_post_path(@post), class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_admin_post_path(@post), class: 'btn btn-default pull-right' %>
       </div>
     </div>
   </div>

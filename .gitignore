@@ -15,10 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
-
 .DS_Store
 
 /public/assets/*
+/public/uploads/*
 
 ## Environment normalisation:
 /.bundle
