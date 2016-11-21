@@ -1,6 +1,7 @@
 <tr>
   <td><%= post.title %></td>
-  <td><%= post.content %></td>
+  <td><%= post.topic.try(:title) %></td>
+  <td><%= post.category.try(:title) %></td>
   <td><%= image_tag(post.image_url(:small_thumb)) %></td>
   <td><%= post.created_at %></td>
   <td>

@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     resources :users
     resources :posts
     resources :comments
-    resources :categories
+    resources :categories do
+      collection do
+        get 'topic_categories' => 'categories#topic_categories'
+      end
+    end
+    resources :topics
   end
 
   scope :api do

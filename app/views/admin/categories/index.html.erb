@@ -12,6 +12,8 @@
       <thead>
       <tr>
         <th>Title</th>
+        <th>Topic</th>
+        <th>Tag</th>
         <th>Created at</th>
         <th>Actions</th>
       </tr>
@@ -21,6 +23,8 @@
         <%- @categories.each do |category| %>
           <tr>
             <td><%= category.title %></td>
+            <td><%= category.topic.try(:title) %></td>
+            <td><%= category.tag %></td>
             <td><%= category.created_at %></td>
             <td>
               <%= link_to 'Show', admin_category_path(category) %>
