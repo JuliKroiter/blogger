@@ -7,7 +7,7 @@ class Admin::UsersController < Admin::AdminController
     if @user.valid?
       redirect_to admin_users_path, flash: {success: "User updated"}
     else
-      render :'admin/users/edit'
+      render 'admin/users/edit'
     end
   end
 

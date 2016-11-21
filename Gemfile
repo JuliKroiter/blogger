@@ -67,4 +67,6 @@ end
 group :production do
   # gem 'unicorn'
   gem 'pg'
+  # for heroku
+  gem 'rails_12factor'
 end
