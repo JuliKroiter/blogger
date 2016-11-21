@@ -5,17 +5,18 @@ class InstagramUploader
     @media_id = id
     media = Instagram.user_recent_media.find(media_id).first
     @post_params = {
+      web_id: media_id,
       link: media.link,
       likes: media.likes.count,
       topic: Topic.find_by(tag: media.tags.first),
-      category: Category.find_by(tag: media.tags.first),
+      category: Category.find_by(tag: media.tags.last),
       remote_image_url: media.images.standard_resolution.url,
       from: 'instagram'
     }
   end
 
   def create_post
-    Post.create(post_params) if post_params['topic'] && post_params['category']
+    Post.create(post_params) if post_params[:topic] && post_params[:category]
   end
 
   class << self
