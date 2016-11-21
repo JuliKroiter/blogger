@@ -98,6 +98,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.19.0)
     rack (1.6.5)
+    rack-ssl (1.4.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -176,6 +178,7 @@ DEPENDENCIES
   jquery-datatables-rails (~> 3.4.0)
   jquery-rails
   pg
+  rack-ssl
   rails (= 4.2.4)
   rmagick
   sass-rails (~> 5.0)
