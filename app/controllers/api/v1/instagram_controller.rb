@@ -17,6 +17,7 @@ class Api::V1::InstagramController < ApplicationController
   private
 
   def authenticate_from_token
+    Rails.logger.info(params)
     unless params['hub.verify_token'] == Rails.application.secrets.instagram_token
       render text: 'Invalid token', status: :unauthorized
     end
