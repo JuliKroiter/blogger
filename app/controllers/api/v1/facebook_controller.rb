@@ -6,9 +6,8 @@ class Api::V1::FacebookController < ApplicationController
   end
 
   def update
-    Rails.logger.info("************************************* PARAMS ******************************************************")
-    Rails.logger.info(params)
-    Rails.logger.info("************************************* PARAMS ******************************************************")
+    FacebookUploader.new.upload
+
     render json: :nothing, status: :ok
   end
 end

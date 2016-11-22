@@ -5,10 +5,7 @@ class Facebook
     attr_reader :client, :updates
 
     def client
-      Koala::Facebook::API.new(
-        Rails.application.secrets.facebook_token,
-        Rails.application.secrets.facebook_secret
-      )
+      Koala::Facebook::API.new(Rails.application.secrets.facebook_token)
     end
 
     def updates
