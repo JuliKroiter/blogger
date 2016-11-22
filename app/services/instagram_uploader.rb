@@ -9,7 +9,7 @@ class InstagramUploader
       link: media.link,
       likes: media.likes['count'],
       topic: Topic.find_by(tag: media.tags.first),
-      category: Category.find_by(tag: media.tags.last),
+      category: Category.find_by(tag: media.tags.second),
       remote_image_url: media.images.standard_resolution.url,
       from: 'instagram'
     }
@@ -28,7 +28,7 @@ class InstagramUploader
       Topic.all.each do |topic|
         Instagram.tag_recent_media(Instagram.tag_search(topic.tag)[0].name).each do |media|
 
-          if category = categories.find_by(tag: media.tags.last)
+          if category = categories.find_by(tag: media.tags.second)
             post = Post.find_by(web_id: media.id)
 
             if post
@@ -36,9 +36,7 @@ class InstagramUploader
                 link: media.link,
                 likes: media.likes['count'],
                 topic: topic,
-                category: category,
-                remote_image_url: media.images.standard_resolution.url,
-                from: 'instagram'
+                category: category
               )
             end
           end
