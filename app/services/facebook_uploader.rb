@@ -26,7 +26,7 @@ class FacebookUploader
         else
           Post.create(
             web_id: feed['id'],
-            content: feed['content'],
+            content: feed['message'],
             link: feed['link'],
             likes: nested_hash_value(feed, 'total_count'),
             topic: topic,
