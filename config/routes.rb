@@ -30,6 +30,10 @@ Rails.application.routes.draw do
         get '/' => 'api/v1/instagram#confirm'
         post '/' => 'api/v1/instagram#update'
       end
+      scope :facebook do
+        get '/' => 'api/v1/facebook#confirm'
+        post '/' => 'api/v1/facebook#update'
+      end
     end
   end
 end
