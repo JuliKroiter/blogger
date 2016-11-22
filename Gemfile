@@ -30,6 +30,7 @@ gem "sidekiq"
 gem "sidekiq-cron", "~> 0.4.0"
 
 gem 'instagram'
+gem "koala", "~> 2.2"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
