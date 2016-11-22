@@ -7,7 +7,7 @@ class InstagramUploader
     @post_params = {
       web_id: media_id,
       link: media.link,
-      likes: media.likes.count,
+      likes: media.likes['count'],
       topic: Topic.find_by(tag: media.tags.first),
       category: Category.find_by(tag: media.tags.last),
       remote_image_url: media.images.standard_resolution.url,
@@ -34,7 +34,7 @@ class InstagramUploader
             if post
               post.update(
                 link: media.link,
-                likes: media.likes.count,
+                likes: media.likes['count'],
                 topic: topic,
                 category: category,
                 remote_image_url: media.images.standard_resolution.url,
