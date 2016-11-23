@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/elasticsearch/elasticsearch-rails.git
+  revision: 15761247f3e99654bda946a178e50b5365414b59
+  specs:
+    elasticsearch-model (0.1.9)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-rails (0.1.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +50,9 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.3)
     bcrypt (3.1.11)
+    bonsai-elasticsearch-rails (0.2.0)
+      elasticsearch-model (~> 0)
+      elasticsearch-rails (~> 0)
     builder (3.2.2)
     byebug (9.0.6)
     cancancan (1.15.0)
@@ -64,6 +77,14 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    elasticsearch (5.0.0)
+      elasticsearch-api (= 5.0.0)
+      elasticsearch-transport (= 5.0.0)
+    elasticsearch-api (5.0.0)
+      multi_json
+    elasticsearch-transport (5.0.0)
+      faraday
+      multi_json
     enum_help (0.0.16)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -95,6 +116,9 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     koala (2.4.0)
       addressable
       faraday
@@ -171,6 +195,10 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    searchkick (1.4.0)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
     sidekiq (4.2.6)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -206,17 +234,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bonsai-elasticsearch-rails
   byebug
   cancancan
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  elasticsearch-rails!
   enum_help
   font-awesome-rails
   instagram
   jbuilder (~> 2.0)
   jquery-datatables-rails (~> 3.4.0)
   jquery-rails
+  kaminari
   koala (~> 2.2)
   pg
   rack-ssl
@@ -225,6 +256,7 @@ DEPENDENCIES
   rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  searchkick
   sidekiq
   sidekiq-cron (~> 0.4.0)
   spring

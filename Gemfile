@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 
 gem "font-awesome-rails"
+gem 'kaminari'
 
 gem "carrierwave"
 gem 'rmagick'
@@ -31,6 +32,11 @@ gem "sidekiq-cron", "~> 0.4.0"
 
 gem 'instagram'
 gem "koala", "~> 2.2"
+
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'searchkick'
+# for heroku
+gem 'bonsai-elasticsearch-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
