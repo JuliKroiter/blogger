@@ -33,10 +33,11 @@ gem "sidekiq-cron", "~> 0.4.0"
 gem 'instagram'
 gem "koala", "~> 2.2"
 
-gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
-gem 'searchkick'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 # for heroku
 gem 'bonsai-elasticsearch-rails'
+gem 'searchkick'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
