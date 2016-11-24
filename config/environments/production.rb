@@ -79,11 +79,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'blooming-shelf-89609.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'http://46.101.216.40/' }
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => 'blooming-shelf-89609.herokuapp.com',
+    :domain => 'http://46.101.216.40/',
     :user_name => Rails.application.secrets.gmail_email,
     :password => Rails.application.secrets.gmail_pass,
     :authentication => :plain,

@@ -35,8 +35,6 @@ gem "koala", "~> 2.2"
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-# for heroku
-gem 'bonsai-elasticsearch-rails'
 gem 'searchkick'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -78,6 +76,4 @@ end
 group :production do
   # gem 'unicorn'
   gem 'pg'
-  # for heroku
-  gem 'rails_12factor'
 end

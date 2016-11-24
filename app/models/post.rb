@@ -1,8 +1,4 @@
 class Post < ActiveRecord::Base
-  # for heroku
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
-
   has_many :comments, dependent: :destroy
   belongs_to :category
   belongs_to :topic
