@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -25,7 +25,9 @@ gem "carrierwave"
 gem 'rmagick'
 
 # https
-gem 'rack-ssl', :require => 'rack/ssl'
+# gem 'rack-ssl', :require => 'rack/ssl'
+gem 'rack', '1.6.4'
+gem 'raindrops', '0.16.0'
 
 gem "sidekiq"
 gem "sidekiq-cron", "~> 0.4.0"
@@ -66,14 +68,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # gem 'capistrano', '~> 3.4.0'
-  # gem 'capistrano-rails'
-  # gem 'capistrano-bundler'
-  # gem 'capistrano-rvm'
-  # gem 'capistrano-rake'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rake'
 end
 
 group :production do
-  # gem 'unicorn'
+  gem 'unicorn', '5.0.1'
   gem 'pg'
 end
