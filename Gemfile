@@ -32,8 +32,11 @@ gem 'raindrops', '0.16.0'
 gem "sidekiq"
 gem "sidekiq-cron", "~> 0.4.0"
 
+gem "omniauth"
+gem 'omniauth-facebook'
 gem 'instagram'
 gem "koala", "~> 2.2"
+gem 'omniauth-facebook'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'

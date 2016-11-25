@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123122849) do
+ActiveRecord::Schema.define(version: 20161125045956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20161123122849) do
     t.string   "link"
     t.integer  "likes",       default: 0
     t.integer  "from",        default: 0
+  end
+
+  create_table "providers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.string   "oauth_fb_page"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "topics", force: :cascade do |t|

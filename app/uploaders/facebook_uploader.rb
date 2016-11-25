@@ -1,13 +1,16 @@
+require 'koala'
+
 class FacebookUploader
   attr_accessor :topics, :categories, :feeds, :posts, :topic, :category
 
   include NestedHash
 
-  def initialize
+  def initialize(user)
+    @user = user
     @topics = Topic.all
     @categories = Category.all
     @posts = Post.facebook
-    @feeds = Facebook.client.get_connection('me', 'feed', :fields => "link,picture,message,likes.summary(true)")
+    @feeds = find_feeds
   end
 
   def upload
@@ -50,5 +53,15 @@ class FacebookUploader
     end
 
     topic && category
+  end
+
+  def find_feeds
+    client =-> (oauth_token) { Koala::Facebook::API.new(oauth_token)
+                                 .get_connection('me', 'feed', :fields => "link,picture,message,likes.summary(true)") }
+    begin
+      client.call(user.oauth_token)
+    rescue
+      client.call(user.oauth_fb_page)
+    end
   end
 end

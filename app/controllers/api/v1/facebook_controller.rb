@@ -6,7 +6,10 @@ class Api::V1::FacebookController < ApplicationController
   end
 
   def update
-    FacebookUploader.new.upload
+    if params['entry']
+      @user = User.joins(:providers).find_by(providers: {provider: 'facebook', uid: params['entry'].first['id']})
+      FacebookUploader.new(@user).upload
+    end
 
     render json: :nothing, status: :ok
   end
