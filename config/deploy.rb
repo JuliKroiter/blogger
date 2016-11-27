@@ -5,7 +5,8 @@ set :repo_url, 'https://github.com/JuliKroiter/blogger.git'
 set :deploy_to, '/home/rails/fly_mama'
 set :tmp_dir, "/home/rails/tmp"
 
-set :linked_files, %w{config/database.yml config/secrets.yml }
+set :linked_files, %w{config/database.yml config/secrets.yml}
+set :linked_dirs, %w{public/uploads}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
