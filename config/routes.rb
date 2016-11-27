@@ -28,18 +28,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 
-      namespace :instagram do
-        get '/' => 'api/v1/instagram#confirm'
-        post '/' => 'api/v1/instagram#update'
-      end
-      namespace :facebook do
-        get '/' => 'api/v1/facebook#confirm'
-        post '/' => 'api/v1/facebook#update'
-      end
+      get '/instagram' => 'instagram#confirm'
+      post '/instagram' => 'instagram#update'
+
+      get '/facebook' => 'facebook#confirm'
+      post '/facebook' => 'facebook#update'
+
       resources :api_users, only: [:create]
       resources :posts, only: [:index, :show]
-
-      match "*path", to: "base#catch_404", via: :all
     end
   end
 end
