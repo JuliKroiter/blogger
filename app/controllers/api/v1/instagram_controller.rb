@@ -1,4 +1,5 @@
 class Api::V1::InstagramController < ApplicationController
+  protect_from_forgery with: :null_session
   include NestedHash
 
   protect_from_forgery with: :null_session

@@ -38,6 +38,11 @@ gem 'instagram'
 gem "koala", "~> 2.2"
 gem 'omniauth-facebook'
 
+# API
+gem 'active_hash_relation'
+gem 'apipie-rails'
+
+
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'searchkick'

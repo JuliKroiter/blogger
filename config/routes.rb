@@ -2,6 +2,7 @@ require 'sidekiq/web'
 require 'sidekiq/cron/web'
 
 Rails.application.routes.draw do
+  apipie
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   root 'home#index'
@@ -24,17 +25,21 @@ Rails.application.routes.draw do
     end
   end
 
-  scope :api do
-    scope :v1 do
-      scope :instagram do
+  namespace :api do
+    namespace :v1 do
+
+      namespace :instagram do
         get '/' => 'api/v1/instagram#confirm'
         post '/' => 'api/v1/instagram#update'
       end
-      scope :facebook do
+      namespace :facebook do
         get '/' => 'api/v1/facebook#confirm'
         post '/' => 'api/v1/facebook#update'
       end
+      resources :api_users, only: [:create]
+      resources :posts, only: [:index, :show]
+
+      match "*path", to: "base#catch_404", via: :all
     end
   end
-
 end

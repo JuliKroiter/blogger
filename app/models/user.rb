@@ -25,15 +25,17 @@ class User < ActiveRecord::Base
 
         graph = Koala::Facebook::API.new(access_token.credentials.token)
         pages = graph.get_connections('me', 'accounts')
-        oauth_fb_page = pages ? graph.get_page_access_token(pages.first['id']) : ''
+        oauth_fb_page = pages.any? ? graph.get_page_access_token(pages.first['id']) : ''
 
-        user.providers.create(
-          provider: access_token.provider,
-          uid: access_token.uid,
-          oauth_token: access_token.credentials.token,
-          oauth_fb_page: oauth_fb_page
+        if user.save
+          user.providers.create(
+            provider: access_token.provider,
+            uid: access_token.uid,
+            oauth_token: access_token.credentials.token,
+            oauth_fb_page: oauth_fb_page
 
-        )
+          )
+        end
       end
 
       user

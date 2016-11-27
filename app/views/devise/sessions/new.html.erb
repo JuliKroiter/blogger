@@ -26,6 +26,7 @@
               <% end -%>
 
               <%= f.submit "Log in", class: 'btn btn-lg btn-success btn-block' %>
+              <%= link_to "Facebook log in", user_facebook_omniauth_authorize_path %><br />
 
               <%= render "devise/shared/links" %>
             </fieldset>
