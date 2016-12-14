@@ -19,3 +19,8 @@
 //= require bootstrap
 //= require bootstrap.min
 //= require home
+//= require jquery.jcarousel.min-0.3.1
+//= require jquery.jcarousel-control
+//= require jquery.jcarousel-pagination
+//= require plugins
+//= require scripts

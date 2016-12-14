@@ -1,14 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-  <title>Blogger</title>
+  <meta charset="utf-8" />
+  <title>Goncharova</title>
+  <meta name="viewport" content="width=1280, initial-scale=-1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/flash'%>
-  <%= yield %>
+  <div id="main">
+    <header id="header">
+      <div class="s-header-top">
+        <div class="socket">
+          <div class="btn-menu" id="btn-menu">
+            <span></span>
+            <div>закрыть меню</div>
+          </div>
+
+          <div class="header-title"><a href="">Goncharova</a></div>
+
+          <div class="b-search">
+            <input type="text" placeholder="поиск по сайту">
+            <button type="submit"></button>
+          </div>
+        </div>
+
+        <!-- Menu Drop -->
+        <div class="w-menu-drop">
+          <ul class="menu-drop">
+            <li class="is-current">
+              <a href="">
+                <span>01</span>
+                Главная
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>02</span>
+                Библиотека
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>03</span>
+                Календарь
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>04</span>
+                Магазин
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>05</span>
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div><!-- / Menu Drop -->
+      </div>
+
+      <div class="s-header-btm">
+        <!-- Menu -->
+        <nav class="menu">
+          <ul>
+            <li class="is-current"><a href="">главная</a></li>
+            <li><a href="">обо мне</a></li>
+            <li><a href="">блог</a></li>
+            <li><a href="">партнерам</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header><!-- / HEADER -->
+
+    <%= render 'layouts/flash'%>
+    <%= yield %>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="socket">
+        <div class="b-social">
+          <span>Мы в социальных сетях :</span>
+          <ul>
+            <li class="vk"><a href=""></a></li>
+            <li class="ok"><a href=""></a></li>
+            <li class="fb"><a href=""></a></li>
+          </ul>
+        </div>
+        <div class="copyright">Все права защищены &copy; 2016</div>
+      </div>
+    </footer><!-- / FOOTER -->
+  </div>
 
 </body>
 </html>
