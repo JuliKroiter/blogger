@@ -7,207 +7,205 @@
   <% end %>
 <% end %>
 
-<div id="posts_main">
-  <div class="s-slide s-slide-blog" style="background-image: url(<%= image_path('slide-2.jpg') %>);">
-    <div class="socket">
-      <div class="cell">
-        <div class="b-slide-text">
-          <div class="text">Больше 1349 разных статей</div>
-          <div class="title">Блог</div>
-          <a href="" class="btn">Заказать проффесиональную конультацию</a>
+<div class="s-slide s-slide-blog" style="background-image: url(<%= image_path('slide-2.jpg') %>);">
+  <div class="socket">
+    <div class="cell">
+      <div class="b-slide-text">
+        <div class="text">Больше 1349 разных статей</div>
+        <div class="title">Блог</div>
+        <a href="" class="btn">Заказать проффесиональную конультацию</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-socket">
+  <div class="s-filter shadow">
+    <div class="categories">
+      <%- Category.all.each_with_index do |category, index| %>
+        <div class="i-category">
+          <div class="ico">
+            <%= image_tag("c-#{index + 1 }.png", class: 'def') %>
+            <%= image_tag("c-#{index + 1}-a.png", class: 'act') %>
+          </div>
+          <span><%= category.title%></span>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="filter-row">
+      <div class="filter-item is-active">
+        <span>Показать все темы</span>
+      </div>
+      <%- Topic.first(4).each do |topic| %>
+        <div class="filter-item">
+          <span><%= topic.title %></span>
+        </div>
+      <% end %>
+      <div class="filter-item filter-item-select">
+        <div class="filter-select">
+          <%= select_tag(:theme_select, options_for_select((Topic.all[5..-1] || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще темы"}})%>
+        </div>
+      </div>
+
+      <div class="filter-item filter-item-select">
+        <div class="filter-select">
+          <select>
+            <option>Самые новые</option>
+            <option>Самые старые</option>
+          </select>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="blog-socket">
-    <div class="s-filter shadow">
-      <div class="categories">
-        <%- Category.all.each_with_index do |category, index| %>
-          <div class="i-category">
-            <div class="ico">
-              <%= image_tag("c-#{index + 1 }.png", class: 'def') %>
-              <%= image_tag("c-#{index + 1}-a.png", class: 'act') %>
-            </div>
-            <span><%= category.title%></span>
+  <div class="clearfix">
+    <!-- Column -->
+    <div class="column">
+
+      <div class="posts">
+        <%- @posts.each_slice(2).with_index do |posts, index| %>
+          <div class="clearfix">
+            <%= render posts %>
           </div>
-        <% end %>
-      </div>
 
-      <div class="filter-row">
-        <div class="filter-item is-active">
-          <span>Показать все темы</span>
-        </div>
-        <%- Topic.first(4).each do |topic| %>
-          <div class="filter-item">
-            <span><%= topic.title %></span>
-          </div>
-        <% end %>
-        <div class="filter-item filter-item-select">
-          <div class="filter-select">
-            <%= select_tag(:theme_select, options_for_select((Topic.all[5..-1] || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще темы"}})%>
-          </div>
-        </div>
-
-        <div class="filter-item filter-item-select">
-          <div class="filter-select">
-            <select>
-              <option>Самые новые</option>
-              <option>Самые старые</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="clearfix">
-      <!-- Column -->
-      <div class="column">
-
-        <div class="posts">
-          <%- @posts.each_slice(2).with_index do |posts, index| %>
-            <div class="clearfix">
-              <%= render posts %>
-            </div>
-
-            <%- if index == 0 %>
-              <div class="s-social shadow">
-                <div class="s-social-head">
-                  <h3>Новости с Facebook</h3>
-                  <a class="btn btn-3 btn-g" href="#">подписаться</a>
-                </div>
-                <%- @fb_posts.each do |post| %>
-                  <div class="fb-row">
-                    <div class="img">
-                      <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+          <%- if index == 0 %>
+            <div class="s-social shadow">
+              <div class="s-social-head">
+                <h3>Новости с Facebook</h3>
+                <a class="btn btn-3 btn-g" href="#">подписаться</a>
+              </div>
+              <%- @fb_posts.each do |post| %>
+                <div class="fb-row">
+                  <div class="img">
+                    <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+                  </div>
+                  <%= link_to post.content, post.link, class: 'ttl' %>
+                  <div class="like-count">
+                    <div class="circ-l">
+                      <span><%= image_tag('ico-like.png') %></span>
                     </div>
-                    <%= link_to post.content, post.link, class: 'ttl' %>
-                    <div class="like-count">
-                      <div class="circ-l">
-                        <span><%= image_tag('ico-like.png') %></span>
+                    <i><%= post.likes %></i>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <%- if index == 1 %>
+            <div class="s-social shadow">
+              <div class="s-social-head">
+                <h3>Подпишитесь на мой Instagram</h3>
+                <a class="btn btn-3 btn-g" href="#">подписаться</a>
+              </div>
+              <div class="ins-row">
+                <%- @inst_posts.each do |post| %>
+                  <div class="ins-item">
+                    <%= link_to post.link, class: 'img' do %>
+                      <%= image_tag post.image_url(:thumb)%>
+                    <% end %>
+                    <div class="stats">
+                      <div class="stat">
+                        <%= image_tag('ico-com.png') %>
+                        <span><%= post.comments.length%></span>
                       </div>
-                      <i><%= post.likes %></i>
+                      <div class="stat">
+                        <%= image_tag('ico-fv.png') %>
+                        <span><%= post.likes %></span>
+                      </div>
                     </div>
                   </div>
                 <% end %>
               </div>
-            <% end %>
-
-            <%- if index == 1 %>
-              <div class="s-social shadow">
-                <div class="s-social-head">
-                  <h3>Подпишитесь на мой Instagram</h3>
-                  <a class="btn btn-3 btn-g" href="#">подписаться</a>
-                </div>
-                <div class="ins-row">
-                  <%- @inst_posts.each do |post| %>
-                    <div class="ins-item">
-                      <%= link_to post.link, class: 'img' do %>
-                        <%= image_tag post.image_url(:thumb)%>
-                      <% end %>
-                      <div class="stats">
-                        <div class="stat">
-                          <%= image_tag('ico-com.png') %>
-                          <span><%= post.comments.length%></span>
-                        </div>
-                        <div class="stat">
-                          <%= image_tag('ico-fv.png') %>
-                          <span><%= post.likes %></span>
-                        </div>
-                      </div>
-                    </div>
-                  <% end %>
-                </div>
-              </div>
-            <% end %>
+            </div>
           <% end %>
-        </div>
-
-        <div style="display:none"><%= paginate @posts %></div>
-
-        <div class="b-load shadow">
-          <div>
-            посмотреть больше статей
-          </div>
-        </div>
-
+        <% end %>
       </div>
 
-      <!-- Sidebar -->
-      <aside class="sidebar">
+      <div style="display:none"><%= paginate @posts %></div>
 
-        <div class="b-subs shadow">
-          <div class="ico-mail">
-            <%= image_tag('ico-mail.gif') %>
-          </div>
-          <h3>Подпишитесь сейчас</h3>
-          <p>
-            Будьте первыми кто узнает  об обновлениях на нашем сайте
-          </p>
-          <form action="">
-            <div class="input">
-              <input type="email" placeholder="введите ваш е-мейл" required>
-            </div>
-            <button class="btn btn-2" type="submit">подписаться</button>
-          </form>
+      <div class="b-load shadow">
+        <div>
+          посмотреть больше статей
         </div>
-
-        <div class="b-plan shadow">
-          <div class="ico-plan">
-            <div class="circ circ-f">2017</div>
-            <%= image_tag('ico-plan.gif') %>
-          </div>
-          <h3>Мама-план</h3>
-          <p>
-            Как маме запланировать и прожить  позитивный, проактивный и продуктивный год
-          </p>
-          <a class="btn btn-2" href="#">узнать больше</a>
-        </div>
-
-        <div class="b-courses shadow">
-          <h3>Наши курсы</h3>
-          <div class="course-item">
-            <div class="circ circ-f">№1</div>
-            <a class="text-b" href="#">Система восстановления</a>
-            <div class="text">Онлайн-тренинг</div>
-          </div>
-          <div class="course-item">
-            <div class="circ circ-f">№2</div>
-            <a class="text-b" href="#">Система восстановления</a>
-            <div class="text">Онлайн-тренинг</div>
-          </div>
-          <div class="course-item">
-            <div class="circ circ-f">№3</div>
-            <a class="text-b" href="#">Система восстановления</a>
-            <div class="text">Онлайн-тренинг</div>
-          </div>
-        </div>
-
-        <div class="b-load shadow">
-          <div>
-            посмотреть больше курсов
-          </div>
-        </div>
-
-        <div class="b-calendar shadow">
-          <h3>Календарь тренингов</h3>
-          <div id="calendar"></div>
-          <a href="" class="today text-b">перейти на сегодня</a>
-        </div>
-
-        <div class="b-plan shadow">
-          <div class="ico-ball">
-            <%= image_tag('ico-ball.gif') %>
-          </div>
-          <h3>Взлетай над бытом</h3>
-          <p>
-            Стань королевой порядка! Это проще чем кажется Я расскажу тебе как :)
-          </p>
-          <a class="btn btn-2" href="#">узнать больше</a>
-        </div>
-
-      </aside>
+      </div>
 
     </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="b-subs shadow">
+        <div class="ico-mail">
+          <%= image_tag('ico-mail.gif') %>
+        </div>
+        <h3>Подпишитесь сейчас</h3>
+        <p>
+          Будьте первыми кто узнает  об обновлениях на нашем сайте
+        </p>
+        <form action="">
+          <div class="input">
+            <input type="email" placeholder="введите ваш е-мейл" required>
+          </div>
+          <button class="btn btn-2" type="submit">подписаться</button>
+        </form>
+      </div>
+
+      <div class="b-plan shadow">
+        <div class="ico-plan">
+          <div class="circ circ-f">2017</div>
+          <%= image_tag('ico-plan.gif') %>
+        </div>
+        <h3>Мама-план</h3>
+        <p>
+          Как маме запланировать и прожить  позитивный, проактивный и продуктивный год
+        </p>
+        <a class="btn btn-2" href="#">узнать больше</a>
+      </div>
+
+      <div class="b-courses shadow">
+        <h3>Наши курсы</h3>
+        <div class="course-item">
+          <div class="circ circ-f">№1</div>
+          <a class="text-b" href="#">Система восстановления</a>
+          <div class="text">Онлайн-тренинг</div>
+        </div>
+        <div class="course-item">
+          <div class="circ circ-f">№2</div>
+          <a class="text-b" href="#">Система восстановления</a>
+          <div class="text">Онлайн-тренинг</div>
+        </div>
+        <div class="course-item">
+          <div class="circ circ-f">№3</div>
+          <a class="text-b" href="#">Система восстановления</a>
+          <div class="text">Онлайн-тренинг</div>
+        </div>
+      </div>
+
+      <div class="b-load shadow">
+        <div>
+          посмотреть больше курсов
+        </div>
+      </div>
+
+      <div class="b-calendar shadow">
+        <h3>Календарь тренингов</h3>
+        <div id="calendar"></div>
+        <a href="" class="today text-b">перейти на сегодня</a>
+      </div>
+
+      <div class="b-plan shadow">
+        <div class="ico-ball">
+          <%= image_tag('ico-ball.gif') %>
+        </div>
+        <h3>Взлетай над бытом</h3>
+        <p>
+          Стань королевой порядка! Это проще чем кажется Я расскажу тебе как :)
+        </p>
+        <a class="btn btn-2" href="#">узнать больше</a>
+      </div>
+
+    </aside>
+
   </div>
 </div>

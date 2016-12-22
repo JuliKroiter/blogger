@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :posts, only: [:index]
+  get 'about' => 'home#about'
 
   namespace :admin do
     root 'posts#index'
