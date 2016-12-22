@@ -23,7 +23,8 @@
   <div class="s-filter shadow">
     <div class="categories">
       <%- Category.all.each_with_index do |category, index| %>
-        <div class="i-category">
+        <!-- FIX for blank image -->
+        <div class="i-category<%= ' is-active' if category.title == 'здоровье' %>">
           <div class="ico">
             <%= image_tag("c-#{index + 1 }.png", class: 'def') %>
             <%= image_tag("c-#{index + 1}-a.png", class: 'act') %>

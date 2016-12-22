@@ -1,0 +1,78 @@
+<%= content_for :search do %>
+  <div class="b-search">
+    <input type="text" placeholder="поиск по сайту">
+    <button type="submit"></button>
+  </div>
+<% end %>
+
+<!-- CONTENT -->
+<div class="s-slide s-slide-t" style="background-image: url(<%= image_path('slide-4.jpg') %>);">
+  <div class="socket">
+    <div class="cell">
+      <div class="b-slide-text">
+        <div class="title">Партнерам</div>
+        <div class="text">Общее описание деятельности</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-partners">
+  <div class="s-item s-coop">
+    <div class="socket">
+
+      <div class="column-t">
+        <div class="title-d">
+          <div><span>Способы</span></div>
+          <div><span>сотрудничества</span></div>
+        </div>
+        <p>
+          Меня зовут Светлана Гончарова. Я дважды мама,
+          эксперт по семейному тайм-менеджменту
+          и автор <a href="">www.flymama.info</a>  Я от всего серца хочу
+          помочь вам стать организованой и счастливой мамой.
+        </p>
+      </div>
+
+      <div class="b-quote b-quote-min right">
+        <h3>Хотите связаться со мной?</h3>
+        <div class="text">Введите имя и е-мейл пожалуйста</div>
+        <form action="">
+          <div class="input">
+            <input type="text" placeholder="Введите ваше имя" required>
+          </div>
+          <div class="input">
+            <input type="email" placeholder="введите ваш е-мейл" required>
+          </div>
+          <button class="btn btn-2" type="submit">связаться со мной</button>
+        </form>
+      </div>
+
+      <div class="lines">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-item s-use">
+    <div class="socket">
+      <%= image_tag('photo-4.jpg', class: 'image left') %>
+
+      <div class="column-t">
+        <div class="title-d">
+          <div><span>Условия</span></div>
+          <div><span>сотрудничества</span></div>
+        </div>
+        <p>
+          Меня зовут Светлана Гончарова. Я дважды мама,
+          эксперт по семейному тайм-менеджменту
+          и автор <a href="">www.flymama.info</a>  Я от всего серца хочу
+          помочь вам стать организованой и счастливой мамой.
+        </p>
+        <a href="" class="btn btn-2">написать мне письмо</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- / CONTENT -->
