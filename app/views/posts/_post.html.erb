@@ -22,7 +22,7 @@
       </div>
       <div class="stat">
         <%= image_tag('ico-cal.png') %>
-        <span><%= post.created_at %></span>
+        <span><%= l(post.created_at.to_date, :format => :default) %></span>
       </div>
     </div>
   </div>
