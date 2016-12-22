@@ -13,4 +13,8 @@ module ApplicationHelper
 
     "alert alert-#{valid_class}"
   end
+
+  def menu_current_page(name)
+    'is-current' if @current_page == name
+  end
 end

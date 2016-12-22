@@ -23,7 +23,7 @@ $(document).ready(function(){
   $('.b-load.shadow').click(function(){
     var url = $('.pagination .next a').attr('href');
     if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
-      $('.pagination').text("Please Wait...");
+      $('.pagination').text("Ожидайте...");
       return $.getScript(url);
     }
   });

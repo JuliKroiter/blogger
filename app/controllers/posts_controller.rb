@@ -13,4 +13,8 @@ class PostsController < ApplicationController
       params[:term].presence || "*"
     ).records
   end
+
+  def current_page
+    @current_page = 'posts'
+  end
 end
