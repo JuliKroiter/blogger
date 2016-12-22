@@ -20,6 +20,7 @@ gem 'jquery-datatables-rails', '~> 3.4.0'
 
 gem "font-awesome-rails"
 gem 'kaminari'
+gem 'chosen-rails'
 
 gem "carrierwave"
 gem 'rmagick'

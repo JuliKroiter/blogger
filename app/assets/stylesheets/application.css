@@ -16,6 +16,8 @@
  *= require home
  *= require dataTables/jquery.dataTables
  *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require fullcalendar.min
+ *= require chosen
  *= require main
  *= require normalize
  *= require_self

@@ -22,10 +22,7 @@
 
           <div class="header-title"><a href="">Goncharova</a></div>
 
-          <div class="b-search">
-            <input type="text" placeholder="поиск по сайту">
-            <button type="submit"></button>
-          </div>
+          <%= yield :search %>
         </div>
 
         <!-- Menu Drop -->
@@ -71,7 +68,7 @@
           <ul>
             <li class="is-current"><a href="">главная</a></li>
             <li><a href="">обо мне</a></li>
-            <li><a href="">блог</a></li>
+            <li><%= link_to 'блог', posts_path %></li>
             <li><a href="">партнерам</a></li>
           </ul>
         </nav>
