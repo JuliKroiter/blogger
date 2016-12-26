@@ -5,17 +5,21 @@
   </div>
 <% end %>
 
-<!-- CONTENT -->
-<div class="s-slide s-slide-main" style="background-image: url(<%= image_path('slide-1.jpg') %>);">
-  <div class="socket">
-    <div class="cell">
-      <div class="b-slide-text quote">
-        <div class="title">Мама - сердце семьи!</div>
-        <div class="text">Если мама организованная, здоровая и спокойная - выигрывает вся семья.</div>
-        <a href="" class="btn">Заказать проффесиональную конультацию</a>
-      </div>
+
+  <!-- CONTENT -->
+<div class="s-slide s-slide-main">
+
+    <div class="socket">
+        <div class="cell">
+            <div class="b-slide-text quote">
+                <div class="title">Мама - сердце семьи!</div>
+                <div class="text">Если мама организованная, здоровая и спокойная - выигрывает вся семья.</div>
+                <a href="" class="btn">Заказать профеcсиональную конультацию</a>
+            </div>
+        </div>
+
+        <!-- <img class="fig-mob" src="images/fig-mob-1.png" alt="">     -->
     </div>
-  </div>
 </div>
 
 <div class="s-item s-intro">
@@ -44,7 +48,6 @@
 
 <div class="s-item s-book">
   <div class="socket">
-    <%= image_tag('book.png', class: 'image') %>
 
     <span class="circ"></span>
 
@@ -60,127 +63,154 @@
         <button class="btn btn-2" type="submit">получить книгу</button>
       </form>
     </div>
+      <%= image_tag('book.png', class: 'image') %>
   </div>
 </div>
 
-<div class="s-item s-feedback">
-  <div class="socket">
-    <div class="b-carousel b-carousel-f">
-      <div class="jcarousel">
-        <ul>
-          <li>
-            <div class="play"><span>Включить видео</span></div>
-            <%= image_tag('fb-img.jpg') %>
-          </li>
-          <li>
-            <%= image_tag('fb-img.jpg') %>
-          </li>
-          <li>
-            <%= image_tag('fb-img.jpg') %>
-          </li>
-        </ul>
-      </div>
-      <div class="jcarousel-items"></div>
-      <div class="jcarousel-panel"></div>
-      <div class="jcarousel-pagination"></div>
-      <a href="#" class="jcarousel-control-prev"></a>
-      <a href="#" class="jcarousel-control-next"></a>
-    </div>
+ <div class="s-item s-feedback">
+      <div class="socket">
 
-    <div class="column-t">
-      <div class="title-d">
-        <div><span>Отзывы о мне</span></div>
-      </div>
-      <div class="text">Меня зовут Светлана Гончарова. Я дважды мама.</div>
-    </div>
+          <div class="column-t">
+              <div class="title-d">
+                  <div>Отзывы о мне</div>
+              </div>
+              <div class="text">Краткие отзывы о моей работе</div>
+          </div>
 
-    <div class="b-quote right">
-      <div class="b-person">
-        <div class="avatar">
-          <%= image_tag('avatar.jpg', class: 'avatar') %>
-        </div>
-        <div class="name">Ирина Осина</div>
-        <div class="text">Мать 3 детей, косметолог</div>
-      </div>
-      <div class="quote-text">
-        <p>
-          "У меня наконец-то появилось времья на себя и на  свои увлечени и желание без отрыва от семьи.
-          У меня появилось время для мужа так что он доволен и я тоже!))"
-        </p>
-      </div>
-    </div>
+          <div class="b-carousel b-carousel-f">
+              <div class="jcarousel">
+                  <ul>
+                      <li>
+                          <div class="img">
 
-    <div class="circ"></div>
+                               <%= image_tag('fb-img.jpg') %>
+                              <div class="play"><span>Включить видео</span></div>
+                          </div>
+
+                          <div class="b-quote right">
+                              <div class="b-person">
+                                  <div class="avatar">
+                                  <%= image_tag('avatar.jpg') %></div>
+                                  <div class="name">Ирина Осина</div>
+                                  <div class="text">Мать 3 детей, косметолог</div>
+                              </div>
+                              <div class="quote-text">
+                                  <p>
+                                      "У меня наконец-то появилось времья на себя и на  свои увлечения и желание без отрыва от семьи.
+                                      У меня появилось время для мужа так что он доволен и я тоже!))"
+                                  </p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="img"><%= image_tag('fb-img.jpg') %></div>
+
+                          <div class="b-quote right">
+                              <div class="b-person">
+                                  <div class="avatar"><%= image_tag('avatar.jpg') %></div>
+                                  <div class="name">Оксана Мосина</div>
+                                  <div class="text">Мать 18 детей, педиатр</div>
+                              </div>
+                              <div class="quote-text">
+                                  <p>
+                                      "Есть на себя и на свои увлечения времья для мужа так что он доволен и я тоже. У меня наконец-то появилось увлечения"
+                                  </p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="img"><%= image_tag('fb-img.jpg') %></div>
+
+                          <div class="b-quote right">
+                              <div class="b-person">
+                                  <div class="avatar"><%= image_tag('avatar.jpg') %></div>
+                                  <div class="name">Марина Есинаева</div>
+                                  <div class="text">Мать 0 детей, психолог</div>
+                              </div>
+                              <div class="quote-text">
+                                  <p>
+                                      "У меня наконец-то появилось времья на себя и на  свои увлечения и желание без отрыва от семьи.
+                                      У меня появилось время для мужа так что он доволен и я тоже!))"
+                                  </p>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <div class="jcarousel-items"></div>
+              <div class="jcarousel-panel"></div>
+              <div class="jcarousel-pagination"></div>
+              <a href="#" class="jcarousel-control-prev"></a>
+              <a href="#" class="jcarousel-control-next"></a>
+          </div>
+
+          <div class="circ"></div>
+      </div>
   </div>
-</div>
 
-<div class="s-item s-quote">
-  <div class="socket">
-    <%= image_tag('photo-2.jpg', class: 'image') %>
-
-    <div class="column-t">
-      <div class="q"></div>
-      <div class="title-d">
-        <div><span>Женщины особенны</span></div>
-        <div><span>Роль женщины уникальна</span></div>
+  <div class="s-item s-quote">
+      <div class="socket">
+          <%= image_tag('photo-2.jpg', class: "image") %>
+          <div class="column-t">
+              <div class="q"></div>
+              <div class="title-d"><div>Женщины особенны</div> <div>Роль женщины уникальна</div> </div>
+              <div class="text">Особенности женщин обширны, именно по этому для женщин  тоже нужен особый женский подход к организации времени.</div>
+              <div class="b-person b-person-m">
+                  <div class="avatar"><%= image_tag('avatar-2.jpg') %></div>
+                  <div class="cell">
+                      <div class="name">Светлана Гончарова</div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="text">Особенности женщин обширны, именно по этому для женщин  тоже нужен особый женский подход к организации времени.</div>
-      <div class="b-person b-person-m">
-        <div class="avatar">
-          <%= image_tag('avatar-2.jpg', class: 'avatar') %>
-        </div>
-        <div class="cell">
-          <div class="name">Светлана Гончарова</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="s-articles">
-  <div class="title-h-center">
-    <div class="title-d">
-      <div><span>Интерсные статьи</span></div>
-    </div>
-    <div class="text">Уже более 3245 клиентов изменили свою жизнь с помощью наших блогов</div>
   </div>
 
-  <div class="b-articles">
-    <div class="article">
-      <div class="ico-a">
-        <%= image_tag('ico-1.png') %>
+  <div class="s-articles">
+      <div class="title-h-center">
+          <div class="title-d">
+              <div>Интерсные статьи</div>
+          </div>
+          <div class="text">Уже более 3245 клиентов изменили свою жизнь с помощью наших блогов</div>
       </div>
-      <div class="name">Порядок </div>
-      <div class="text">424 статьи </div>
-      <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-    </div>
 
-    <div class="article">
-      <div class="ico-a">
-        <%= image_tag('ico-2.png') %>
-      </div>
-      <div class="name">Любовь </div>
-      <div class="text">424 статьи </div>
-      <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-    </div>
+      <div class="b-articles">
+          <div class="article">
+              <div class="ico-a">
+                <%= image_tag('ico-1.png') %>
+              </div>
+              <div class="name">Порядок </div>
+              <div class="text">424 статьи </div>
+              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
+          </div>
 
-    <div class="article">
-      <div class="ico-a">
-        <%= image_tag('ico-3.png') %>
-      </div>
-      <div class="name">Здоровье </div>
-      <div class="text">424 статьи </div>
-      <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-    </div>
+          <div class="article">
+              <div class="ico-a">
+                <%= image_tag('ico-2.png') %>
+              </div>
+              <div class="name">Любовь </div>
+              <div class="text">424 статьи </div>
+              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
+          </div>
 
-    <div class="article">
-      <div class="ico-a">
-        <%= image_tag('ico-4.png') %>
+          <div class="article">
+              <div class="ico-a">
+                <%= image_tag('ico-3.png') %>
+              </div>
+              <div class="name">Здоровье </div>
+              <div class="text">424 статьи </div>
+              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
+          </div>
+
+          <div class="article">
+              <div class="ico-a">
+                <%= image_tag('ico-4.png') %>
+              </div>
+              <div class="name">Призвание </div>
+              <div class="text">424 статьи </div>
+              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
+          </div>
       </div>
-      <div class="name">Призвание </div>
-      <div class="text">424 статьи </div>
-      <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-    </div>
   </div>
-</div>
-<!-- / CONTENT -->
+            <!-- / CONTENT -->
+ </div><!-- / MAIN -->
+

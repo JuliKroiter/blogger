@@ -21,4 +21,45 @@ $(document).ready(function() {
         });
     }());
 
+    // Search Mobile
+    $(".btn-search").on("click", function(){
+        $(this).toggleClass("close");
+        $(".b-search").slideToggle(200);
+    });
+
+    // Title Words Wrap
+    $(".title-d div").lettering("words");
+    $(".title-d div span").lettering();
+
+    // $(".title-d span").each(function(){
+    //     if ( $(this).text() === " " ){
+    //          $(this).prev().css("padding-right","10px");
+    //     }
+    // });
+
+    windowSize();
+    $(window).resize(windowSize);
 });
+
+var cachedWidth = window.innerWidth;
+
+function windowSize(){
+
+    var winWidth = window.innerWidth;
+
+    // Resize Mobile
+    if (winWidth !== cachedWidth){
+
+
+        cachedWidth = winWidth;
+    }
+
+    // Mobile Viewport
+    if (winWidth >= 767){
+        $(".b-search").attr("style", "");
+        $(".btn-search").removeClass("close");
+
+    } else {
+
+    }
+}

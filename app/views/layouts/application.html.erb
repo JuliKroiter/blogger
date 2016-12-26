@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Goncharova</title>
-  <meta name="viewport" content="width=1280, initial-scale=-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -21,6 +21,7 @@
           </div>
 
           <div class="header-title"><a href="">Goncharova</a></div>
+          <div class="btn-search"></div>
 
           <%= yield :search %>
         </div>

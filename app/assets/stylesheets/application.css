@@ -19,6 +19,8 @@
  *= require fullcalendar.min
  *= require chosen
  *= require main
+ *= require slick
+ *= require main-2
  *= require normalize
  *= require_self
  */

@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require slick.min
+//= require plugins
 //= require dataTables/jquery.dataTables
 //= require dataTables/extras/dataTables.responsive
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
@@ -24,6 +26,5 @@
 //= require chosen-jquery
 //= require fullcalendar.min
 //= require scripts
-//= require plugins
 //= require home
 
