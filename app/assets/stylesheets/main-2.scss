@@ -871,6 +871,9 @@ html, body {
     width: 400px;
     padding: 28px 25px 23px 30px;
   }
+  .s-slide-main video{
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .b-quote.right, .b-quote.left {
