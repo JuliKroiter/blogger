@@ -6,6 +6,15 @@ class PostsController < ApplicationController
     @inst_posts = all_posts.instagram
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def create_comment
+    @comment = Comment.create(comment_params)
+    @post = Post.find(params[:comment][:post_id])
+  end
+
   private
 
   def search
@@ -17,4 +26,9 @@ class PostsController < ApplicationController
   def current_page
     @current_page = 'posts'
   end
+
+  def comment_params
+    params.require(:comment).permit(:post_id, :content)
+  end
+
 end

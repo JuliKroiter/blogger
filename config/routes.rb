@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   root 'home#index'
-  resources :posts, only: [:index]
+  resources :posts, only: [:index, :show]
   get 'about' => 'home#about'
   get 'partners' => 'home#partners'
+  post 'create_comment' => 'posts#create_comment'
 
   namespace :admin do
     root 'posts#index'

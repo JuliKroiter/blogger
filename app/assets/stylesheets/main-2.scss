@@ -1720,7 +1720,9 @@ html, body {
     padding: 20px 0  0;
   }
 }
-
+.s-slide-blog-i{
+  background-image: asset-url('blog-slide-1.jpg')
+}
 .s-slide-blog-i .b-slide-text {
   margin-left: 90px;
   padding-bottom: 40px;
@@ -2628,7 +2630,7 @@ html, body {
   text-decoration: underline;
 }
 .b-load div:after {
-  background: url(../images/sprites.png) -105px 0px;
+  background: image-url('sprites.png') -105px 0px;
   width: 13px;
   height: 13px;
   left: 0;
@@ -3723,7 +3725,7 @@ a.today:hover {
   display: none;
 }
 .s-text q:after {
-  background: url(../images/sprites.png) -95px -42px;
+  background: image-url('sprites.png') -95px -42px;
   content: "";
   width: 33px;
   height: 26px;
@@ -3742,7 +3744,7 @@ a.today:hover {
   margin-bottom: 0;
 }
 .title-com i {
-  background: url(../images/sprites.png) -133px -40px;
+  background: image-url('sprites.png') -133px -40px;
   position: relative;
   top: -3px;
   text-align: center;
@@ -3778,7 +3780,7 @@ a.today:hover {
   border: 2px solid #e0dfe3;
 }
 .b-comment .comment:before {
-  background: url(../images/sprites.png) -153px 0;
+  background: image-url('sprites.png') -153px 0;
   left: -8px;
   top: 34px;
   width: 8px;
@@ -3867,7 +3869,7 @@ a.today:hover {
   font-size: 12px;
 }
 .social-panel .share-count span:after {
-  background: url(../images/sprites.png) -153px -18px;
+  background: image-url('sprites.png') -153px -18px;
   width: 18px;
   height: 17px;
   left: 0;
@@ -3887,7 +3889,7 @@ a.today:hover {
   border-right: 2px solid #e0dfe3;
 }
 .social-panel ul li a {
-  background: url(../images/sprites.png) 0 0;
+  background: image-url('sprites.png') 0 0;
   display: block;
   margin: auto;
   width: 27px;

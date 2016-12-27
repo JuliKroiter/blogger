@@ -1,7 +1,7 @@
 <div class="b-article shadow">
-  <a class="image" href="#">
+  <%= link_to post_path(post), class: "image" do%>
     <%= image_tag post.image_url(:thumb) %>
-  </a>
+  <% end %>
   <div class="desc">
     <div class="circ-l"><span><%= image_tag('ico-fav.png') %></span></div>
     <h3><%= link_to post.title, '' %></h3>

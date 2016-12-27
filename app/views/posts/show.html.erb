@@ -1,0 +1,164 @@
+<%= content_for :search do %>
+  <div class="b-search">
+    <input type="text" placeholder="поиск по сайту">
+    <button type="submit"></button>
+  </div>
+<% end %>
+      <!-- CONTENT -->
+ <div class="s-slide s-slide-blog-i">
+    <div class="socket">
+        <div class="cell">
+            <div class="b-slide-text">
+                <div class="text">Раздел : <%= @post.try(:category)%></div>
+                <div class="title"><%= @post.try(:title) %></div>
+                <div class="stats">
+                    <div class="stat">
+                        <%= image_tag("ico-com-2.png") %>
+                        <span><%= @post.comments.try(:count) %></span>
+                    </div>
+                    <div class="stat">
+                        <%= image_tag("ico-v-2.png") %>
+                        <span>235</span>
+                    </div>
+                    <div class="stat">
+                        <%= image_tag("ico-cal-2.png") %>
+                        <span>13 сентября 2016 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-socket blog-socket-t">
+
+
+    <div class="clearfix">
+        <!-- Column -->
+        <div class="column">
+            <div class="s-text shadow">
+                <section>
+                    <h3><%= @post.try(:title) %></h3>
+                    <p>
+                        <%= @post.try(:content) %>
+                    </p>
+                </section>
+            </div>
+
+            <div class="s-text shadow">
+                <div class="title-com">
+                    <h3>Комментарии</h3>
+                    <i><%= @post.comments.count %></i>
+                </div>
+                <div class = 'comments'>
+                     <% @post.comments.each do |comment| %>
+                        <%= render partial: 'comment', locals: {comment: comment} %>
+                     <% end %>
+                </div>
+                <h3>Добавить свой комментарий</h3>
+                <div class="form-comment">
+                    <%= form_for Comment.new, url: create_comment_path, class: 'form-comment', remote: true do |f| %>
+                        <%= hidden_field_tag 'comment[post_id]', @post.id %>
+                        <%= f.text_area :content, placeholder: "Оставьте тут свой комментарий..." %>
+                        <%= f.submit 'отправить комментарий ', class: "btn-sub" %>
+                    <% end %>
+                </div>
+            </div>
+
+            <div class="social-panel shadow">
+                <div class="share-count">
+                    <span>1293 поделились статьей</span>
+                </div>
+                <ul>
+                    <li class="soc-1"><a href=""></a></li>
+                    <li class="soc-2"><a href=""></a></li>
+                    <li class="soc-3"><a href=""></a></li>
+                    <li class="soc-4"><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="b-subs shadow">
+                <div class="ico-mail">
+                    <%= image_tag 'ico-mail.gif' %>
+                </div>
+                <h3>Подпишитесь сейчас</h3>
+                <p>
+                    Будьте первыми кто узнает  об обновлениях на нашем сайте
+                </p>
+                <form action="">
+                    <div class="input">
+                        <input type="email" placeholder="введите ваш е-мейл" required>
+                    </div>
+                    <button class="btn btn-2" type="submit">подписаться</button>
+                </form>
+            </div>
+
+            <div class="b-plan shadow">
+                <div class="ico-plan">
+                    <div class="circ circ-f">2017</div>
+                    <%= image_tag("ico-plan.gif") %>
+                </div>
+                <h3>Мама-план</h3>
+                <p>
+                    Как маме запланировать и прожить  позитивный, проактивный и продуктивный год
+                </p>
+                <a class="btn btn-2" href="#">узнать больше</a>
+            </div>
+
+            <div class="b-courses shadow">
+                <h3>Наши курсы</h3>
+                <div class="course-item">
+                    <div class="circ circ-f">№1</div>
+                    <a class="text-b" href="#">Система восстановления</a>
+                    <div class="text">Онлайн-тренинг</div>
+                </div>
+                <div class="course-item">
+                    <div class="circ circ-f">№2</div>
+                    <a class="text-b" href="#">Система восстановления</a>
+                    <div class="text">Онлайн-тренинг</div>
+                </div>
+                <div class="course-item">
+                    <div class="circ circ-f">№3</div>
+                    <a class="text-b" href="#">Система восстановления</a>
+                    <div class="text">Онлайн-тренинг</div>
+                </div>
+            </div>
+
+            <div class="b-load shadow">
+                <div>
+                    посмотреть больше курсов
+                </div>
+            </div>
+
+            <div class="b-calendar shadow">
+                <h3>Календарь тренингов</h3>
+                <div id="calendar"></div>
+                <a href="" class="today text-b">перейти на сегодня</a>
+            </div>
+
+            <div class="b-plan shadow">
+                <div class="ico-ball">
+                    <%= image_tag("ico-ball.gif") %>
+                </div>
+                <h3>Взлетай над бытом</h3>
+                <p>
+                    Стань королевой порядка! Это проще чем кажется Я расскажу тебе как :)
+                </p>
+                <a class="btn btn-2" href="#">узнать больше</a>
+            </div>
+
+        </aside>
+
+    </div>
+</div>
+
+
+            <!-- / CONTENT -->
+    </div><!-- / MAIN -->
+
+  </body>
+</html>
