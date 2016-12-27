@@ -1600,6 +1600,7 @@ html, body {
 .s-slide-main {
   background-color: #f4f4f4;
   background-image: image-url('slide-1.jpg') ;
+  overflow: hidden;
 }
 .s-slide-main .socket, .s-slide-main .cell {
   height: 679px;
