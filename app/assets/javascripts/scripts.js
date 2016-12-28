@@ -31,6 +31,29 @@ $(document).ready(function() {
     $(".title-d div").lettering("words");
     $(".title-d div span").lettering();
 
+     // Popup
+    $("#btn-s").on("click", function(e){
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+
+        e.preventDefault();
+    });
+
+    $(".b-popup .close").on("click", function(){
+        closePopup();
+    });
+
+    function closePopup(){
+        $(".w-popup").delay(800).fadeOut(250);
+
+        setTimeout(
+            function(){
+                $(".b-popup").removeClass("is-open");
+        }, 400);
+
+        $(".b-popup").find(".close").removeClass("is-show");
+    }
+
     // $(".title-d span").each(function(){
     //     if ( $(this).text() === " " ){
     //          $(this).prev().css("padding-right","10px");

@@ -1,0 +1,440 @@
+/* =========================
+   Forms
+   ========================= */
+
+
+.input {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e3e2e3;
+
+    input {
+        display: block;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        color: $col-d;
+        border: 1px solid #E3E3E3;
+        background:none;
+        border: none;
+        text-transform: uppercase;
+        font-family: $bold;
+        -webkit-appearance: none; -webkit-border-radius: 0; 
+
+        @include ph {
+            color: #e3e2e3;
+        }
+    }
+
+
+    textarea {
+        resize:none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 14px 15px;
+        height: 177px;
+        line-height: 18px;
+    }
+}
+
+/* ---------------
+    Select
+    -------------- */
+
+.selects {
+    font-size: 0;
+}
+
+.filter-select {
+    position: relative;
+    vertical-align: top;
+    min-width: 40px;
+    margin-right: 25px;
+    display: inline-block;
+    
+    .chosen-container {
+        width: 100% !important;
+    }
+
+    .chosen-container-active {
+        
+    }
+
+    .chosen-container-single {
+
+        .chosen-single {
+            height: 64px;
+            border: none;
+            padding: 0;
+            box-shadow: none;
+            background: none;
+            
+            &:hover span {
+                
+            }
+
+            span {
+                @extend .trans-all;
+                @extend .uc;
+                display: inline-block;
+                line-height: 64px;
+                height: 100%;
+                margin-right: 12px;
+            }
+
+            div {
+                display: inline-block;
+                position: relative;
+                width: 11px;
+                height: 100%;
+            }
+
+            b {
+                @include tr-bottom(4px,4px,4px, #4a4a4a);
+                @include trans(0.1s);
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -2px;   
+            }
+        }
+
+        &.chosen-with-drop .chosen-single {
+            span {
+                
+            }
+
+            div b {
+                @include rot(-180deg);
+                margin-top: -3px;  
+            }
+        }
+
+        .chosen-drop {
+            @include border-rad(21px);
+            border: none;
+            background: none;
+            z-index: 900;
+            -webkit-box-shadow: 0 12px 18px 3px rgba(15,30,40,.05);
+            box-shadow: 0 12px 18px 3px rgba(15,30,40,.05);
+
+            .chosen-search {
+                display: none;
+            }
+
+            ul.chosen-results {
+                overflow: hidden;
+                max-height: 100%;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                background: #fff;
+                -webkit-border-radius: 4px;
+                        border-radius: 4px;
+                -webkit-box-shadow: 0 0 7px rgba(0,0,0,.08);
+                        box-shadow: 0 0 7px rgba(0,0,0,.08);
+
+                li {
+                    @extend .trans-all;
+                    @extend .uc;
+                    text-align: left;
+                    position: relative;
+                    border-bottom: 2px solid #f7f7f7;
+                    padding:17px 10px 18px 20px;
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+
+                li.highlighted {
+                    background: #f3f3f3;
+                }
+            }
+        }
+    }
+}    
+
+/* ---------------
+    Checkbox
+    -------------- */
+
+.checkbox {
+    position: relative;
+    -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+
+    .checkbox-text {
+        display: block;
+        padding-left: 31px;
+        line-height: 16px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    } 
+
+    input[type=checkbox]:checked+.custom-checkbox {
+        border-color: red;
+
+        &:before {
+            display: block;
+            background-color: red;
+        }
+    }
+
+    .custom-checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 18px; height: 18px;
+        background: #fff;
+        border: 1px solid #C3C3C3;
+
+        &:before {
+            @extend .ps;
+            display: none;
+            top: 2px;
+            left: 2px;
+            width: 12px;
+            height: 12px;
+            background-color:red;
+        }
+    }
+}
+
+
+/* ----------------
+    Perfect Scroll
+    --------------- */
+
+.scroll.ps-container > .ps-scrollbar-y-rail { width: 3px; background: #e8e5e2; }
+.scroll.ps-container > .ps-scrollbar-x-rail { display: none !important; }
+.scroll.ps-container > .ps-scrollbar-y-rail .ps-scrollbar-y { width: 3px; background:#000; }    
+
+/* ---------------
+    Buttons
+    -------------- */
+
+.btn {
+    @include border-rad(35px);
+    @include trans(0.2s);
+    padding: 0 30px;
+    display: inline-block;
+    height: 57px;
+    line-height: 55px;
+    color: $col-f;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;  
+    background: none;
+    border: 2px solid #e0dfe3;
+    outline: none;
+    font-family: $bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    &.btn-2 {
+        height: 50px;
+        line-height: 48px;
+        font-size: 11px;
+        padding: 0 33px;
+        letter-spacing: 0.6px;
+    }
+
+    &.btn-3 {
+        height: 40px;
+        line-height: 38px;
+        font-size: 12px;
+        padding: 0 25px;
+        letter-spacing: 0.6px;
+    }
+
+    &.btn-g {
+        color: $col-d;
+    }
+
+    &:hover {
+        border-color:$col-f;
+    }
+
+    @include mobile {
+        letter-spacing: 0 !important;
+    }
+}
+
+.btn-read {
+    width: 176px;
+    padding: 0;
+    margin: auto;
+}
+
+.btn-more {
+    width: 150px;
+    padding: 0;
+}
+
+.w-btns {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ---------------
+    Calendar
+    -------------- */
+
+#calendar {
+
+    .fc-view-container {
+        width: 245px;
+        margin: auto;
+    }
+
+    .fc-basic-view .fc-body .fc-row {
+        min-height: 43px;
+        height: 43px !important;
+    }
+
+    .fc-scroller {
+        height: auto !important;
+    }
+
+    .fc-header-toolbar {
+        position: relative;
+        height: 47px;
+        background-color: #f7f7f7;
+        margin-bottom: 20px;
+
+        .fc-left, .fc-right, .fc-button-group {
+            position: absolute;
+            float: none;
+        }
+
+        .fc-today-button {
+            display: none;
+
+            bottom: -35px;
+            padding: 0;
+            border: none; background: none;
+            font-family: $bold; text-transform: uppercase; color: $col-d;
+        }
+
+        .fc-left, .fc-right {
+            left: 0;
+            right: 0;
+
+            h2 {
+                float: none;
+                font-size: 12px; line-height: 47px; font-family: $bold; text-transform: uppercase; color: $col-d;
+            }
+        }
+
+        .fc-button-group {
+            margin: 0;
+            left: 67px; right: 67px;
+
+            @include tablet {
+                left: 33%;
+                right: 33%;
+            }
+
+            @include mobile {
+                left: 28%;
+                right: 28%;
+            }
+        }
+
+        .fc-button {
+            position: absolute;
+            top: 0; bottom: 0; margin: 0; padding: 0; border: none;
+            height: auto;
+
+            span {
+                margin: 0; top: 13px; height: auto; line-height: 1; color: #cccccc;
+
+                &:after {
+                    font-size:20px;
+                }
+
+                &:hover {
+                    color: $col-d;
+                }
+            }
+        }
+
+        .fc-prev-button {
+            left: 0;
+        }
+
+        .fc-next-button {
+            right: 0;
+        }
+    }
+
+    th, td {
+        border: none;
+        font-size: 12px;
+        color: #d4d4d4;
+        font-family: $bold;
+    }
+
+    th {
+        height: 30px;
+    }
+
+    .fc-content-skeleton {
+        padding: 0;
+
+        tbody {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            td {
+                width: 35px;
+            }
+
+            .fc-day-grid-event {
+                @include border-rad(50%);
+                margin: 0; padding: 0; background: none;
+                width: 31px;
+                height: 31px;
+                border: 2px solid #fdccc8;
+            }
+
+            .fc-content {
+                text-indent: -9999px;
+            }
+        }
+
+        thead td {
+           padding: 0;
+
+            span.fc-day-number {
+                @include border-rad(50%);
+                float: none;
+                display: block; padding: 0;
+                width: 35px; height: 35px; line-height: 35px; text-align: center;
+            }
+        }
+
+        td.fc-today {
+            background: none !important;
+
+            span.fc-day-number {
+                background-color: $col-f;
+                color: #fff;
+            }
+        }
+
+        .fc-day-top.fc-other-month {
+            opacity: 1; 
+        }
+    }
+}    
+
