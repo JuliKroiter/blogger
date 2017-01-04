@@ -181,7 +181,7 @@
                <%= image_tag("ico-#{index + 1 }.png") %>
             </div>
             <div class="name"><%= category.title %></div>
-            <div class="text"> <%= category.posts.count %> статьи </div>
+            <div class="text"> <%= category.posts.count %> <%= pluralize_article(category.posts.count) %></div>
             <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(category: category.id), class: "btn btn-2 btn-g btn-read" %>
          </div>
         <% end %>

@@ -1,0 +1,67 @@
+<div class="posts">
+  <%- @posts.each_slice(2).with_index do |posts, index| %>
+    <div class="clearfix">
+      <%= render posts %>
+    </div>
+
+    <%- if index == 0 %>
+      <div class="s-social shadow">
+        <div class="s-social-head">
+          <h3>Новости с Facebook</h3>
+          <a class="btn btn-3 btn-g" href="#">подписаться</a>
+        </div>
+      <div class="fb-posts">
+        <%- @fb_posts.each do |post| %>
+          <div class="fb-row">
+            <div class="img">
+              <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+            </div>
+            <%= link_to post.content, post.link, class: 'ttl' %>
+            <div class="like-count">
+              <div class="circ-l">
+                <span><%= image_tag('ico-like.png') %></span>
+              </div>
+              <i><%= post.likes %></i>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="inst-posts">
+    <%- if index == 1 %>
+      <div class="s-social shadow">
+        <div class="s-social-head">
+          <h3>Подпишитесь на мой Instagram</h3>
+          <a class="btn btn-3 btn-g" href="#">подписаться</a>
+        </div>
+        <div class="ins-row">
+          <%- @inst_posts.each do |post| %>
+            <div class="ins-item">
+              <%= link_to post.link, class: 'img' do %>
+                <%= image_tag post.image_url(:thumb)%>
+              <% end %>
+              <div class="stats">
+                <div class="stat">
+                  <%= image_tag('ico-com.png') %>
+                  <span><%= post.comments.length%></span>
+                </div>
+                <div class="stat">
+                  <%= image_tag('ico-fv.png') %>
+                  <span><%= post.likes %></span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<div style="display:none"><%= paginate @posts %></div>
+<div class="b-load shadow">
+  <div>
+    посмотреть больше статей
+  </div>
+</div>

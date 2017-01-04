@@ -1,12 +1,17 @@
 $(document).ready(function() {
   $('.i-category').click(function(){
-    debugger;
     var category = $(this).find('input').val();
-    $(this).find('.def').hide();
-    $(this).find('.act').show();
+    // reset all categories
+    $('.i-category').removeClass('active-category');
+    $('.i-category').find('.category-title').css('color', '#656565');
     $('.topic').removeClass('active-topic');
     $('.all').addClass('active-topic');
-    $('.i-category').removeClass('active-category');
+    $('.act').hide();
+    $('.def').show();
+    // make active clicked category
+    $(this).find('.def').hide();
+    $(this).find('.act').show();
+    $(this).find('.category-title').css('color', '#d3215d');
     $(this).addClass('active-category');
     $.ajax({
       type: 'GET',
@@ -16,8 +21,7 @@ $(document).ready(function() {
   })
 
   $('.topic').click(function(){
-    debugger;
-    var topic = $(this).find('input').val();
+    var topic = $(this).find('input').val() == undefined ? '' : $(this).find('input').val()
     var category = $('.active-category').find('input').val();
     $('.topic').removeClass('active-topic');
     $(this).addClass('active-topic');
@@ -29,9 +33,8 @@ $(document).ready(function() {
   })
 
   $('.chosen-drop').click(function(){
-    debugger;
-    var category = $('.active-category').val() == undefined ? '' : $('.active-category').val();
-    var topic = $('.active-topic').val();
+    var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val();
+    var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
     var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
     $.ajax({
       type: 'GET',
