@@ -8,6 +8,8 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :comments, reject_if: :all_blank, allow_destroy: true
 
   enum from: [:site, :instagram, :facebook]
+  scope :by_category, -> (category_id) { where(category_id: category_id) unless category_id.blank?}
+  scope :by_topic, -> (topic_id) { where(topic_id: topic_id) unless topic_id.blank?}
 
   searchkick
 

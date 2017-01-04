@@ -24,22 +24,24 @@
     <div class="categories">
       <%- Category.all.each_with_index do |category, index| %>
         <!-- FIX for blank image -->
-        <div class="i-category<%= ' is-active' if category.title == 'здоровье' %>">
+        <div class="i-category">
           <div class="ico">
+            <%= hidden_field_tag :category, category.id, id: "category-#{category.id}"%>
             <%= image_tag("c-#{index + 1 }.png", class: 'def') %>
-            <%= image_tag("c-#{index + 1}-a.png", class: 'act') %>
+            <%= image_tag("ico-#{index + 1}.png", class: 'act') %>
           </div>
-          <span><%= category.title%></span>
+          <span class = 'category-title'><%= category.title %></span>
         </div>
       <% end %>
     </div>
 
     <div class="filter-row">
-      <div class="filter-item is-active">
+      <div class="filter-item all topic active-topic">
         <span>Показать все темы</span>
       </div>
       <%- Topic.first(4).each do |topic| %>
-        <div class="filter-item">
+        <div class="filter-item topic">
+          <%= hidden_field_tag :topic,  topic.id %>
           <span><%= topic.title %></span>
         </div>
       <% end %>
@@ -60,6 +62,7 @@
     </div>
   </div>
 
+
   <div class="clearfix">
     <!-- Column -->
     <div class="column">
@@ -76,6 +79,7 @@
                 <h3>Новости с Facebook</h3>
                 <a class="btn btn-3 btn-g" href="#">подписаться</a>
               </div>
+            <div class="fb-posts">
               <%- @fb_posts.each do |post| %>
                 <div class="fb-row">
                   <div class="img">
@@ -92,7 +96,9 @@
               <% end %>
             </div>
           <% end %>
+        </div>
 
+        <div class="inst-posts">
           <%- if index == 1 %>
             <div class="s-social shadow">
               <div class="s-social-head">
@@ -122,6 +128,7 @@
           <% end %>
         <% end %>
       </div>
+    </div>
 
       <div style="display:none"><%= paginate @posts %></div>
 

@@ -1,2 +1,4 @@
-$('.posts').append('<%= escape_javascript render @posts %>');
+$('.posts').html('<%= escape_javascript render @posts %>');
+$('.fb-posts').html('<%= escape_javascript render @fb_posts %>');
+$('.inst-posts').html('<%= escape_javascript render @inst_posts  %>');
 $('.pagination').replaceWith('<%= escape_javascript paginate(@posts) %>');

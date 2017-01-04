@@ -6,7 +6,7 @@
 }
 
 .ps, .menu-drop > li.is-current a span:before, .btn-menu span::before,
-.btn-menu span::after, .menu li:after, .menu li.is-current a:after, .play:after, .checkbox .custom-checkbox:before, .quote:before, .filter-item.is-active span:after, .b-load div:after, .b-comment .comment:before, .social-panel .share-count span:after {
+.btn-menu span::after, .menu li:after, .menu li.is-current a:after, .play:after, .checkbox .custom-checkbox:before, .quote:before, .filter-item.active-topic span:after, .b-load div:after, .b-comment .comment:before, .social-panel .share-count span:after {
   content: "";
   display: block;
   position: absolute;
@@ -2389,7 +2389,7 @@ html, body {
   position: relative;
   display: inline-block;
 }
-.filter-item.is-active span:after {
+.filter-item.active-topic span:after {
   left: 0;
   top: auto;
   right: 0;

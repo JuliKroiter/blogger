@@ -172,42 +172,19 @@
           <div class="text">Уже более 3245 клиентов изменили свою жизнь с помощью наших блогов</div>
       </div>
 
+      <div class="blog-socket">
+
       <div class="b-articles">
+        <%- Category.all.each_with_index do |category, index| %>
           <div class="article">
-              <div class="ico-a">
-                <%= image_tag('ico-1.png') %>
-              </div>
-              <div class="name">Порядок </div>
-              <div class="text">424 статьи </div>
-              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-          </div>
-
-          <div class="article">
-              <div class="ico-a">
-                <%= image_tag('ico-2.png') %>
-              </div>
-              <div class="name">Любовь </div>
-              <div class="text">424 статьи </div>
-              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-          </div>
-
-          <div class="article">
-              <div class="ico-a">
-                <%= image_tag('ico-3.png') %>
-              </div>
-              <div class="name">Здоровье </div>
-              <div class="text">424 статьи </div>
-              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-          </div>
-
-          <div class="article">
-              <div class="ico-a">
-                <%= image_tag('ico-4.png') %>
-              </div>
-              <div class="name">Призвание </div>
-              <div class="text">424 статьи </div>
-              <a href="" class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ </a>
-          </div>
+            <div class="ico-a">
+               <%= image_tag("ico-#{index + 1 }.png") %>
+            </div>
+            <div class="name"><%= category.title %></div>
+            <div class="text"> <%= category.posts.count %> статьи </div>
+            <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(category: category.id), class: "btn btn-2 btn-g btn-read" %>
+         </div>
+        <% end %>
       </div>
   </div>
             <!-- / CONTENT -->

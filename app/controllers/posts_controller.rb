@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
     all_posts = (params[:term].present? ? search : Post.all).includes(:category, :comments, :topic).order('created_at DESC')
+    all_posts = all_posts
+                      .by_category(params[:category])
+                      .by_topic(params[:topic])
+                      .order(!params[:order].blank? ? 'created_at': params[:order] )
     @posts = all_posts.site.page(params[:page]).per(6)
     @fb_posts = all_posts.facebook
     @inst_posts = all_posts.instagram
