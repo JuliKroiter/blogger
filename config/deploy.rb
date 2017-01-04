@@ -1,6 +1,6 @@
 set :application, 'fly_mama'
 
-set :repo_url, 'https://github.com/JuliKroiter/blogger.git'
+set :repo_url, 'git@github.com:JuliKroiter/blogger.git'
 
 set :deploy_to, '/home/rails/fly_mama'
 set :tmp_dir, "/home/rails/tmp"
