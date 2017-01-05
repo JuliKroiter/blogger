@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to book.title, '', target: :_blank %></td>
+  <td><%= book.content %></td>
+  <td><%= book.price %></td>
+  <td><%= image_tag(book.image_url(:small_thumb)) %></td>
+  <td><%= book.created_at %></td>
+  <td>
+    <%= link_to 'Show', admin_book_path(book) %>
+    <%= link_to 'Edit', edit_admin_book_path(book) %>
+    <%= link_to 'Destroy', admin_book_path(book), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </td>
+</tr>

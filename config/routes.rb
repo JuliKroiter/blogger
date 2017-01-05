@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show]
   get 'about' => 'home#about'
   get 'partners' => 'home#partners'
+  post 'order_book' => 'home#order_book'
   post 'create_comment' => 'posts#create_comment'
 
   namespace :admin do
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
     resources :users
     resources :posts
     resources :comments
+    resources :books
     resources :categories do
       collection do
         get 'topic_categories' => 'categories#topic_categories'

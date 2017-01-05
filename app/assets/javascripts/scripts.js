@@ -39,6 +39,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $(".btn-more").on("click", function(e){
+        var book_id = $(this).attr('id');
+        $('#book_id').val(book_id);
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+
+        e.preventDefault();
+    });
+
+
     $(".b-popup .close").on("click", function(){
         closePopup();
     });
@@ -49,7 +59,10 @@ $(document).ready(function() {
         setTimeout(
             function(){
                 $(".b-popup").removeClass("is-open");
+                $('#email').show();
+                $('#order-form input[type=submit]').val('заказать');
         }, 400);
+
 
         $(".b-popup").find(".close").removeClass("is-show");
     }

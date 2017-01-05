@@ -202,133 +202,27 @@
       <div class="b-carousel b-carousel-p">
           <div class="jcarousel">
               <ul>
-                  <li>
+                <li>
+                  <% Book.all.each do |book| %>
                       <div class="b-polygraphy shadow">
-                          <h3>7 заповедей  организованной мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-1.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
+                          <h3><%= book.title %></h3>
+                          <div class="book" id=<%= "book-#{book.id}" %>>
+                              <%= image_tag(book.image.url) %>
+                              <div class="circ circ-f"><%= book.price %> грн.</div>
                           </div>
                           <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
+                          <p> <%= book.content %></p>
+                          <a class="btn btn-3 btn-more" id=<%= book.id %> href="#">заказать книгу</a>
                       </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Источник сил для  уставшей мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-2.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Онлайн-карьера  <br>для мам</h3>
-                          <div class="book">
-                              <%= image_tag("book-3.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="b-polygraphy shadow">
-                          <h3>7 заповедей  организованной мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-3.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Источник сил для  уставшей мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-3.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Онлайн-карьера  <br>для мам</h3>
-                          <div class="book">
-                              <%= image_tag("book-1.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-                  </li>
-                  <li>
-                      <div class="b-polygraphy shadow">
-                          <h3>7 заповедей  организованной мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-1.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Источник сил для  уставшей мамы</h3>
-                          <div class="book">
-                              <%= image_tag("book-2.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-
-                      <div class="b-polygraphy shadow">
-                          <h3>Онлайн-карьера  <br>для мам</h3>
-                          <div class="book">
-                              <%= image_tag("book-3.jpg") %>
-                              <div class="circ circ-f">140 грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p>
-                              Мы все любим наших детей. Мы счастливы  быть мамами. Но зачасту материнство оказывается вовсе не таким уж лучезарным.
-                          </p>
-                          <a class="btn btn-3 btn-more" href="#">заказать книгу</a>
-                      </div>
-                  </li>
+                  <% end %>
+                <li>
               </ul>
           </div>
-          <div class="jcarousel-items"></div>
+         <!--  <div class="jcarousel-items"></div>
           <div class="jcarousel-panel"></div>
           <div class="jcarousel-pagination"></div>
           <a href="#" class="jcarousel-control-prev"></a>
-          <a href="#" class="jcarousel-control-next"></a>
+          <a href="#" class="jcarousel-control-next"></a> -->
       </div>
 
       <div class="b-slider-p-mobile"></div>
@@ -336,3 +230,22 @@
   </div>
 </div>
 <!-- / CONTENT -->
+<!-- POPUP -->
+<div class="w-popup">
+  <div id="popup-s" class="b-popup">
+    <div class="close"></div>
+    <div class="popup">
+        <div class="ico-mail">
+            <%= image_tag('ico-mail.gif') %>
+        </div>
+        <h3>Закажите книгу</h3>
+        <%= form_tag order_book_path, id: 'order-form', remote: true do%>
+          <%= hidden_field_tag :book_id %>
+          <div class="input-r">
+              <%= email_field_tag :email, nil, placeholder: "Ваш е-мейл" %>
+          </div>
+          <%= submit_tag 'заказать', class: "btn btn-4" %>
+      <% end %>
+    </div>
+</div>
+</div>
