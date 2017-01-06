@@ -15,7 +15,9 @@ class PostsController < ApplicationController
   end
 
   def create_comment
-    @comment = Comment.create(comment_params)
+    cp = comment_params
+    cp[:commenter] = cp[:commenter].blank? ? 'Аноним' : cp[:commenter]
+    @comment = Comment.create(cp)
     @post = Post.find(params[:comment][:post_id])
   end
 
@@ -32,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:post_id, :content)
+    params.require(:comment).permit(:post_id, :content, :commenter)
   end
 
 end

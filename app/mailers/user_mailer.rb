@@ -3,6 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def order_book(name, email)
     @book_name = name
+    @email = email
     mail(from: email, subject: 'Заказ книги')
   end
 end

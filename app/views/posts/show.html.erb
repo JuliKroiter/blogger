@@ -9,7 +9,7 @@
     <div class="socket">
         <div class="cell">
             <div class="b-slide-text">
-                <div class="text">Раздел : <%= @post.try(:category)%></div>
+                <div class="text">Раздел: <%= @post.try(:category).title %></div>
                 <div class="title"><%= @post.try(:title) %></div>
                 <div class="stats">
                     <div class="stat">
@@ -59,7 +59,8 @@
                 <div class="form-comment">
                     <%= form_for Comment.new, url: create_comment_path, class: 'form-comment', remote: true do |f| %>
                         <%= hidden_field_tag 'comment[post_id]', @post.id %>
-                        <%= f.text_area :content, placeholder: "Оставьте тут свой комментарий..." %>
+                        <%= f.text_field :commenter, placeholder: 'Ваше имя' %>
+                        <%= f.text_area :content, placeholder: "Оставьте тут свой комментарий...", required: true %>
                         <%= f.submit 'отправить комментарий ', class: "btn-sub" %>
                     <% end %>
                 </div>

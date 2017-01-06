@@ -3803,7 +3803,7 @@ a.today:hover {
   padding-bottom: 30px;
 }
 .form-comment textarea {
-  padding: 25px;
+  padding: 10px 5px;
   height: 180px;
   background: none;
   width: 100%;
@@ -3811,8 +3811,21 @@ a.today:hover {
   font-size: 15px;
   margin-bottom: 9px;
 }
-.form-comment textarea::-webkit-input-placeholder {
-  color: #656565;
+
+.form-comment #comment_commenter{
+    padding: 5px;
+    height: 40px;
+    /* background: none; */
+    /* width: 100%; */
+    /* resize: none; */
+    font-size: 15px;
+    margin-bottom: 9px;
+    border: 2px solid #e0dfe3;
+    border-radius: 2px;
+}
+
+.form-comment textarea::-webkit-input-placeholder,  .form-comment #comment_commenter::-webkit-input-placeholder{
+  color: #828891;
 }
 .form-comment textarea:-moz-placeholder {
   color: #656565;

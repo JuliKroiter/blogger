@@ -1,3 +1,4 @@
 $('.comments').append("<%= escape_javascript(render(:partial => 'comment', :locals => {:comment => @comment})) %>")
 $('.title-com i').text("<%= @post.comments.count %>")
 $('textarea').val('')
+$('#create_commenter').val('')

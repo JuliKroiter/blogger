@@ -1,7 +1,7 @@
 <div class="b-comment">
-    <div class="avatar"><img src="images/avatar-4.jpg" alt=""></div>
+    <div class="avatar"><%= image_tag('avatar.png') %></div>
     <div class="comment">
-        <div class="name-c">Елена чижикова</div>
+        <div class="name-c"><%= comment.commenter%></div>
         <p>
            <%= comment.content %>
         </p>
