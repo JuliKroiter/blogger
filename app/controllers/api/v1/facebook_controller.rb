@@ -7,7 +7,7 @@ class Api::V1::FacebookController < ApplicationController
 
   def update
     if params['entry']
-      @user = User.joins(:providers).find_by(providers: {provider: 'facebook', uid: params['entry'].first['id']})
+      @user = User.joins(:providers).find_by(providers: {provider: 'facebook', uid: params[:entry]["id"]})
       FacebookUploader.new(@user).upload if @user
     end
 

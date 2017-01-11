@@ -15,8 +15,8 @@ class FacebookUploader
 
   def upload
     feeds.each do |feed|
-
       if search_tags(feed)
+
         post = posts.find_by(web_id: feed['id'])
 
         if post
@@ -51,15 +51,14 @@ class FacebookUploader
       self.topic = topics.select { |i| i.tag ==  match[1]}.first
       self.category = categories.select { |i| i.tag ==  match[2]}.first
     end
-
     topic && category
+    true
   end
 
   def find_feeds
     client =-> (oauth_token) { Koala::Facebook::API.new(oauth_token)
                                  .get_connection('me', 'feed', :fields => "link,picture,message,likes.summary(true)") }
     provider = user.providers.find_by(provider: 'facebook')
-
     if provider
       begin
         client.call(provider.oauth_token)
