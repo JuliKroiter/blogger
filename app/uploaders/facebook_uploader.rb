@@ -46,7 +46,7 @@ class FacebookUploader
   end
 
   def search_tags(feed)
-    match = /#([a-zA-Z0-9\.-]*)\s*#([a-zA-Z0-9\.-]*)\s*/.match(feed['message'])
+    match = /#([[:alnum:]\.-]*)\s*#([[:alnum:]\.-]*)\s*/.match(feed['message'])
     if match
       self.topic = topics.select { |i| i.tag ==  match[1]}.first
       self.category = categories.select { |i| i.tag ==  match[2]}.first
