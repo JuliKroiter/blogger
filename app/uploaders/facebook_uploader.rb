@@ -52,7 +52,6 @@ class FacebookUploader
       self.category = categories.select { |i| i.tag ==  match[2]}.first
     end
     topic && category
-    true
   end
 
   def find_feeds

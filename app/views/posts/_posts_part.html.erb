@@ -14,7 +14,9 @@
         <%- @fb_posts.each do |post| %>
           <div class="fb-row">
             <div class="img">
-              <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+              <%= link_to post.link do %>
+                <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+              <% end %>
             </div>
             <%= link_to post.content, post.link, class: 'ttl' %>
             <div class="like-count">
