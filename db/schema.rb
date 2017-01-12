@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106113026) do
+ActiveRecord::Schema.define(version: 20170112152845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(version: 20170106113026) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
@@ -52,15 +66,16 @@ ActiveRecord::Schema.define(version: 20170106113026) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "category_id"
     t.string   "image"
     t.integer  "topic_id"
     t.string   "web_id"
     t.string   "link"
-    t.integer  "likes",       default: 0
-    t.integer  "from",        default: 0
+    t.integer  "likes",          default: 0
+    t.integer  "from",           default: 0
+    t.integer  "comments_count", default: 0
   end
 
   create_table "providers", force: :cascade do |t|

@@ -61,6 +61,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+#WYSIWYG editor
+gem 'bootsy'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

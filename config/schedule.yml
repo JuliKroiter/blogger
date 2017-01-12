@@ -1,9 +1,9 @@
 facebook_update_job:
-  cron: "0 6 * * *"
+  cron: "0 */2 * * * "
   class: "Cron::FacebookUpdate"
   queue: default
 
 instagram_update_job:
-  cron: "*/30 * * * *"
+  cron: "0 */2 * * * "
   class: "Cron::InstagramUpdate"
   queue: default

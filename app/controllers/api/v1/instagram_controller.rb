@@ -9,7 +9,7 @@ class Api::V1::InstagramController < ApplicationController
   end
 
   def update
-    InstagramUploader.new(nested_hash_value(params,'media_id')).create_post
+    InstagramUploader.update_all
 
     render json: :nothing, status: :ok
   end
