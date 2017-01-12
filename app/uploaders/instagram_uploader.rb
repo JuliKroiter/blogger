@@ -33,9 +33,13 @@ class InstagramUploader
 
       categories = Category.all
       Topic.all.each do |topic|
+        puts topic
         Instagram.tag_recent_media(Instagram.tag_search(topic.tag)[0].name).each do |media|
+           puts media.tags
           if category = categories.find_by(tag: media.tags.second)
+            puts category
             post = Post.find_by(web_id: media.id)
+            puts post
             if post
               post.update(
                 link: media.link,
@@ -55,6 +59,7 @@ class InstagramUploader
                   remote_image_url: media.images.standard_resolution.url,
                   from: 'instagram'
                 }
+                puts @post_params
               Post.create(@post_params) if @post_params[:topic] && @post_params[:category]
             end
           end
