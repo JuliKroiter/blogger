@@ -116,6 +116,8 @@ GEM
       activesupport (>= 4.1.0)
     hashie (3.4.6)
     i18n (0.7.0)
+    impressionist (1.5.2)
+      nokogiri (~> 1.6)
     instagram (1.1.6)
       faraday (>= 0.7, < 0.10)
       faraday_middleware (>= 0.8, < 0.10)
@@ -304,6 +306,7 @@ DEPENDENCIES
   elasticsearch-rails
   enum_help
   font-awesome-rails
+  impressionist
   instagram
   jbuilder (~> 2.0)
   jquery-datatables-rails (~> 3.4.0)

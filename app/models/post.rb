@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  is_impressionable
   has_many :comments, dependent: :destroy
   belongs_to :category
   belongs_to :topic

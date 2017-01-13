@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  impressionist actions: [:show]
+
   def index
     all_posts = (params[:term].present? ? search : Post.all).includes(:category, :comments, :topic)
     all_posts = all_posts
@@ -6,8 +8,9 @@ class PostsController < ApplicationController
                       .by_topic(params[:topic])
                       .order(params[:order].blank?  ? 'created_at desc' :  'created_at ' + params[:order] )
     @posts = all_posts.site.page(params[:page]).per(6)
-    @fb_posts = all_posts.facebook
-    @inst_posts = all_posts.instagram
+    @fb_posts = all_posts.facebook.last(4)
+    @inst_posts = all_posts.instagram.last(4)
+    render params[:page].present? ? 'more_pages' : 'index'
   end
 
   def show

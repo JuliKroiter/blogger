@@ -64,6 +64,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #WYSIWYG editor
 gem 'bootsy'
 
+#track post views count
+gem 'impressionist'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

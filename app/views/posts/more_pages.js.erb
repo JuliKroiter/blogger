@@ -1,4 +1,2 @@
-$('.column').html('<%= escape_javascript render partial: 'posts_part' %>');
+$('.clearfix:last').append('<%= escape_javascript render partial: 'post', collection: @posts %>');
 $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@posts, 'посмотреть больше статей', :remote => true, :id=>'load-more-link'))%>");
-
-

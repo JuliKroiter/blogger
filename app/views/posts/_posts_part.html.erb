@@ -66,6 +66,9 @@
 
 <div style="display:none"><%= paginate @posts %></div>
 <div class="b-load shadow">
-  <div>
-    посмотреть больше статей
-  </div>
+<div>
+  <% unless @posts.last_page? %>
+   <i class="fa fa-refresh" aria-hidden="true"></i>
+  <% end %>
+  <%= link_to_next_page @posts, 'посмотреть больше статей', remote: true, id: 'load-more-link', style: 'color: black;'  %>
+</div>
