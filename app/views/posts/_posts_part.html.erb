@@ -1,74 +1,74 @@
 <div class="posts">
+
   <%- @posts.each_slice(2).with_index do |posts, index| %>
+
     <div class="clearfix">
       <%= render posts %>
     </div>
-
-    <%- if index == 0 %>
-      <div class="s-social shadow">
-        <div class="s-social-head">
-          <h3>Новости с Facebook</h3>
-          <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FFlymamainfo%2F&width=200px&height=65&layout=button&size=large&show_faces=false&appId=1310637082313003" width="80px"  height="65" style="border:none;overflow:hidden; float: right;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-<!--           <a class="btn btn-3 btn-g" href="#">подписаться</a>
- -->    </div>
-      <div class="fb-posts">
-        <%- @fb_posts.each do |post| %>
-          <div class="fb-row">
-            <div class="img">
-              <%= link_to post.link do %>
-                <%= image_tag post.image_url(:small_thumb, class: 'img')%>
-              <% end %>
-            </div>
-            <%= link_to post.content.html_safe, post.link, class: 'ttl' %>
-            <div class="like-count">
-              <div class="circ-l">
-                <span><%= image_tag('ico-like.png') %></span>
-              </div>
-              <i><%= post.likes %></i>
-            </div>
-          </div>
-        <% end %>
-        </div>
-      </div>
-    <% end %>
-
-    <%- if index == 0 %>
-      <div class="inst-posts">
-       <div class="s-social shadow">
-          <div class="s-social-head">
-            <h3>Подпишитесь на мой Instagram</h3>
-            <a class="btn btn-3 btn-g" href="#">подписаться</a>
-          </div>
-            <div class="ins-row">
-              <%- @inst_posts.each do |post| %>
-                <div class="ins-item">
-                  <%= link_to post.link, class: 'img' do %>
-                    <%= image_tag post.image_url(:thumb)%>
-                  <% end %>
-                  <div class="stats">
-                    <div class="stat">
-                      <%= image_tag('ico-com.png') %>
-                      <span><%= post.comments_count %></span>
-                    </div>
-                    <div class="stat">
-                      <%= image_tag('ico-fv.png') %>
-                      <span><%= post.likes %></span>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
   <% end %>
 
-<div style="display:none"><%= paginate @posts %></div>
+
+    <div class="s-social shadow">
+      <div class="s-social-head">
+        <h3>Новости с Facebook</h3>
+        <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FFlymamainfo%2F&width=200px&height=65&layout=button&size=large&show_faces=false&appId=1310637082313003" width="80px"  height="65" style="border:none;overflow:hidden; float: right;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<!--           <a class="btn btn-3 btn-g" href="#">подписаться</a>
+-->    </div>
+    <div class="fb-posts">
+      <%- @fb_posts.each do |post| %>
+        <div class="fb-row">
+          <div class="img">
+            <%= link_to post.link do %>
+              <%= image_tag post.image_url(:small_thumb, class: 'img')%>
+            <% end %>
+          </div>
+          <%= link_to post.content.html_safe, post.link, class: 'ttl' %>
+          <div class="like-count">
+            <div class="circ-l">
+              <span><%= image_tag('ico-like.png') %></span>
+            </div>
+            <i><%= post.likes %></i>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+
+    <div class="inst-posts">
+     <div class="s-social shadow">
+        <div class="s-social-head">
+          <h3>Подпишитесь на мой Instagram</h3>
+          <a class="btn btn-3 btn-g" href="#">подписаться</a>
+        </div>
+          <div class="ins-row">
+            <%- @inst_posts.each do |post| %>
+              <div class="ins-item">
+                <%= link_to post.link, class: 'img' do %>
+                  <%= image_tag post.image_url(:thumb)%>
+                <% end %>
+                <div class="stats">
+                  <div class="stat">
+                    <%= image_tag('ico-com.png') %>
+                    <span><%= post.comments_count %></span>
+                  </div>
+                  <div class="stat">
+                    <%= image_tag('ico-fv.png') %>
+                    <span><%= post.likes %></span>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 <div class="b-load shadow">
-<div>
+<div >
   <% unless @posts.last_page? %>
    <i class="fa fa-refresh" aria-hidden="true"></i>
   <% end %>
-  <%= link_to_next_page @posts, 'посмотреть больше статей', remote: true, id: 'load-more-link', style: 'color: black;'  %>
+  <%= link_to_next_page @posts, 'посмотреть больше статей', remote: true, id: 'load-more-link' %>
 </div>
