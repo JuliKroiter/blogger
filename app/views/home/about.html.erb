@@ -28,8 +28,6 @@
                 и автор <a href="">www.flymama.info</a>  Я от всего серца хочу
                 помочь вам стать организованой и счастливой мамой.
             </p>
-
-            <a href="" class="btn btn-2">Больше обо мне</a>
         </div>
 
       <%= image_tag('photo-3.jpg', class: 'image') %>
@@ -52,7 +50,6 @@
         помочь вам стать организованой и счастливой мамой.
       </p>
 
-      <a href="" class="btn btn-2">Больше обо мне</a>
     </div>
         <%= image_tag('photo-4.jpg', class: 'image') %>
   </div>
@@ -212,7 +209,7 @@
                           </div>
                           <div class="text-b">краткое описание</div>
                           <p> <%= book.content %></p>
-                          <a class="btn btn-3 btn-more" id=<%= book.id %> href="#">заказать книгу</a>
+                          <a class="btn btn-3 btn-more order-book" id=<%= book.id %> href="#">заказать книгу</a>
                       </div>
                   <% end %>
                 <li>

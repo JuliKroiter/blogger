@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+
+  before_action :set_subject, only: :order_consultation
+
   def index
   end
 
@@ -14,5 +17,33 @@ class HomeController < ApplicationController
     book_name = Book.find(params[:book_id]).title
     email = params[:email]
     UserMailer.order_book(book_name, email).deliver_now
+  end
+
+  def order_consultation
+    email = params[:email]
+    UserMailer.order_consultation(email, @subject).deliver_now
+  end
+
+  def free_book
+    email = params[:email]
+    UserMailer.free_book(email).deliver_now
+  end
+
+  def contact_me
+    name = params[:name]
+    email = params[:email]
+    UserMailer.contact_me(name, email).deliver_now
+  end
+
+  private
+
+  def set_subject
+    if !params[:learn_more].blank?
+      @subject = 'Узнать больше'
+    elsif !params[:mom_plan].blank?
+      @subject = 'Мама-план. Узнать больше.'
+    else
+      @subject = 'Заказ консультации'
+    end
   end
 end

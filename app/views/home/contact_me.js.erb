@@ -1,0 +1,9 @@
+<% if params[:form_one].present? %>
+  $('#form-one .input').hide();
+  $('#form-one input[type=submit]').val('спаcибо!')
+  $('.b-quote-min .text').hide();
+<% elsif params[:form_two].present?%>
+  $('#form-two #name-2').val('').hide();
+  $('#form-two #email-2').val('').hide();
+  $('#form-two input[type=submit]').val('спаcибо!')
+<% end %>

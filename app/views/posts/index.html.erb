@@ -13,7 +13,7 @@
       <div class="b-slide-text">
         <div class="text">Больше 1349 разных статей</div>
         <div class="title">Блог</div>
-        <a href="" class="btn">Заказать профеcсиональную конультацию</a>
+        <a href="" class="btn order-consultation">Заказать профеcсиональную конультацию</a>
       </div>
     </div>
   </div>
@@ -90,10 +90,7 @@
           Будьте первыми кто узнает  об обновлениях на нашем сайте
         </p>
         <form action="">
-          <div class="input">
-            <input type="email" placeholder="введите ваш е-мейл" required>
-          </div>
-          <button class="btn btn-2" type="submit">подписаться</button>
+          <button class="btn btn-2 subscribe" type="submit">подписаться</button>
         </form>
       </div>
 
@@ -106,7 +103,7 @@
         <p>
           Как маме запланировать и прожить  позитивный, проактивный и продуктивный год
         </p>
-        <a class="btn btn-2" href="#">узнать больше</a>
+        <a class="btn btn-2 mom-plan" href="#">узнать больше</a>
       </div>
 
       <div class="b-courses shadow">
@@ -148,10 +145,31 @@
         <p>
           Стань королевой порядка! Это проще чем кажется Я расскажу тебе как :)
         </p>
-        <a class="btn btn-2" href="#">узнать больше</a>
+        <a class="btn btn-2 learn-more" href="#">узнать больше</a>
       </div>
 
     </aside>
 
   </div>
 </div>
+<!-- POPUP -->
+<div class="w-popup">
+  <div id="popup-s" class="b-popup">
+    <div class="close"></div>
+    <div class="popup">
+        <div class="ico-mail">
+            <%= image_tag('ico-mail.gif') %>
+        </div>
+        <h3>Закажите консультацию</h3>
+        <%= form_tag order_consultation_path, id: 'consultation-form', remote: true do%>
+          <div class="input-r">
+              <%= email_field_tag :email, nil, id: 'email-consultation', placeholder: "Ваш е-мейл", required: true %>
+          </div>
+          <%= hidden_field_tag 'learn_more', nil %>
+          <%= hidden_field_tag 'mom_plan', nil %>
+          <%= submit_tag 'заказать', class: "btn btn-4" %>
+      <% end %>
+    </div>
+</div>
+
+

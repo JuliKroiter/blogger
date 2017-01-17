@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   get 'about' => 'home#about'
   get 'partners' => 'home#partners'
   post 'order_book' => 'home#order_book'
+  post 'order_consultation' => 'home#order_consultation'
   post 'create_comment' => 'posts#create_comment'
+  post 'free_book' => 'home#free_book'
+  post 'contact_me' => 'home#contact_me'
 
   namespace :admin do
     root 'posts#index'

@@ -37,15 +37,16 @@
       <div class="b-quote b-quote-min right">
         <h3>Хотите связаться со мной?</h3>
         <div class="text">Введите имя и е-мейл пожалуйста</div>
-        <form action="">
+        <%= form_tag(contact_me_path, remote: true, id: 'form-one') do %>
+          <%= hidden_field_tag 'form_one', true %>
           <div class="input">
-            <input type="text" placeholder="Введите ваше имя" required>
+            <%= text_field_tag :name, nil, id: 'name-1', placeholder: "Введите ваше имя", required: true %>
           </div>
           <div class="input">
-            <input type="email" placeholder="введите ваш е-мейл" required>
+              <%= email_field_tag :email, nil, id: 'email-1', placeholder: "Введите ваш е-мейл", required: true %>
           </div>
-          <button class="btn btn-2" type="submit">связаться со мной</button>
-        </form>
+            <%= submit_tag 'связаться со мной', class: "btn btn-2" %>
+        <% end %>
       </div>
 
       <div class="lines">
@@ -84,19 +85,20 @@
           <div class="ico-mail">
               <%= image_tag('ico-mail.gif') %>
           </div>
-          <h3>Подпишитесь сейчас</h3>
-          <p>
+          <h3>Хотите связаться со мной?</h3>
+          <!-- <p>
               Будьте первыми кто узнает  об обновлениях на нашем сайте
-          </p>
-          <form action="">
-              <div class="input-r">
-                  <input placeholder="Ваше имя" type="text">
-              </div>
-              <div class="input-r">
-                  <input placeholder="Ваш е-мейл" type="text">
-              </div>
-              <button class="btn btn-4" type="submit">подписаться</button>
-          </form>
+          </p> -->
+          <%= form_tag(contact_me_path, id: 'form-two', remote: true) do %>
+            <%= hidden_field_tag 'form_two', true %>
+            <div class="input-r">
+              <%= text_field_tag :name, nil, id: 'name-2', placeholder: "Введите ваше имя", required: true %>
+            </div>
+            <div class="input-r">
+                <%= email_field_tag :email, nil, id: 'email-2', placeholder: "Введите ваш е-мейл", required: true %>
+            </div>
+              <%= submit_tag 'связаться со мной', class: "btn btn-2" %>
+          <% end %>
       </div>
   </div>
 </div>

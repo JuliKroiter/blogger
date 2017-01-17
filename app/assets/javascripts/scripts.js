@@ -39,12 +39,52 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $(".btn-more").on("click", function(e){
+    $(".order-book").on("click", function(e){
         var book_id = $(this).attr('id');
         $('#book_id').val(book_id);
         $(".w-popup").fadeIn(250);
         $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
 
+        e.preventDefault();
+    });
+
+    $('.learn-more').on("click", function(e){
+        $('.popup h3').text('Узнать больше');
+        $('#consultation-form input[type=submit]').val('узнать');
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+        $('#learn_more').val('true');
+        $('#mom_plan').val('');
+    });
+
+    $('.subscribe').on("click", function(e){
+        $('.popup h3').text('Подпишитесь сейчас');
+        $('#consultation-form input[type=submit]').val('подписаться');
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+        $('#learn_more').val('true');
+        $('#mom_plan').val('');
+    });
+
+
+    $('.mom-plan').on("click", function(e){
+        $('.popup h3').text('Узнать больше');
+        $('#consultation-form input[type=submit]').val('узнать');
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+        $('#learn_more').val('');
+        $('#mom_plan').val('true');
+    });
+
+
+
+    $(".order-consultation").on("click", function(e){
+        $('.popup h3').text('Заказать консультацию');
+        $('#consultation-form input[type=submit]').val('заказать');
+        $(".w-popup").fadeIn(250);
+        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+        $('#learn_more').val('');
+        $('#mom_plan').val('');
         e.preventDefault();
     });
 
@@ -59,8 +99,10 @@ $(document).ready(function() {
         setTimeout(
             function(){
                 $(".b-popup").removeClass("is-open");
-                $('#email').show();
-                $('#order-form input[type=submit]').val('заказать');
+                $('#email, #email-consultation').show();
+                $('#order-form input[type=submit], #consultation-form input[type=submit]').val('заказать');
+                $('#form-two input[type=submit]').val('связаться со мной');
+                $('#name-2, #email-2').show();
         }, 400);
 
 

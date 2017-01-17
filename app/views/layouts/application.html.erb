@@ -29,35 +29,29 @@
         <!-- Menu Drop -->
         <div class="w-menu-drop">
           <ul class="menu-drop">
-            <li class="is-current">
-              <a href="">
-                <span>01</span>
+            <li class= <%= "is-current" if (params[:action] == 'index' && params[:controller] == 'home')%>>
+              <%= link_to root_path do %>
+                <span>01  </span>
                 Главная
-              </a>
+              <% end %>
             </li>
-            <li>
-              <a href="">
-                <span>02</span>
-                Библиотека
-              </a>
+            <li class=<%= "is-current" if  params[:action] == 'about'%>>
+              <%= link_to about_path do %>
+                <span>02 </span>
+                Обо мне
+              <% end %>
             </li>
-            <li>
-              <a href="">
-                <span>03</span>
-                Календарь
-              </a>
+            <li class=<%= "is-current" if (params[:action] == 'index' && params[:controller] == 'posts')%>>
+              <%= link_to posts_path do%>
+                <span>03 </span>
+                Блог
+              <% end %>
             </li>
-            <li>
-              <a href="">
-                <span>04</span>
-                Магазин
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span>05</span>
-                Контакты
-              </a>
+            <li class=<%= "is-current" if  params[:action] == 'partners'%>>
+               <%= link_to partners_path do %>
+                <span>04 </span>
+                Партнерам
+              <% end %>
             </li>
           </ul>
         </div><!-- / Menu Drop -->
@@ -86,9 +80,9 @@
       <div class="b-social">
         <span>Мы в социальных сетях :</span>
         <ul>
-          <li class="vk"><a href=""></a></li>
+          <li class="vk"><%= link_to '', 'https://vk.com/flymama', target: '_blank' %></li>
           <li class="ok"><a href=""></a></li>
-          <li class="fb"><a href=""></a></li>
+          <li class="fb"><%= link_to '', 'https://www.facebook.com/Flymamainfo', target: '_blank' %></li>
         </ul>
       </div>
       <div class="copyright">Все права защищены &copy; 2016</div>
