@@ -67,13 +67,21 @@
 
             <div class="social-panel shadow">
                 <div class="share-count">
-                    <span>1293 поделились статьей</span>
+                    <span> <%= count_shares(@post) %> </span>
                 </div>
                 <ul>
-                    <li class="soc-1"><a href=""></a></li>
-                    <li class="soc-2"><a href=""></a></li>
-                    <li class="soc-3"><a href=""></a></li>
-                    <li class="soc-4"><a href=""></a></li>
+                    <li class="soc-1">
+                       <%= link_to '', "https://vk.com/share.php?url=#{post_url(@post)}", target: "_blank" %>
+                    </li>
+                    <li class="soc-2">
+                         <%= link_to '', "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=#{post_url(@post)}", target: "_blank" %>
+                    </li>
+                    <li class="soc-3">
+                        <%= link_to '', "http://www.facebook.com/sharer/sharer.php?u=#{post_url(@post)}", target: "_blank" %>
+                    </li>
+                    <li class="soc-4">
+                        <%= link_to '', "http://www.twitter.com/intent/tweet?url=#{post_url(@post)}", target: "_blank" %>
+                    </li>
                 </ul>
             </div>
         </div>

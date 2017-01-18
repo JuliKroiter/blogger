@@ -115,6 +115,8 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.4.6)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     impressionist (1.5.2)
       nokogiri (~> 1.6)
@@ -306,6 +308,7 @@ DEPENDENCIES
   elasticsearch-rails
   enum_help
   font-awesome-rails
+  httparty
   impressionist
   instagram
   jbuilder (~> 2.0)

@@ -64,6 +64,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #WYSIWYG editor
 gem 'bootsy'
 
+
+gem 'httparty'
+
 #track post views count
 gem 'impressionist'
 
