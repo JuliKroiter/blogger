@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   impressionist actions: [:show]
 
   def index
-    all_posts = (params[:term].present? ? search : Post.all).includes(:category, :comments, :topic)
+    all_posts = Post.all.includes(:category, :comments, :topic)
     all_posts = all_posts
                       .by_category(params[:category])
                       .by_topic(params[:topic])
@@ -25,12 +25,6 @@ class PostsController < ApplicationController
   end
 
   private
-
-  def search
-    Post.search(
-      params[:term].presence || "*"
-    ).records
-  end
 
   def current_page
     @current_page = 'posts'

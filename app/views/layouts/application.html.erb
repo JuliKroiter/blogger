@@ -27,10 +27,19 @@
             <div>закрыть меню</div>
           </div>
 
-          <div class="header-title"><%= image_tag('flymama-logo.png') %></div>
+          <div class="header-title">
+            <%= link_to root_path do %>
+              <%= image_tag('flymama-logo.png') %>
+            <% end %>
+          </div>
           <div class="btn-search"></div>
 
-          <%= yield :search %>
+            <%= form_for :term, url: search_path, method: :get do |form| %>
+              <div class="b-search">
+                <%= text_field_tag :term, params[:term], placeholder: "поиск по сайту", required: true%>
+                <button type="submit"></button>
+            <% end %>
+          </div>
         </div>
 
         <!-- Menu Drop -->

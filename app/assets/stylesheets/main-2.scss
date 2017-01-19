@@ -3982,3 +3982,15 @@ a.today:hover {
 
 }
 /*# sourceMappingURL=main.css.map */
+.search_results{
+  .text-b{
+    margin-bottom: 10px;
+  }
+  li{
+    margin-bottom: 20px;
+  }
+  @media (max-width: 670px) {
+    text-align: left;
+    margin-left: 20px;
+  }
+}

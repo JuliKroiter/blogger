@@ -1,0 +1,58 @@
+<div class="title-d">
+  <div><span> Pезультаты поиска: <%= params[:term] %></span></div>
+</div>
+
+
+<ul class="search_results">
+  <% @posts.try(:each) do |post| %>
+    <li>
+      <div class="text-b">
+        <%= highlight((link_to post.title, post_path(post)), params[:term], sanitize: false)%>
+      </div>
+      <p>
+        <%=  highlight((truncate ActionView::Base.full_sanitizer.sanitize(post.content), length: 160),
+        params[:term], sanitize: false) %>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<ul class="search_results">
+  <% @comments.try(:each) do |comment| %>
+    <li>
+     <div class="text-b">
+        <%= highlight((link_to comment.commenter, post_path(comment.post_id, anchor: "b-#{comment.id}"), target: '_blank'),
+        params[:term], sanitize: false) %>
+      </div>
+      <p>
+        <%= highlight(comment.content, params[:term]) %>
+      </p>
+     </div>
+    </li>
+  <% end %>
+</ul>
+
+<ul class="search_results">
+  <% @categories.try(:each) do |category| %>
+    <li>
+     <div class="text-b">
+        <%= highlight((link_to category.title, posts_path(category: category.id,
+        anchor: "i-#{category.id}"), target: '_blank'), params[:term], sanitize: false) %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<ul class="search_results">
+  <% @books.try(:each) do |book| %>
+    <li>
+    <div class="text-b">
+      <%= highlight((link_to book.title, about_path(anchor: "book-#{book.id}"), target: '_blank'),
+      params[:term], sanitize: false) %>
+    </div>
+    <p>
+      <%= highlight(book.content, params[:term]) %>
+    </p>
+    </li>
+  <% end %>
+</ul>
