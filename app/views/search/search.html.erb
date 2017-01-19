@@ -21,8 +21,8 @@
   <% @comments.try(:each) do |comment| %>
     <li>
      <div class="text-b">
-        <%= highlight((link_to comment.commenter, post_path(comment.post_id, anchor: "b-#{comment.id}"), target: '_blank'),
-        params[:term], sanitize: false) %>
+        <%= highlight((link_to comment.commenter, post_path(comment.post_id,
+          anchor: "b-#{comment.id}"), target: '_blank'), params[:term], sanitize: false) %>
       </div>
       <p>
         <%= highlight(comment.content, params[:term]) %>
