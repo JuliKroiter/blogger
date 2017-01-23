@@ -3,7 +3,7 @@
     <div class="row justify-content-md-center">
       <div class="col col-lg-12 zero-padding">
         <article>
-          <div class= "social-panel ">
+          <div class= "social-panel desk">
             <ul>
               <li class="soc-1">
                  <%= link_to '', "https://vk.com/share.php?url=#{posts_url}", target: "_blank" %>
@@ -19,8 +19,8 @@
               </li>
             </ul>
           </div>
-          <figure class="post-image"> <%= image_tag post.image_url(:thumb) %> </figure>
-            <div class="article-text">
+          <figure class="post-image desk"> <%= image_tag post.image_url(:thumb) %> </figure>
+           <div class="article-text">
              <p><h3><%= post.title %></h3></p>
              <hr class="article-hr" role="presentation">
              <div class="b-slide-text">
@@ -41,7 +41,24 @@
                 </div>
             </div>
             <hr class="article-hr" role="presentation">
+            <figure class="post-image mobile"> <%= image_tag post.image_url(:thumb) %> </figure>
              <div class='ttl'> <%= post.content.html_safe %></div>
+          </div>
+             <div class= "social-panel mobile">
+            <ul>
+              <li class="soc-1">
+                 <%= link_to '', "https://vk.com/share.php?url=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-2">
+                   <%= link_to '', "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-3">
+                  <%= link_to '', "http://www.facebook.com/sharer/sharer.php?u=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-4">
+                  <%= link_to '', "http://www.twitter.com/intent/tweet?url=#{posts_url}", target: "_blank" %>
+              </li>
+            </ul>
           </div>
         </article>
 

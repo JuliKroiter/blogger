@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     ids = all_posts.map(&:id)
     ids = ids.unshift(ids.detect{ |id| id == params[:id].to_i}).uniq
     order = "position(id::text in '#{ids.join(',')}')"
-    @posts = Post.where(id: ids).order(order).page(params[:page]).per(6)
+    @posts = Post.where(id: ids).order(order).page(params[:page]).per(2)
   end
 
   def create_comment
