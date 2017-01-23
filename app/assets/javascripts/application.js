@@ -27,6 +27,7 @@
 //= require fullcalendar.min
 //= require jquery.lettering-0.6.1.min
 //= require scripts
+//= require jquery.infinite-pages
 //= require posts
 //= require home
 

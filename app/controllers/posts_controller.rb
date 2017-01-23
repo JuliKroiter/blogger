@@ -13,8 +13,12 @@ class PostsController < ApplicationController
     render params[:page].present? ? 'more_pages' : 'index'
   end
 
-  def show
-    @post = Post.find(params[:id])
+  def show_posts
+    all_posts = Post.site.includes(:category, :comments, :topic)
+    ids = all_posts.map(&:id)
+    ids = ids.unshift(ids.detect{ |id| id == params[:id].to_i}).uniq
+    order = "position(id::text in '#{ids.join(',')}')"
+    @posts = Post.where(id: ids).order(order).page(params[:page]).per(6)
   end
 
   def create_comment
@@ -22,6 +26,11 @@ class PostsController < ApplicationController
     cp[:commenter] = cp[:commenter].blank? ? 'Аноним' : cp[:commenter]
     @comment = Comment.create(cp)
     @post = Post.find(params[:comment][:post_id])
+  end
+
+  def more_comments
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments.page(params[:page]).per(3)
   end
 
   private

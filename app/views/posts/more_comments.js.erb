@@ -1,0 +1,5 @@
+$('.comments').append('<%= escape_javascript render partial: 'comment', collection: @comments %>');
+$('#more-comments' + "<%=@post.id%>").replaceWith('<%= escape_javascript(link_to 'еще', more_comments_path(post_id: @post.id, page: params[:page].to_i + 1), id: "more-comments-#{@post.id}", remote: true)%>');
+ <% if @comments.last_page? %>
+  $('#more-comments-' + "<%=@post.id%>").hide();
+<% end %>

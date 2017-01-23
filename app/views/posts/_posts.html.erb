@@ -1,0 +1,88 @@
+<% @posts.each do |post| %>
+  <div class="container post-border">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-12 zero-padding">
+        <article>
+          <div class= "social-panel ">
+            <ul>
+              <li class="soc-1">
+                 <%= link_to '', "https://vk.com/share.php?url=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-2">
+                   <%= link_to '', "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-3">
+                  <%= link_to '', "http://www.facebook.com/sharer/sharer.php?u=#{posts_url}", target: "_blank" %>
+              </li>
+              <li class="soc-4">
+                  <%= link_to '', "http://www.twitter.com/intent/tweet?url=#{posts_url}", target: "_blank" %>
+              </li>
+            </ul>
+          </div>
+          <figure class="post-image"> <%= image_tag post.image_url(:thumb) %> </figure>
+            <div class="article-text">
+             <p><h3><%= post.title %></h3></p>
+             <hr class="article-hr" role="presentation">
+             <div class="b-slide-text">
+                <div class="text">Раздел: <%= post.try(:category).try(:title) %></div>
+                <div class="stats">
+                  <div class="stat" id = "show-comments">
+                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                    <span><%= post.comments.try(:count) %></span>
+                  </div>
+                  <div class="stat">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span><%= post.impressionist_count %></span>
+                  </div>
+                  <div class="stat">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <span><%= l(post.created_at.to_date, :format => :default) %></span>
+                  </div>
+                </div>
+            </div>
+            <hr class="article-hr" role="presentation">
+             <div class='ttl'> <%= post.content.html_safe %></div>
+          </div>
+        </article>
+
+        <div class="col col-lg-12 zero-padding">
+          <div class="col col-lg-5 zero-padding">
+            <div class="comments-block">
+              <div class="title-com">
+                <h3>Комментарии</h3>
+                <i><%= post.comments.count %></i>
+              </div>
+            <div class="collapsed" data-toggle="collapse" data-target="#collapse-post-<%= post.id%>"><i class="chevron fa fa-fw" ></i></div>
+            <div class="collapse" id="collapse-post-<%= post.id%>">
+              <div class = 'comments'>
+                <% post.comments.first(3).each do |comment| %>
+                  <%= render partial: 'comment', locals: {comment: comment} %>
+                <% end %>
+                <div >
+                </div>
+              </div>
+                <%= link_to  more_comments_path(post_id: post.id, page: 2), id: "more-comments-#{post.id}", remote: true, style: "#{'display:none' if post.comments.count <= 3}"  do %>
+                    <i class="fa fa-refresh" aria-hidden="true" style ='margin: -90px 0 20px 80px;'> еще </i>
+                <% end %>
+              <h3>Добавить свой комментарий</h3>
+              <div class="form-comment">
+                <%= form_for Comment.new, url: create_comment_path, class: 'form-comment', remote: true do |f| %>
+                    <%= hidden_field_tag 'comment[post_id]', post.id %>
+                    <%= f.text_field :commenter, placeholder: 'Ваше имя' %>
+                    <%= f.text_area :content, placeholder: "Оставьте тут свой комментарий...", required: true %>
+                    <%= f.submit 'отправить комментарий ', class: "btn-sub" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<script>
+  $('.chevron ').click(function(){
+    $(this).parent().css({'display': 'inline'})
+  })
+</script>

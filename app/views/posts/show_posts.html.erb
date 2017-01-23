@@ -1,0 +1,16 @@
+<div class="infinite-table">
+  <%= render partial: 'posts', object: @posts%>
+  <p class="pagination" hidden>
+    <%= link_to_next_page @posts, "", params: params, remote: true %>
+  </p>
+</div>
+<script>
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 1){
+      $('.s-header-btm ').addClass("sticky");
+    }
+    else{
+      $('.s-header-btm').removeClass("sticky");
+    }
+});
+</script>

@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   post 'free_book' => 'home#free_book'
   post 'contact_me' => 'home#contact_me'
   get 'search', to: 'search#search'
+  get 'show_posts' => 'posts#show_posts'
+  get 'more_comments' => 'posts#more_comments'
 
   namespace :admin do
     root 'posts#index'

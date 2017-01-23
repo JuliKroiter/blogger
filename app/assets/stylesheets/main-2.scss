@@ -3872,8 +3872,8 @@ a.today:hover {
 }
 
 .social-panel {
-  height: 80px;
-  font-size: 0;
+  float: left;
+  margin: 10px 0;
 }
 .social-panel .share-count {
   text-align: center;
@@ -3905,14 +3905,18 @@ a.today:hover {
   display: inline-block;
   vertical-align: top;
   width: 66%;
+  width: 48px;
+  border: 1px solid #ccc;
   font-size: 0;
 }
 .social-panel ul li {
-  width: 25%;
-  padding-top: 28px;
-  height: 80px;
-  display: inline-block;
-  border-right: 2px solid #e0dfe3;
+  width: 48px;
+  height: 48px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  &:hover{
+    background-color: #f0f0f0;
+  }
 }
 .social-panel ul li a {
   background: image-url('sprites.png') 0 0;
@@ -3945,17 +3949,17 @@ a.today:hover {
     position: static;
     margin-bottom: 17px;
   }
-
+/*
   .social-panel {
     height: auto;
   }
   .social-panel .share-count, .social-panel ul {
     width: auto;
     display: block;
-  }
+  }*/
 }
 @media (max-width: 380px) {
-  .social-panel ul li {
+  /*.social-panel ul li {
     width: 50%;
     height: 127px;
     padding-top: 49px;
@@ -3967,7 +3971,7 @@ a.today:hover {
   }
   .social-panel ul li:nth-child(3), .social-panel ul li:nth-child(4) {
     border-bottom: none;
-  }
+  }*/
 }
 .post-content{
   line-height: 29px;
@@ -3991,6 +3995,93 @@ a.today:hover {
     margin-bottom: 20px;
   }
   @media (max-width: 670px) {
+    text-align: left;
+  }
+}
+
+.post-border{
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+}
+
+figure.post-image {
+  float: left;
+  width: 50%;
+  img{
+    width: 100%;
+    margin: 10px 0;
+    padding-right: 30px;
+    @media (max-width: 670px) {
+      position:absolute;
+      bottom: 0;
+      max-height: 250px;
+    }
+  }
+}
+
+.zero-padding{
+  padding: 0;
+}
+
+.article-text{
+  padding: 30px;
+  @media (max-width: 670px) {
+    padding: 0 0 200px 0;
+  }
+}
+
+.article-hr {
+    background: #ccc;
+    margin: 10px 0;
+    width: 200px;
+    height: 1px;
+    text-align: left;
+    @media (max-width: 670px) {
+      margin: 0;
+    }
+}
+
+.sticky{
+  position: fixed;
+  width: 1100px;
+  background: white;
+  z-index: 9999999;
+  top: 0;
+  width: 100%;
+}
+
+.stat i{
+  font-size: 15px;
+  color: #ccc;
+}
+
+.comments-block{
+    padding: 10px 30px;
+    word-break: break-word;
+}
+
+.title-com{
+  display: inline;
+}
+
+.collapsed, .chevron{
+  display: inline;
+  font-size: 18px;
+  color: #d3215d;
+  display: inline;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.chevron:after {
+    content: "\f078";
+}
+.collapsed .chevron:after {
+    content: "\f054";
+}
+
+.ttl{
+  @media (max-width: 380px) {
     text-align: left;
   }
 }
