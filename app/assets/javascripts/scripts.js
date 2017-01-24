@@ -2,6 +2,9 @@ document.documentElement.className = document.documentElement.className.replace(
 
 
 $(document).ready(function() {
+     $(document).on('click', '.chevron ', function(){
+        $(this).parent().css({'display': 'inline'})
+      })
 
     // Placeholder Hide
     $("input, textarea").focus(function(){
@@ -152,6 +155,3 @@ $(function() {
     }
   });
 });
- $(document).on('click', '.chevron ', function(){
-    $(this).parent().css({'display': 'inline'})
-  })

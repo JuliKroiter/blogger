@@ -28,7 +28,7 @@
                 <div class="stats">
                   <div class="stat">
                     <i class="fa fa-comments-o" aria-hidden="true"></i>
-                    <span><%= post.comments.try(:count) %></span>
+                    <span id = "count-<%= post.id %>"><%= post.comments.try(:count) %></span>
                   </div>
                   <div class="stat">
                     <i class="fa fa-eye" aria-hidden="true"></i>
