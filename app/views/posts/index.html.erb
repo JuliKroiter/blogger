@@ -13,7 +13,7 @@
 <div class="blog-socket">
   <div class="s-filter shadow">
     <div class="categories">
-      <%- Category.all.each_with_index do |category, index| %>
+      <%- Topic.all.each_with_index do |category, index| %>
         <!-- FIX for blank image -->
         <div class="i-category" id = "i-<%=category.id%>">
           <div class="ico">
@@ -38,7 +38,7 @@
       <div class="filter-item all topic active-topic">
         <span>Показать все темы</span>
       </div>
-      <%- Topic.first(4).each do |topic| %>
+      <%- Category.first(4).each do |topic| %>
         <div class="filter-item topic">
           <%= hidden_field_tag :topic,  topic.id %>
           <span><%= topic.title %></span>
@@ -46,7 +46,7 @@
       <% end %>
       <div class="filter-item filter-item-select">
         <div class="filter-select">
-          <%= select_tag(:theme_select, options_for_select((Topic.all[5..-1] || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще темы"}})%>
+          <%= select_tag(:theme_select, options_for_select((Category.all[5..-1] || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще темы"}})%>
         </div>
       </div>
 
