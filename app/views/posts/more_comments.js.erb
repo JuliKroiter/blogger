@@ -1,5 +1,6 @@
 $('.comments').append('<%= escape_javascript render partial: 'comment', collection: @comments %>');
-$('#more-comments' + "<%=@post.id%>").replaceWith('<%= escape_javascript(link_to 'еще', more_comments_path(post_id: @post.id, page: params[:page].to_i + 1), id: "more-comments-#{@post.id}", remote: true)%>');
+$('#more-comments-' + "<%=@post.id%>").replaceWith('<%= escape_javascript(link_to 'еще', more_comments_path(post_id: @post.id, page: params[:page].to_i + 1), id: "more-comments-#{@post.id}", remote: true) %>');
+$('#more-comments-' + "<%=@post.id%>").prepend('<i class="fa fa-refresh" aria-hidden="true" style ="margin: -90px 0 20px 80px;"> </i>')
  <% if @comments.last_page? %>
   $('#more-comments-' + "<%=@post.id%>").hide();
 <% end %>

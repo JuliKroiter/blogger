@@ -7,7 +7,7 @@
   <% @posts.try(:each) do |post| %>
     <li>
       <div class="text-b">
-        <%= highlight((link_to post.title, post_path(post)), params[:term], sanitize: false)%>
+        <%= highlight((link_to post.title, show_posts_path(id: post.id)), params[:term], sanitize: false)%>
       </div>
       <p>
         <%=  highlight((truncate ActionView::Base.full_sanitizer.sanitize(post.content), length: 160),
@@ -21,7 +21,7 @@
   <% @comments.try(:each) do |comment| %>
     <li>
      <div class="text-b">
-        <%= highlight((link_to comment.commenter, post_path(comment.post_id,
+        <%= highlight((link_to comment.commenter,  show_posts_path(id: comment.post_id,
           anchor: "b-#{comment.id}"), target: '_blank'), params[:term], sanitize: false) %>
       </div>
       <p>

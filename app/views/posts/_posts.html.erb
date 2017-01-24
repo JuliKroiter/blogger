@@ -26,7 +26,7 @@
              <div class="b-slide-text">
                 <div class="text">Раздел: <%= post.try(:category).try(:title) %></div>
                 <div class="stats">
-                  <div class="stat" id = "show-comments">
+                  <div class="stat">
                     <i class="fa fa-comments-o" aria-hidden="true"></i>
                     <span><%= post.comments.try(:count) %></span>
                   </div>
@@ -67,7 +67,7 @@
             <div class="comments-block">
               <div class="title-com">
                 <h3>Комментарии</h3>
-                <i><%= post.comments.count %></i>
+                <i id="comments-count-<%= post.id %>"><%= post.comments.count %></i>
               </div>
             <div class="collapsed" data-toggle="collapse" data-target="#collapse-post-<%= post.id%>"><i class="chevron fa fa-fw" ></i></div>
             <div class="collapse" id="collapse-post-<%= post.id%>">
@@ -98,8 +98,3 @@
   </div>
 </div>
 <% end %>
-<script>
-  $('.chevron ').click(function(){
-    $(this).parent().css({'display': 'inline'})
-  })
-</script>

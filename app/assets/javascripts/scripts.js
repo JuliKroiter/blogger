@@ -152,3 +152,6 @@ $(function() {
     }
   });
 });
+ $(document).on('click', '.chevron ', function(){
+    $(this).parent().css({'display': 'inline'})
+  })

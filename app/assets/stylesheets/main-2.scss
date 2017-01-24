@@ -3815,6 +3815,7 @@ a.today:hover {
 .form-comment {
   padding-bottom: 30px;
 }
+
 .form-comment textarea {
   padding: 10px 5px;
   height: 180px;
@@ -3835,6 +3836,9 @@ a.today:hover {
     margin-bottom: 9px;
     border: 2px solid #e0dfe3;
     border-radius: 2px;
+    @media (max-width: 670px) {
+      float: left;
+    }
 }
 
 .form-comment textarea::-webkit-input-placeholder,  .form-comment #comment_commenter::-webkit-input-placeholder{
@@ -4092,6 +4096,20 @@ figure.post-image {
   margin-left: 10px;
 }
 
+.collapse{
+  h3{
+    @media (max-width: 670px) {
+      margin-bottom: 10px;
+      float: left;
+    }
+  }
+  i {
+    @media (max-width: 670px) {
+          margin: 0 0 10px 30px !important;
+    }
+  }
+}
+
 .chevron:after {
     content: "\f078";
 }
@@ -4109,11 +4127,13 @@ figure.post-image {
 .social-panel.mobile{
   float: none;
   ul{
-    width: 50%;
+    width: 80%;
+    margin-left: 10%;
     border: none;
     li{
       float: left;
       border: 1px solid #ccc;
+      width: 20%;
 
     }
   }

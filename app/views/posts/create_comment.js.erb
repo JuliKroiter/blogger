@@ -1,5 +1,5 @@
 $('.comments').append("<%= escape_javascript(render(:partial => 'comment', :locals => {:comment => @comment})) %>")
-$('.title-com i').text("<%= @post.comments.count %>")
 $('textarea').val('')
 $('#create_commenter, #comment_commenter').val('')
 $('#show-comments span').text("<%= @post.comments.count %>")
+$('#comments-count-' + "<%=@post.id%>").text("<%= @post.comments.count %>")
