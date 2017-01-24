@@ -4138,3 +4138,9 @@ figure.post-image {
     }
   }
 }
+
+.comments{
+  @media (max-width: 670px) {
+    text-align: left;
+  }
+}
