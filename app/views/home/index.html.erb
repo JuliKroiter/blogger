@@ -167,14 +167,14 @@
       <div class="blog-socket">
 
       <div class="b-articles">
-        <%- Category.all.each_with_index do |category, index| %>
+        <%- Topic.all.each_with_index do |topic, index| %>
           <div class="article">
             <div class="ico-a">
                <%= image_tag("ico-#{index + 1 }.png") %>
             </div>
-            <div class="name"><%= category.title %></div>
-            <div class="text"> <%= category.posts.count %> <%= pluralize_article(category.posts.count) %></div>
-            <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(category: category.id), class: "btn btn-2 btn-g btn-read" %>
+            <div class="name"><%= topic.title %></div>
+            <div class="text"> <%= topic.posts.count %> <%= pluralize_article(topic.posts.count) %></div>
+            <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(topic: topic.id), class: "btn btn-2 btn-g btn-read" %>
          </div>
         <% end %>
       </div>

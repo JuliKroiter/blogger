@@ -6,7 +6,7 @@
 }
 
 .ps, .menu-drop > li.is-current a span:before, .btn-menu span::before,
-.btn-menu span::after, .menu li:after, .menu li.is-current a:after, .play:after, .checkbox .custom-checkbox:before, .quote:before, .filter-item.active-topic span:after, .b-load div:after, .b-comment .comment:before, .social-panel .share-count span:after {
+.btn-menu span::after, .menu li:after, .menu li.is-current a:after, .play:after, .checkbox .custom-checkbox:before, .quote:before, .filter-item.active-category span:after, .b-load div:after, .b-comment .comment:before, .social-panel .share-count span:after {
   content: "";
   display: block;
   position: absolute;
@@ -16,7 +16,7 @@
   display: none;
 }
 
-.trans-all, .header-title a, .menu-drop > li > a, .menu li a, .play, .filter-select .chosen-container-single .chosen-single span, .filter-select .chosen-container-single .chosen-drop ul.chosen-results li, .categories .i-category span, .filter-item span, .b-article .desc h3 a, .b-load div, .btn-sub {
+.trans-all, .header-title a, .menu-drop > li > a, .menu li a, .play, .filter-select .chosen-container-single .chosen-single span, .filter-select .chosen-container-single .chosen-drop ul.chosen-results li, .topics .i-topic span, .filter-item span, .b-article .desc h3 a, .b-load div, .btn-sub {
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -145,7 +145,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.uc, .filter-select .chosen-container-single .chosen-single span, .filter-select .chosen-container-single .chosen-drop ul.chosen-results li, .categories .i-category span, .filter-item span {
+.uc, .filter-select .chosen-container-single .chosen-single span, .filter-select .chosen-container-single .chosen-drop ul.chosen-results li, .topics .i-topic span, .filter-item span {
   font-size: 12px;
   font-family: "PTSans-Bold";
   text-transform: uppercase;
@@ -2318,17 +2318,17 @@ html, body {
   margin-bottom: 45px;
 }
 
-.categories {
+.topics {
   border-bottom: 2px solid #f4f4f4;
 }
-.categories:before, .categories:after {
+.topics:before, .categories:after {
   content: " ";
   display: table;
 }
-.categories:after {
+.topics:after {
   clear: both;
 }
-.categories .i-category {
+.topics .i-topic {
   float: left;
   padding-top: 16px;
   width: 25%;
@@ -2339,31 +2339,31 @@ html, body {
   background-color: #fff;
   text-align: center;
 }
-.categories .i-category:first-child {
+.topics .i-topic:first-child {
   border-left: none;
 }
-.categories .i-category:last-child {
+.topics .i-topic:last-child {
   border-right: none;
 }
-.categories .i-category .ico {
+.topics .i-topic  .ico {
   height: 86px;
 }
-.categories .i-category .ico .act {
+.topics .i-topic  .ico .act {
   display: none;
 }
-.categories .i-category span {
+.topics .i-topic  span {
   display: block;
 }
-.categories .i-category.is-active .ico .def {
+.topics .i-topic .is-active .ico .def {
   display: none;
 }
-.categories .i-category.is-active .ico .act {
+.topics .i-topic.is-active .ico .act {
   display: inline;
 }
-.categories .i-category.is-active span {
+.topics .i-topic.is-active span {
   color: #212121;
 }
-.categories .i-category:hover span {
+.topics .i-topic:hover span {
   color: #d3215d;
 }
 
@@ -2400,7 +2400,7 @@ html, body {
   position: relative;
   display: inline-block;
 }
-.filter-item.active-topic span:after {
+.filter-item.active-category span:after {
   left: 0;
   top: auto;
   right: 0;
@@ -2721,7 +2721,7 @@ html, body {
   }
 }
 @media (max-width: 850px) {
-  .filter-item span, .categories .i-category span {
+  .filter-item span, .ttopics .i-topic span {
     font-size: 11px;
   }
 }
@@ -2764,19 +2764,19 @@ html, body {
     display: none;
   }
 
-  .categories .i-category {
+  .topics .i-topic {
     position: relative;
     padding-top: 25px;
     height: 62px;
     border: none;
   }
-  .categories .i-category .ico {
+  .topics .i-topic .ico {
     display: none;
   }
-  .categories .i-category span {
+  .topics .i-topic span {
     font-size: 12px;
   }
-  .categories .i-category.is-active:after {
+  .topics .i-topic.is-active:after {
     content: "";
     display: block;
     position: absolute;
@@ -2862,7 +2862,7 @@ html, body {
     padding-right: 70px;
   }
 
-  .categories .i-category.is-active:after {
+  .topics .i-topic.is-active:after {
     left: 0;
     right: 0;
   }

@@ -12,41 +12,41 @@
 
 <div class="blog-socket">
   <div class="s-filter shadow">
-    <div class="categories">
-      <%- Topic.all.each_with_index do |category, index| %>
+    <div class="topics">
+      <%- Topic.all.each_with_index do |topic, index| %>
         <!-- FIX for blank image -->
-        <div class="i-category" id = "i-<%=category.id%>">
+        <div class="i-topic" id = "i-<%=topic.id%>">
           <div class="ico">
-            <%= hidden_field_tag :category, category.id, id: "category-#{category.id}"%>
+            <%= hidden_field_tag :topic, topic.id, id: "topic-#{topic.id}"%>
             <%= image_tag("c-#{index + 1 }.png", class: 'def') %>
             <%= image_tag("ico-#{index + 1}.png", class: 'act') %>
           </div>
-          <span class = 'category-title'><%= category.title %></span>
+          <span class = 'topic-title'><%= topic.title %></span>
         </div>
-        <% if params[:category].to_i == index + 1 %>
+        <% if params[:topic].to_i == index + 1 %>
           <script>
-            $("#category-<%=category.id %>").next('.def').next('.act').show();
-            $("#category-<%=category.id %>").next('.def').hide();
-            $("#category-<%=category.id %>").parents('.i-category').addClass('is-active');
-            $("#category-<%=category.id %>").parent().next().css('color', '#d3215d');
+            $("#topic-<%=topic.id %>").next('.def').next('.act').show();
+            $("#topic-<%=topic.id %>").next('.def').hide();
+            $("#topic-<%=topic.id %>").parents('.i-topic').addClass('is-active');
+            $("#topic-<%=topic.id %>").parent().next().css('color', '#d3215d');
           </script>
         <% end %>
       <% end %>
     </div>
 
     <div class="filter-row">
-      <div class="filter-item all topic active-topic">
-        <span>Показать все темы</span>
+      <div class="filter-item all category active-category">
+        <span>Все категории</span>
       </div>
-      <%- Category.first(4).each do |topic| %>
-        <div class="filter-item topic">
-          <%= hidden_field_tag :topic,  topic.id %>
-          <span><%= topic.title %></span>
+      <%- Category.first(8).each do |category| %>
+        <div class="filter-item category">
+          <%= hidden_field_tag :category,  category.id %>
+          <span><%= category.title %></span>
         </div>
       <% end %>
       <div class="filter-item filter-item-select">
         <div class="filter-select">
-          <%= select_tag(:theme_select, options_for_select((Category.all[5..-1] || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще темы"}})%>
+          <%= select_tag(:theme_select, options_for_select((Category.last(9) || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще"}})%>
         </div>
       </div>
 
