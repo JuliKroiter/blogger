@@ -13,11 +13,12 @@ Rails.application.routes.draw do
   post 'order_book' => 'home#order_book'
   post 'order_consultation' => 'home#order_consultation'
   post 'create_comment' => 'posts#create_comment'
-  post 'free_book' => 'home#free_book'
+  post 'free_planer' => 'home#free_planer'
   post 'contact_me' => 'home#contact_me'
   get 'search', to: 'search#search'
   get 'show_posts' => 'posts#show_posts'
   get 'more_comments' => 'posts#more_comments'
+  get 'polygraphy' => 'home#polygraphy'
 
   namespace :admin do
     root 'posts#index'

@@ -5,7 +5,7 @@
         <div class="cell">
             <div class="b-slide-text quote">
                 <div class="title">Мама - сердце семьи!</div>
-                <div class="text">Если мама организованная, здоровая и спокойная - выигрывает вся семья.</div>
+                <div class="text">Если мама организованная, здоровая и счастливая - выигрывается все семья.</div>
                 <a href="" class="btn order-consultation">Заказать профеcсиональную конультацию</a>
             </div>
         </div>
@@ -16,7 +16,7 @@
 
 <div class="s-item s-intro">
   <div class="socket">
-    <%= image_tag('photo-1.jpg', class: 'image')%>
+    <%= image_tag('hi.jpg', class: 'image')%>
 
     <span class="circ"></span>
     <div class="q"></div>
@@ -27,12 +27,12 @@
       </div>
 
       <p>
-        Меня зовут Светлана Гончарова. Я дважды мама,
-        эксперт по семейному тайм-менеджменту
-        и автор <a href="">www.flymama.info</a>  Я от всего серца хочу
-        помочь вам стать организованой и счастливой мамой.
+        Меня зовут Света Гончарова. Я дважды мама,
+        эксперт по семейному тайм-менеджменту,
+        писательница и автор <a href="">www.flymama.info</a> Я от всего сердца хочу
+        помочь вам стать организованной и счастливой мамой.
       </p>
-      <%= link_to 'Больше обо мне', about_path, class: "btn btn-2" %>
+      <%= link_to 'Узнать больше', about_path, class: "btn btn-2" %>
     </div>
   </div>
 </div>
@@ -44,19 +44,61 @@
 
     <div class="book-form">
       <div class="title-d">
-        <div><span>Книга в подарок!</span></div>
+        <div><span>Подарок</span></div>
       </div>
-      <div class="text">Оставьте ваш е-мейл чтобы получить книгу бесплатно.</div>
-        <%= form_tag free_book_path, id: 'free-book-form', remote: true do %>
+      <div class="text">Начните свой путь к порядку прямо сейчас!  Я хочу подарить вам
+                        Планер Королевы Порядка. Скачайте, распечатайте и планируйте день,
+                        неделю, месяц, меню, бюджет легко и просто.</div>
+      <%= form_tag free_planer_path, id: 'free-book-form', remote: true do %>
           <div class="input">
               <%= email_field_tag :email, nil, id: 'email-free-book', placeholder: "введите ваш е-мейл", required: true %>
           </div>
-          <%= submit_tag 'получить книгу', class: "btn btn-2" %>
+          <%= submit_tag 'Скачать', class: "btn btn-2" %>
         <% end %>
     </div>
       <%= image_tag('book.png', class: 'image') %>
   </div>
 </div>
+
+ <div class="b-slider-mobile"></div>
+
+      <div class="title-h-center">
+          <div class="title-d">
+              <div><span>Полиграфия</span></div>
+          </div>
+          <div class="text polygraphy">Получите ежедневное вдохновение, идеи и мотивацию в
+                            моих книгах-бестселлерах для мам. Кстати, кроме книг у меня есть
+                            еще календарь и планнер для мам. Вы уже их видели?</div>
+      </div>
+      <%= link_to 'УЗНАТЬ БОЛЬШЕ', polygraphy_path, class: "btn btn-2 btn-center" %>
+
+      <div class="b-carousel b-carousel-p">
+          <div class="jcarousel">
+              <ul>
+                <li>
+                  <% Book.all.each do |book| %>
+                      <div class="b-polygraphy shadow">
+                          <h3><%= book.title %></h3>
+                          <div class="book" id=<%= "book-#{book.id}" %>>
+                              <%= image_tag(book.image.url) %>
+                              <div class="circ circ-f"><%= book.price %> грн.</div>
+                          </div>
+                          <div class="text-b">краткое описание</div>
+                          <p> <%= book.content %></p>
+                          <a class="btn btn-3 btn-more order-book" id=<%= book.id %> href="#">заказать книгу</a>
+                      </div>
+                  <% end %>
+                <li>
+              </ul>
+          </div>
+         <!--  <div class="jcarousel-items"></div>
+          <div class="jcarousel-panel"></div>
+          <div class="jcarousel-pagination"></div>
+          <a href="#" class="jcarousel-control-prev"></a>
+          <a href="#" class="jcarousel-control-next"></a> -->
+      </div>
+
+      <div class="b-slider-p-mobile"></div>
 
  <div class="s-item s-feedback">
       <div class="socket">

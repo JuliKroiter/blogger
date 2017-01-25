@@ -1755,7 +1755,7 @@ html, body {
 }
 
 .s-slide-blog {
-  background-image: image-url('slide-2.jpg');
+  background-image: image-url('blog_slide.jpg');
 }
 .s-slide-blog .q {
   top: 11px;
@@ -1772,8 +1772,8 @@ html, body {
 }
 @media (max-width: 767px) {
   .s-slide-blog {
-    background-image: image-url('slide-2-mob.jpg');
-    background-position: 73% 0 !important;
+    background-image: image-url('blog_slide.jpg');
+    background-position: 13% 0 !important;
     background-color: #f8f8f8;
   }
   .s-slide-blog .b-slide-text .text {
@@ -1785,12 +1785,12 @@ html, body {
 }
 @media (max-width: 720px) {
   .s-slide-blog {
-    background-position: 60% 0 !important;
+    background-position: 15% 0 !important;
   }
 }
 @media (max-width: 380px) {
   .s-slide-blog {
-    background-position: 55% 0 !important;
+    background-position: 15% 0 !important;
   }
 }
 
@@ -1802,14 +1802,14 @@ html, body {
 }
 
 .s-intro {
-  height: 890px;
+  height: 720px;
 }
 .s-intro .socket {
   padding-top: 90px;
 }
 .s-intro .image {
-  width: 460px;
-  margin-left: 100px;
+  width: 600px;
+  margin-left: 0px;
 }
 .s-intro .circ {
   right: 125px;
@@ -1866,6 +1866,7 @@ html, body {
 
 .s-book, .s-quote {
   height: 509px;
+  margin-bottom: 30px;
   background-color: #f6f5f6;
   z-index: 1;
 }
@@ -1880,6 +1881,14 @@ html, body {
 }
 .s-book .text, .s-quote .text {
   font-size: 14px;
+}
+
+.s-book .text{
+  width: 450px;
+  word-wrap: break-word;
+  @media (max-width: 767px) {
+    width: inherit;
+  }
 }
 .s-book .circ, .s-quote .circ {
   top: 64px;
@@ -3043,6 +3052,22 @@ a.today:hover {
 .s-slide-t .cell {
   height: 462px;
 }
+.s-slide-t{
+  background-image: image_url('slide-2.jpg');
+  .white-text{
+    .title, .text{
+    color: black  !important;
+    }
+  }
+  @media (max-width: 767px) {
+    background-image: image_url('slide-2-mob.jpg');
+    .white-text{
+      .title, .text{
+      color: white !important;
+      }
+    }
+  }
+}
 .s-slide-t .title, .s-slide-t .text {
   color: #fff;
 }
@@ -3509,8 +3534,8 @@ a.today:hover {
 .b-carousel-p {
   position: relative;
   width: 1100px;
-  padding-bottom: 135px;
-  margin: auto;
+/*  padding-bottom: 135px;
+*/  margin: auto;
 }
 @media (max-width: 1023px) {
   .b-carousel-p {
@@ -4143,4 +4168,19 @@ figure.post-image {
   @media (max-width: 670px) {
     text-align: left;
   }
+}
+
+.btn-center{
+  margin: auto;
+  display: block;
+  width: 200px;
+}
+
+.polygraphy{
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    @media (max-width: 670px) {
+    width: inherit;
+    }
 }

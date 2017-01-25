@@ -1,0 +1,63 @@
+<!-- CONTENT -->
+
+<div class="b-slider-mobile"></div>
+
+<div class="title-h-center">
+    <div class="title-d">
+        <div><span>Полиграфия</span></div>
+    </div>
+    <div class="text">Мои достижения и подтверждения проффесионализма</div>
+</div>
+
+<div class="b-carousel b-carousel-p">
+    <div class="jcarousel">
+        <ul>
+          <li>
+            <% Book.all.each do |book| %>
+                <div class="b-polygraphy shadow">
+                    <h3><%= book.title %></h3>
+                    <div class="book" id=<%= "book-#{book.id}" %>>
+                        <%= image_tag(book.image.url) %>
+                        <div class="circ circ-f"><%= book.price %> грн.</div>
+                    </div>
+                    <div class="text-b">краткое описание</div>
+                    <p> <%= book.content %></p>
+                    <a class="btn btn-3 btn-more order-book" id=<%= book.id %> href="#">заказать книгу</a>
+                </div>
+            <% end %>
+          <li>
+        </ul>
+    </div>
+</div>
+<div class="b-slider-p-mobile"></div>
+
+   <!--  <div class="jcarousel-items"></div>
+          <div class="jcarousel-panel"></div>
+          <div class="jcarousel-pagination"></div>
+          <a href="#" class="jcarousel-control-prev"></a>
+          <a href="#" class="jcarousel-control-next"></a>
+      </div>
+
+
+  </div>
+</div>
+<!-- / CONTENT -->
+<!-- POPUP -->
+<div class="w-popup">
+  <div id="popup-s" class="b-popup">
+    <div class="close"></div>
+    <div class="popup">
+        <div class="ico-mail">
+            <%= image_tag('ico-mail.gif') %>
+        </div>
+        <h3>Закажите книгу</h3>
+        <%= form_tag order_book_path, id: 'order-form', remote: true do%>
+          <%= hidden_field_tag :book_id %>
+          <div class="input-r">
+              <%= email_field_tag :email, nil, placeholder: "Ваш е-мейл" %>
+          </div>
+          <%= submit_tag 'заказать', class: "btn btn-4" %>
+      <% end %>
+    </div>
+</div>
+</div>

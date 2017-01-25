@@ -24,15 +24,19 @@ class HomeController < ApplicationController
     UserMailer.order_consultation(email, @subject).deliver_now
   end
 
-  def free_book
+  def free_planer
     email = params[:email]
-    UserMailer.free_book(email).deliver_now
+    UserMailer.free_planer(email).deliver_now
   end
 
   def contact_me
     name = params[:name]
     email = params[:email]
     UserMailer.contact_me(name, email).deliver_now
+  end
+
+  def polygraphy
+    @current_page = 'polygraphy'
   end
 
   private

@@ -12,9 +12,9 @@ class UserMailer < ActionMailer::Base
     mail(from: email, subject: subject)
   end
 
-  def free_book email
+  def free_planer email
     @email = email
-    mail(from: email, subject: 'Книга в подарок')
+    mail(from: email, subject: 'Планер в подарок')
   end
 
   def contact_me name, email
