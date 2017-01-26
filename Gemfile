@@ -70,6 +70,10 @@ gem 'bootsy'
 
 gem 'httparty'
 
+gem 'roo'
+gem 'roo-xls'
+gem 'sanitize'
+
 #track post views count
 gem 'impressionist'
 
@@ -102,3 +106,5 @@ group :production do
   gem 'unicorn', '5.0.1'
   gem 'pg'
 end
+
+

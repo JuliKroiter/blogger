@@ -144,7 +144,7 @@
   </div>
 </div>
 <!-- POPUP -->
-<div class="w-popup">
+<div class="w-popup order">
   <div id="popup-s" class="b-popup">
     <div class="close"></div>
     <div class="popup">
@@ -162,5 +162,21 @@
       <% end %>
     </div>
 </div>
-
-
+<div class="w-popup order-book">
+  <div id="popup-s" class="b-popup">
+    <div class="close"></div>
+    <div class="popup">
+        <div class="ico-mail">
+            <%= image_tag('ico-mail.gif') %>
+        </div>
+        <h3>Закажите книгу</h3>
+        <%= form_tag order_book_path, id: 'order-form', remote: true do%>
+          <%= hidden_field_tag :book_id %>
+          <div class="input-r">
+              <%= email_field_tag :email, nil, placeholder: "Ваш е-мейл" %>
+          </div>
+          <%= submit_tag 'заказать', class: "btn btn-4" %>
+      <% end %>
+    </div>
+</div>
+</div>

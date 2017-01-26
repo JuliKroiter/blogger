@@ -7,7 +7,7 @@ class PostsController < ApplicationController
                       .by_category(params[:category])
                       .by_topic(params[:topic])
                       .order(params[:order].blank?  ? 'created_at desc' :  'created_at ' + params[:order] )
-    @posts = all_posts.site.page(params[:page]).per(6)
+    @posts = all_posts.site.page(params[:page]).per(2)
     @fb_posts = all_posts.facebook.last(4)
     @inst_posts = all_posts.instagram.last(4)
     render params[:page].present? ? 'more_pages' : 'index'

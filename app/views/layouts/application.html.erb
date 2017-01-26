@@ -57,12 +57,6 @@
                 Обо мне
               <% end %>
             </li>
-            <li class=<%= "is-current" if  params[:action] == 'polygraphy'%>>
-              <%= link_to polygraphy_path do %>
-                <span>03</span>
-                Полиграфия
-              <% end %>
-            </li>
             <li class=<%= "is-current" if (params[:action] == 'index' && params[:controller] == 'posts')%>>
               <%= link_to posts_path do%>
                 <span>04 </span>
@@ -85,7 +79,6 @@
           <ul>
             <li class="<%= menu_current_page('home') %>"><%= link_to 'главная', root_path %></li>
             <li class="<%= menu_current_page('about') %>"><%= link_to 'обо мне', about_path%></li>
-            <li class="<%= menu_current_page('polygraphy') %>"><%= link_to 'полиграфия', polygraphy_path%></li>
             <li class="<%= menu_current_page('posts') %>"><%= link_to 'блог', posts_path %></li>
             <li class="<%= menu_current_page('partners') %>"><%= link_to 'партнерам', partners_path %></li>
           </ul>
