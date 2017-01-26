@@ -12,8 +12,6 @@ namespace :import do
         category = Category.find_by_title(row[2].mb_chars.capitalize)
         doc = Nokogiri::HTML(open(url))
         image = doc.at_css('.post-single-content').children.xpath('//img').first.attr('src') rescue nil
-        doc.at_css(".header_text").remove
-        doc.at_css("img").remove
         title = doc.at_css(".single-title").text
         content = doc.at_css(".post-single-content").to_html
         post = Post.create(title: title, content: content, remote_image_url: image,
