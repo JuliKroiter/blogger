@@ -21,18 +21,20 @@ $(document).ready(function() {
   })
 
   $('.category').click(function(){
-    var category = $(this).find('input').val() == undefined ? '' : $(this).find('input').val()
-    var topic = $('.active-topic').find('input').val();
-    $('.category').removeClass('active-category');
-    $(this).addClass('active-category');
-    $.ajax({
-      type: 'GET',
-      url: '/posts?category=' + category + '&topic=' + topic,
-      dataType: 'script'
-    })
+    debugger;
+      var category = $(this).find('input').val() == undefined ? '' : $(this).find('input').val()
+      var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
+      $('.category').removeClass('active-category');
+      $(this).addClass('active-category');
+      $.ajax({
+        type: 'GET',
+        url: '/posts?category=' + category + '&topic=' + topic,
+        dataType: 'script'
+      })
   })
 
   $('.chosen-drop').click(function(){
+    debugger;
     var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val();
     var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
     var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
@@ -41,5 +43,18 @@ $(document).ready(function() {
       url: '/posts?topic=' + topic + '&category=' + category + '&order=' + order,
       dataType: 'script'
     })
+  })
+
+  $('#load-more-link').click(function(e) {
+    e.preventDefault();
+    var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val()
+    var topic = $('.active-topic').find('input').val();
+    var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
+    var url = $(this).attr('href')
+    $.ajax({
+      type: 'GET',
+      url: url + "&category="+ category + "&topic=" + topic + '&order=' + order,
+      dataType: 'script'
     })
+  });
 });

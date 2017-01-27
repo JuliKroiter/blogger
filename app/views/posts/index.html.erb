@@ -2,7 +2,7 @@
   <div class="socket">
     <div class="cell">
       <div class="b-slide-text">
-        <div class="text">Больше 1349 разных статей</div>
+        <div class="text">Больше <%= Post.all.count %> разных статей</div>
         <div class="title">Блог</div>
         <a href="" class="btn order-consultation">Заказать профеcсиональную конультацию</a>
       </div>
@@ -23,7 +23,7 @@
           </div>
           <span class = 'topic-title'><%= topic.title %></span>
         </div>
-        <% if params[:topic].to_i == index + 1 %>
+        <% if (params[:topic].blank? && topic = Topic.first) || (params[:topic].to_i == topic.id )%>
           <script>
             $("#topic-<%=topic.id %>").next('.def').next('.act').show();
             $("#topic-<%=topic.id %>").next('.def').hide();
@@ -34,33 +34,7 @@
       <% end %>
     </div>
 
-    <div class="filter-row">
-      <div class="filter-item all category active-category">
-        <span>Все категории</span>
-      </div>
-      <%- Category.first(8).each do |category| %>
-        <div class="filter-item category">
-          <%= hidden_field_tag :category,  category.id %>
-          <span><%= category.title %></span>
-        </div>
-      <% end %>
-      <div class="filter-item filter-item-select">
-        <div class="filter-select">
-          <%= select_tag(:theme_select, options_for_select((Category.last(9) || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще"}})%>
-        </div>
-      </div>
-
-      <div class="filter-item filter-item-select">
-        <div class="filter-select">
-          <select>
-            <option>Самые новые</option>
-            <option>Самые старые</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </div>
-
+    <%= render 'filter_row' %>
 
   <div class="clearfix">
     <!-- Column -->

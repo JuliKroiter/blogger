@@ -70,5 +70,5 @@
   <% unless @posts.last_page? %>
    <i class="fa fa-refresh" aria-hidden="true"></i>
   <% end %>
-  <%= link_to_next_page @posts, 'посмотреть больше статей', remote: true, id: 'load-more-link' %>
+  <%= link_to_next_page @posts, 'посмотреть больше статей', id: 'load-more-link' %>
 </div>

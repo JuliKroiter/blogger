@@ -4,12 +4,13 @@ class PostsController < ApplicationController
   def index
     all_posts = Post.all.includes(:category, :comments, :topic)
     all_posts = all_posts
+                      .by_topic(params[:topic].blank? ? Topic.first : params[:topic])
                       .by_category(params[:category])
-                      .by_topic(params[:topic])
                       .order(params[:order].blank?  ? 'created_at desc' :  'created_at ' + params[:order] )
     @posts = all_posts.site.page(params[:page]).per(2)
     @fb_posts = all_posts.facebook.last(4)
     @inst_posts = all_posts.instagram.last(4)
+    @topic = params[:topic].blank? ? Topic.first : Topic.find(params[:topic])
     render params[:page].present? ? 'more_pages' : 'index'
   end
 

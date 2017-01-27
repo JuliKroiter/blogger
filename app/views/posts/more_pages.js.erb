@@ -1,5 +1,18 @@
 $('.inst-posts').append('<%= escape_javascript render partial: 'post', collection: @posts %>');
-$('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@posts, 'посмотреть больше статей', :remote => true, :id=>'load-more-link'))%>");
+$('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@posts, 'посмотреть больше статей', :id=>'load-more-link'))%>");
  <% if @posts.last_page? %>
    $('.fa-refresh').hide();
 <% end %>
+$('#load-more-link').click(function(e) {
+  e.preventDefault();
+  var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val()
+  var topic = $('.active-topic').find('input').val();
+  var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
+  var url = $(this).attr('href')
+  $.ajax({
+    type: 'GET',
+    url: url + "&category="+ category + "&topic=" + topic + '&order=' + order,
+    dataType: 'script'
+  })
+});
+

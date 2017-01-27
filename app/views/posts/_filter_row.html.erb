@@ -1,0 +1,41 @@
+<div class="filter-row">
+  <div class="filter-item all category <%='active-category' if params[:category].blank? %>">
+    <span>Все категории</span>
+  </div>
+  <%- @topic.categories.all.each do |category| %>
+    <div class="filter-item category <%='active-category' if params[:category].to_i == category.id %>">
+      <%= hidden_field_tag :category, category.id,  id: category.id %>
+      <span><%= category.title %></span>
+    </div>
+  <% end %>
+  <!-- <div class="filter-item filter-item-select">
+    <div class="filter-select">
+      <%= select_tag(:theme_select, options_for_select((Category.last(9) || []).map{|i| [i.title, i.id]}), { include_blank: true, class: 'chosen-select', data: {placeholder: "Еще"}})%>
+    </div>
+  </div>
+-->
+  <div class="filter-item filter-item-select">
+    <div class="filter-select">
+      <select>
+        <option>Самые новые</option>
+        <option>Самые старые</option>
+      </select>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+  $('.category').click(function(){
+    var category = $(this).find('input').val() == undefined ? '' : $(this).find('input').val()
+    var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
+    $('.category').removeClass('active-category');
+    $(this).addClass('active-category');
+    $.ajax({
+      type: 'GET',
+      url: '/posts?category=' + category + '&topic=' + topic,
+      dataType: 'script'
+    })
+  })
+});
+</script>
