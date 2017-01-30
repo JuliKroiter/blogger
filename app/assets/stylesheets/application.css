@@ -21,6 +21,7 @@
  *= require main
  *= require slick
  *= require main-2
+ *= require blog-posts
  *= require normalize
  *= require_self
  */
