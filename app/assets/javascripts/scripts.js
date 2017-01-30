@@ -42,15 +42,15 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $(".order-book").on("click", function(e){
-        var book_id = $(this).attr('id');
-        $('.popup h3').text('Заказать книгу');
-        $('#book_id').val(book_id);
-        $(".w-popup").fadeIn(250);
-        $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
+    // $(".order-book").on("click", function(e){
+    //     var book_id = $(this).attr('id');
+    //     $('.popup h3').text('Заказать книгу');
+    //     $('#book_id').val(book_id);
+    //     $(".w-popup").fadeIn(250);
+    //     $("#popup-s").addClass("is-open").find(".close").addClass("is-show");
 
-        e.preventDefault();
-    });
+    //     e.preventDefault();
+    // });
 
     $('.learn-more').on("click", function(e){
         $('.popup h3').text('Узнать больше');

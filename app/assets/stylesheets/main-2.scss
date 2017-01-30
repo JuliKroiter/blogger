@@ -3494,9 +3494,7 @@ a.today:hover {
 }
 
 .b-polygraphy {
-  width: 349px;
-  height: 600px;
-  text-align: center;
+  margin-bottom: 30px;
 }
 .b-polygraphy h3 {
   display: table-cell;
@@ -4188,7 +4186,9 @@ figure.post-image {
   background: image-url('slide-about.jpg');
   background-position: 60% 25% !important;
   @media (max-width: 670px) {
-    background-position: 15% 0 !important;
+    background-size: cover;
+    background-position: 60% !important;
+    background-repeat: no-repeat;
   }
   .socket{
     height: 430px;
@@ -4228,7 +4228,7 @@ figure.post-image {
   padding: 250px 10px 40px;
   @media (max-width: 670px) {
     padding: 0;
-    margin-top: -740px;
+    margin-top: -760px;
     position: absolute;
     background-color: rgba(256, 265, 286, 0.8);
   }
@@ -4256,6 +4256,7 @@ figure.post-image {
 .slide-1-text{
   @media (max-width: 670px) {
     margin-top: -490px;
+    padding: 0 10px;
   }
 }
 
@@ -4333,6 +4334,11 @@ figure.post-image {
 .about-text-6{
   margin: 30px;
 }
+.about-text-4{
+  @media (max-width: 670px) {
+    padding: 20px;
+  }
+}
 
 .image-6{
   background: image-url('about-6.jpg');
@@ -4398,7 +4404,8 @@ figure.post-image {
   left: 700px;
   margin-bottom: 300px;
   @media (max-width: 670px) {
-    width: inherit;
+    background-position: 30% 40% !important;
+    width: 100%;
     left: 0;
     margin-bottom: 40px;
   }

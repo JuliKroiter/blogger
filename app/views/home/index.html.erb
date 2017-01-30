@@ -6,7 +6,6 @@
             <div class="b-slide-text quote">
                 <div class="title">Мама - сердце семьи!</div>
                 <div class="text">Если мама организованная, здоровая и счастливая - выигрывается все семья.</div>
-                <a href="" class="btn order-consultation">Заказать профеcсиональную конультацию</a>
             </div>
         </div>
 
@@ -85,7 +84,7 @@
                           </div>
                           <div class="text-b">краткое описание</div>
                           <p> <%= book.content %></p>
-                          <a class="btn btn-3 btn-more order-book" id=<%= book.id %> href="#">заказать книгу</a>
+                          <%= link_to 'заказать книгу', polygraphy_path, class: "btn btn-3 btn-more", id: book.id %>
                       </div>
                   <% end %>
                 <li>
@@ -223,20 +222,3 @@
   </div>
             <!-- / CONTENT -->
  </div><!-- / MAIN -->
-<!-- POPUP -->
-<div class="w-popup">
-  <div id="popup-s" class="b-popup">
-    <div class="close"></div>
-    <div class="popup">
-        <div class="ico-mail">
-            <%= image_tag('ico-mail.gif') %>
-        </div>
-        <h3>Закажите консультацию</h3>
-        <%= form_tag order_consultation_path, id: 'consultation-form', remote: true do%>
-          <div class="input-r">
-              <%= email_field_tag :email, nil, id: 'email-consultation', placeholder: "Ваш е-мейл", required: true %>
-          </div>
-          <%= submit_tag 'заказать', class: "btn btn-4" %>
-      <% end %>
-    </div>
-</div>
