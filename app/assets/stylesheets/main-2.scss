@@ -3062,18 +3062,18 @@ a.today:hover {
 }
 .s-slide-t{
   background-image: image_url('slide-2.jpg');
+  background-position: 100% 22% !important;
+  .b-slide-text {
+    margin: 100px 0 0 -60px;
+  }
   .white-text{
     .title, .text{
     color: black  !important;
     }
   }
   @media (max-width: 767px) {
-    background-image: image_url('slide-2-mob.jpg');
-    .white-text{
-      .title, .text{
-      color: white !important;
-      }
-    }
+    background-image: image_url('slide-2.jpg');
+    background-position: 30% !important;
   }
 }
 .s-slide-t .title, .s-slide-t .text {
@@ -3081,7 +3081,7 @@ a.today:hover {
 }
 @media (max-width: 767px) {
   .s-slide-t:before {
-    content: "";
+   /* content: "";
     position: absolute;
     display: block;
     top: 0;
@@ -3089,7 +3089,7 @@ a.today:hover {
     right: 0;
     height: 300px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);*/
   }
   .s-slide-t .title {
     margin-bottom: 8px;

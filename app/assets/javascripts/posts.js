@@ -48,7 +48,7 @@ $(document).ready(function() {
   $('#load-more-link').click(function(e) {
     e.preventDefault();
     var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val()
-    var topic = $('.active-topic').find('input').val();
+    var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
     var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
     var url = $(this).attr('href')
     $.ajax({
