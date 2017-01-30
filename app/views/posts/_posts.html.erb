@@ -81,7 +81,7 @@
                 <%= link_to  more_comments_path(post_id: post.id, page: 2), id: "more-comments-#{post.id}", remote: true, style: "#{'display:none' if post.comments.count <= 3}"  do %>
                     <i class="fa fa-refresh" aria-hidden="true" style ='margin: -90px 0 20px 80px;'> еще </i>
                 <% end %>
-              <h3>Добавить свой комментарий</h3>
+              <h4>Добавить свой комментарий</h4>
               <div class="form-comment">
                 <%= form_for Comment.new, url: create_comment_path, class: 'form-comment', remote: true do |f| %>
                     <%= hidden_field_tag 'comment[post_id]', post.id %>
