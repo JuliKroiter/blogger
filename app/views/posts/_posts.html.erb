@@ -21,8 +21,8 @@
           </div>
       <!-- <figure class="post-image desk"> <#%= image_tag post.image_url(:thumb) %> </figure> -->
            <div class="article-text">
-             <p><h1 class="title"><%= post.title.html_safe %></h1></p>
-             <hr class="article-hr" role="presentation">
+              <h1 class="title"><%= post.title.html_safe %></h1>
+             <p></p>
              <div class="b-slide-text">
                 <div class="text"><%= post.try(:category).try(:title) %></div>
                 <div class="stats">
