@@ -21,8 +21,8 @@
           </div>
       <!-- <figure class="post-image desk"> <#%= image_tag post.image_url(:thumb) %> </figure> -->
            <div class="article-text">
-             <p><h1 class="title"><%= post.title.html_safe %></h1></p>
-             <hr class="article-hr" role="presentation">
+              <h1 class="title"><%= post.title.html_safe %></h1>
+             <p></p>
              <div class="b-slide-text">
                 <div class="text"><%= post.try(:category).try(:title) %></div>
                 <div class="stats">
@@ -34,8 +34,7 @@
                     <i class="fa fa-eye" aria-hidden="true"></i>
                     <span><%= post.impressionist_count %></span>
                   </div>
-                  <div class="stat">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <div class="stat stat-date">
                     <span><%= l(post.created_at.to_date, :format => :default) %></span>
                   </div>
                 </div>
