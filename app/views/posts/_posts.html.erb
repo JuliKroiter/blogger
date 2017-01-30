@@ -1,3 +1,20 @@
+<div class="about-fm">
+  
+  <div class="about-fm-img">
+     <%= image_tag('about-1.jpg', class: 'image') %>
+  </div>
+  <div class="about-fm">
+    Привет!
+    <p>
+    Я Света.
+    От всего сердца хочу помочь вам стать организованной и счастливой мамой.
+    </p>
+    <%= link_to about_path do %>
+      Узнать больше
+    <% end %>
+  </div>
+</div>
+
 <% @posts.each do |post| %>
   <div class="container post-border">
     <div class="row justify-content-md-center">
