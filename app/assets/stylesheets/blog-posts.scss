@@ -211,7 +211,7 @@
 
 .infinite-table{
 	position: relative;
-	.about-fm{
+	.about-fm.affix-top{
 	    position: absolute;
 	    top: 42px;
 	    left: 8%;
@@ -250,6 +250,11 @@
 	    p{
 	    	padding: 1em 0;
 	    }
+	}
+
+	.about-fm.affix{
+		position: fixed;
+		top: 90px;
 	}
 }
 
