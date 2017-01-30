@@ -4184,3 +4184,235 @@ figure.post-image {
     width: inherit;
     }
 }
+.s-slide-about{
+  background: image-url('slide-about.jpg');
+  background-position: 60% 25% !important;
+  .socket{
+    height: 430px;
+    width: 100%;
+    .q{
+      margin-left: 310px;
+    }
+
+  }
+}
+
+.s-main{
+  padding: 30px 0;
+  img{
+    width: 300px;
+    float: left;
+    margin: 10px 40px 0 0;
+  }
+}
+ #main-quote{
+    width: 900px !important;
+    margin-top: 30px;
+ }
+
+.top-text{
+  padding: 250px 10px 40px;
+}
+
+.left{
+  float: left;
+}
+
+.img-no-hair-1{
+  float: right;
+  background: image_url('about-2.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-position: 10% 40% !important;
+  background-repeat: no-repeat !important;
+  height: 300px;
+  width: 600px;
+  margin-right: -70px;
+  img{
+    width: 400px;
+    margin: 10px -60px 0 20px;
+
+  }
+}
+
+.img-no-hair-2{
+  float: right;
+  background: image_url('about-3.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-position: 10% 40% !important;
+  background-repeat: no-repeat !important;
+  height: 300px;
+  width: 200px;
+  margin-right: -70px;
+  img{
+    width: 400px;
+    margin: 10px -60px 0 20px;
+
+  }
+}
+
+.image-4{
+  float: left;
+  background: image_url('about-4.jpeg');
+  position: relative;
+  background-size: cover !important;
+  background-position: 10% 40% !important;
+  background-repeat: no-repeat !important;
+  height: 300px;
+  width: 500px;
+  margin: 0 30px;
+  img{
+    width: 400px;
+    margin: 10px -60px 0 20px;
+
+  }
+}
+
+.about-4{
+  width: 400px;
+  margin: 40px;
+  float: left;
+}
+.about-5{
+  width: 650px;
+  margin: 40px;
+  height: 350px;
+}
+
+.about-text-6{
+  margin: 30px;
+}
+
+.image-6{
+  background: image-url('about-6.jpg');
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 50%;
+  float: left;
+}
+.text-6-7{
+      background-color: rgb(246, 245, 246);
+}
+.image-7 {
+  background: image-url('about-7.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 50%;
+  float: left;
+}
+ .image-8{
+  background: image-url('about-8.jpg');
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 60% 30% !important;
+  height: 550px;
+  width: 100%;
+  left: 700px;
+  margin-top: 72px;
+  margin-bottom: 600px;
+  .image-8-text{
+    background-color: rgba(246, 245, 246, 0.8);
+    width: 500px;
+    height: 550px;
+    padding: 30px;
+  }
+}
+
+.about-5-image{
+  background: image-url('about-5.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 510px;
+  width: 500px;
+  left: 700px;
+  margin-bottom: 300px;
+}
+.image-9 {
+  background: image-url('about-9.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 30%;
+  float: left;
+}
+.image-10 {
+  background: image-url('about-10.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 30%;
+  float: left;
+}
+.image-11 {
+  background: image-url('about-11.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 30%;
+  float: left;
+}
+.image-12 {
+  background: image-url('about-12.jpg');
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 40% 40% !important;
+  height: 400px;
+  width: 30%;
+  float: left;
+}
+
+.slides{
+  top: 3250px;
+  .jcarousel{
+/*    width: 300px;
+*/  }
+  .jcarousel-panel{
+    top: 380px;
+    left: -10px;
+  }
+  .jcarousel-control-prev {
+    bottom: 240px;
+    left: 10px;
+  }
+  .jcarousel-control-next{
+    bottom: 240px;
+    left: 250px;
+  }
+  .jcarousel-pagination{
+    bottom: 250px;
+    left: 70px;
+  }
+  .jcarousel-items{
+    bottom: 250px;
+    left: 140px;
+  }
+}
+
+.text-carousel{
+  width: 60%;
+  margin-left: 400px;
+  margin-top: -550px;
+  margin-bottom: 200px;
+}
+.main{
+   margin: 0 30px;
+}
+
+.photo-slide{
+  margin-top: 40px;
+}
