@@ -19,12 +19,12 @@
               </li>
             </ul>
           </div>
-          <figure class="post-image desk"> <%= image_tag post.image_url(:thumb) %> </figure>
+      <!-- <figure class="post-image desk"> <#%= image_tag post.image_url(:thumb) %> </figure> -->
            <div class="article-text">
-             <p><h3><%= post.title.html_safe %></h3></p>
+             <p><h1 class="title"><%= post.title.html_safe %></h1></p>
              <hr class="article-hr" role="presentation">
              <div class="b-slide-text">
-                <div class="text">Раздел: <%= post.try(:category).try(:title) %></div>
+                <div class="text"><%= post.try(:category).try(:title) %></div>
                 <div class="stats">
                   <div class="stat">
                     <i class="fa fa-comments-o" aria-hidden="true"></i>
@@ -63,7 +63,6 @@
         </article>
 
         <div class="col col-lg-12 zero-padding">
-          <div class="col col-lg-5 zero-padding">
             <div class="comments-block">
               <div class="title-com">
                 <h3>Комментарии</h3>
@@ -91,7 +90,6 @@
                 <% end %>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
