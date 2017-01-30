@@ -31,7 +31,7 @@
 
 	h2{
 		    font-size: 32px;
-		    line-height: 1.25;
+		    line-height: 1.45;
 		    padding: 1em 0;
 		    color: #000;
 		    opacity: 1;
@@ -122,9 +122,9 @@
 
 	blockquote{
 		    margin: 0 0 20px;
-		    font-size: 17.5px;
+		    font-size: 32px;
 		    background: #f5f5f5;
-		    padding: 2.2em 3em;
+		    padding: 1.2em 1.5em;
 		    font-family: "PTSerif-Reg";
 		    border: 0px;
 
@@ -204,7 +204,7 @@
     }
 }
 
-@media (max-width: 670px){
+@media (max-width: 800px){
 	.article-text{
 		padding: 0 30px;
 		
@@ -242,8 +242,10 @@
 		    opacity: 1;
 		}
 
+
 		ul,ol {
 			margin: 1em 0 1.5em 1em;
+
 
 			li{
 			    font-size: 20px;
