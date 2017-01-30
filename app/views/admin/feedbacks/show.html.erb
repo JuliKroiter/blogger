@@ -1,0 +1,56 @@
+<%= content_for :header do %>
+  <%= @feedback.title %>
+<% end %>
+<%= content_for :create_button do %>
+  <%= link_to 'New Feedback', new_admin_feedback_path, class: 'btn btn-outline btn-success' %>
+<% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= @feedback.commenter_name %>
+      </div>
+
+      <div class="panel-body">
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Commenter Name:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= @feedback.commenter_name %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Short Description:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= @feedback.short_desc %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Long Description:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= @feedback.long_desc %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Image:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= image_tag(@feedback.commenter_picture_url(:thumb)) %>
+          </div>
+        </div>
+
+        <%= link_to 'Edit', edit_admin_feedback_path(@feedback), class: 'btn btn-default pull-right' %>
+      </div>
+    </div>
+  </div>
+</div>

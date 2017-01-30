@@ -39,6 +39,15 @@ class HomeController < ApplicationController
     @current_page = 'polygraphy'
   end
 
+  def feedbacks
+    @feedbacks = Feedback.all.page(params[:page]).per(3)
+  end
+
+  def get_feedback
+    @feedback = Feedback.find(params[:id])
+    render json: @feedback
+  end
+
   private
 
   def set_subject

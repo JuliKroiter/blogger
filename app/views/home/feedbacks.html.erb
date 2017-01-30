@@ -1,0 +1,36 @@
+<div class="container" >
+  <div class="row" id="feedbacks-container">
+    <div class="col-lg-12 feedback-outer ">
+      <div class="infinite-table">
+        <%= render partial: 'feedbacks', object: @feedbacks%>
+        <div class= 'add-more'></div>
+        <p class="pagination" hidden>
+          <%= link_to_next_page @feedbacks, "", remote: true, id: 'load-more-link' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="feedbackModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+          <div class = 'image' >
+          </div>
+          <div class = 'name'>
+            <h3> </h3>
+          </div>
+          <div class = 'modal-short-desc'>
+            <h5></h5>
+          </div>
+
+          <div class = 'modal-long-desc'>
+            <p></p>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">закрыть</button>
+      </div>
+
+  </div>
+</div>

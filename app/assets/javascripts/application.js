@@ -24,6 +24,7 @@
 //= require jquery.jcarousel-control
 //= require jquery.jcarousel-pagination
 //= require chosen-jquery
+//= require masonry/jquery.masonry
 //= require fullcalendar.min
 //= require jquery.lettering-0.6.1.min
 //= require scripts

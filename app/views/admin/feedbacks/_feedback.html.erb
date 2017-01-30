@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to feedback.commenter_name, '', target: :_blank %></td>
+  <td><%= feedback.short_desc %></td>
+  <td><%= feedback.long_desc  %></td>
+  <td><%= image_tag(feedback.commenter_picture_url(:small_thumb)) %></td>
+  <td><%= feedback.created_at %></td>
+  <td>
+    <%= link_to 'Show', admin_feedback_path(feedback) %>
+    <%= link_to 'Edit', edit_admin_feedback_path(feedback) %>
+    <%= link_to 'Destroy', admin_feedback_path(feedback), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </td>
+</tr>

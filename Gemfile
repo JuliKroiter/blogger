@@ -47,6 +47,8 @@ gem 'apipie-rails'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'searchkick'
+gem 'masonry-rails'
+
 
 
 gem 'jquery-infinite-pages'

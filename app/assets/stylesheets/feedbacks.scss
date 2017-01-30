@@ -1,0 +1,19 @@
+#feedbacks-container{
+  background-color: #dcdee2;
+  height: 100%;
+  border-radius: 10px;
+  .feedback-outer{
+    padding: 0;
+   }
+  .box{
+    background-color: white;
+    height: 100%;
+    float: left;
+    margin: 10px 47px;
+    .feedback-image{
+      width: 100%;
+      height: initial;
+      float: left;
+    }
+  }
+}

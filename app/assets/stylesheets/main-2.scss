@@ -2031,7 +2031,7 @@ html, body {
 }
 .b-carousel-f .jcarousel ul li .b-quote {
   position: absolute;
-  top: 145px;
+  top: 165px;
   left: 450px;
   z-index: 1000;
 }
@@ -4536,4 +4536,9 @@ figure.post-image {
 .book-borer{
   margin-bottom: 30px;
   border-bottom: 1px solid #e0dfe3;
+}
+
+#all-feedbacks{
+  float: right;
+   margin: 670px -70px 0 0;
 }

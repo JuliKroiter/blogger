@@ -20,7 +20,15 @@
  *= require chosen
  *= require main
  *= require slick
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  *= require main-2
+ *= require feedbacks
  *= require blog-posts
  *= require normalize
  *= require_self

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'show_posts' => 'posts#show_posts'
   get 'more_comments' => 'posts#more_comments'
   get 'polygraphy' => 'home#polygraphy'
+  get 'feedbacks' => 'home#feedbacks'
+  get 'get_feedback' => 'home#get_feedback'
 
   namespace :admin do
     root 'posts#index'
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :books
     resources :authors
+    resources :feedbacks
     resources :categories do
       collection do
         get 'topic_categories' => 'categories#topic_categories'
