@@ -218,10 +218,15 @@
 	    width: 18%;
 	    max-width: 250px;
 	    padding-bottom: 20px;
+	    z-index: 1000;
 	}
 
 	.about-fm-img{
-		width: 100%;	
+		position: relative;	
+		img{
+			width: 100%;
+			display: block;
+		}
 	}
 
 	.about-fm-text{
