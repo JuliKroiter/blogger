@@ -1,18 +1,3 @@
-<div class="about-fm" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-  
-  <div class="about-fm-img">
-     <%= image_tag('about-1.jpg', class: 'image') %>
-  </div>
-  <div class="about-fm-text">
-    <em>Привет!</em>
-    <p>
-    Я Света.
-    От всего сердца хочу помочь вам стать организованной и счастливой мамой.
-    </p>
-    <%= link_to 'Узнать больше', about_path, class: "btn btn-2" %>
-  </div>
-</div>
-
 <% @posts.each do |post| %>
   <div class="container post-border">
     <div class="row justify-content-md-center">
