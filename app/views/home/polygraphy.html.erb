@@ -10,8 +10,8 @@
 <div class="container">
   <div class="row">
       <% Book.all.each do |book| %>
-        <div class="col-lg-12">
-          <div class="b-polygraphy shadow col-lg-4">
+        <div class="col-lg-12 book-borer">
+          <div class="col-lg-4">
               <div class="book" id=<%= "book-#{book.id}" %>>
                   <%= image_tag(book.image.url) %>
               </div>
@@ -19,11 +19,20 @@
           <div class = 'content col-lg-8'>
               <h3><%= book.title %></h3>
               <p> <%= book.content %></p>
-              <div class = 'col-lg-4', style= 'padding: 20px 0;'>
-                <%= link_to 'купить в Украине', book.buy_link, class: "btn btn-3", target: '_blank' %>
+               <div class = 'col-lg-5', style= 'padding: 20px 0;'>
+                <%= link_to 'купить в Украине', book.buy_ua_link, class: "btn btn-3", target: '_blank' %>
               </div>
-              <div class = 'col-lg-4', style= 'padding: 20px 0;'>
+              <div class = 'col-lg-5', style= 'padding: 20px 0;'>
                 <%= link_to 'купить в электронном виде', book.buy_e_link, class: "btn btn-3", target: '_blank' %>
+              </div>
+              <div class = 'col-lg-5', style= 'padding: 20px 0;' <%='hidden' if book.buy_bel_link.blank? %>>
+                <%= link_to 'купить в беларуси', book.buy_bel_link, class: "btn btn-3", target: '_blank' %>
+              </div>
+               <div class = 'col-lg-5', style= 'padding: 20px 0;' <%='hidden' if book.buy_ozon_link.blank? %>>
+                <%= link_to 'купить в России(озон)', book.buy_ozon_link, class: "btn btn-3", target: '_blank' %>
+              </div>
+              <div class = 'col-lg-5', style= 'padding: 20px 0;' <%='hidden' if book.buy_labirint_link.blank? %>>
+                <%= link_to 'купить в России(лабиринт)', book.buy_labirint_link, class: "btn btn-3", target: '_blank' %>
               </div>
           </div>
         </div>

@@ -22,6 +22,8 @@ class Admin::BooksController < Admin::AdminController
   private
 
   def book_params
-    params.require(:book).permit(:title, :content, :image, :remove_image, :price)
+    params.require(:book).permit(:title, :content, :image, :remove_image, :price,
+                                 :buy_ua_link, :buy_ozon_link, :buy_labirint_link,
+                                 :buy_e_link, :buy_bel_link )
   end
 end
