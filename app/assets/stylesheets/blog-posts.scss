@@ -211,17 +211,22 @@
 
 .infinite-table{
 	position: relative;
-	.about-fm{
+	.about-fm.affix-top{
 	    position: absolute;
 	    top: 42px;
 	    left: 8%;
 	    width: 18%;
 	    max-width: 250px;
 	    padding-bottom: 20px;
+	    z-index: 1000;
 	}
 
 	.about-fm-img{
-		width: 100%;	
+		position: relative;	
+		img{
+			width: 100%;
+			display: block;
+		}
 	}
 
 	.about-fm-text{
@@ -245,6 +250,11 @@
 	    p{
 	    	padding: 1em 0;
 	    }
+	}
+
+	.about-fm.affix{
+		position: fixed;
+		top: 90px;
 	}
 }
 
