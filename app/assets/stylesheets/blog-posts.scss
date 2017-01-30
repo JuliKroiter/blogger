@@ -207,6 +207,8 @@
 @media (max-width: 800px){
 	.article-text{
 		padding: 0 30px;
+		margin-left: 0;
+		text-align: left;
 		
 		.h1.title{
 			font-size: 36px;
@@ -242,10 +244,8 @@
 		    opacity: 1;
 		}
 
-
 		ul,ol {
 			margin: 1em 0 1.5em 1em;
-
 
 			li{
 			    font-size: 20px;
@@ -254,6 +254,15 @@
 			    letter-spacing: 0.3px;
 			    margin-bottom: 1.5em;
 			    font-weight: 100;
+			}
+		}
+
+		blockquote{
+			font-size: 24px;
+			margin-bottom: 40px;
+
+			p{
+				font-size: 24px;
 			}
 		}
 	}
