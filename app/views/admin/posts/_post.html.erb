@@ -5,6 +5,7 @@
   <td><%= image_tag(post.image_url(:small_thumb)) %></td>
   <td><%= post.likes %></td>
   <td><%= post.from %></td>
+  <td><%= post.author.try(:name) %></td>
   <td><%= post.created_at %></td>
   <td>
     <%= link_to 'Show', admin_post_path(post) %>

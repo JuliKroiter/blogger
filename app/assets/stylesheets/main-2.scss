@@ -1876,6 +1876,14 @@ html, body {
   left: 600px;
   z-index: 1;
 }
+.s-book .image{
+  width: 480px;
+  height: 500px;
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 400px;
+  }
+}
 .s-book .title-d, .s-quote .title-d {
   margin-bottom: 0;
 }

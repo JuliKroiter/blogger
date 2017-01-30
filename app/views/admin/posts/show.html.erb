@@ -58,6 +58,15 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <div class="col-md-3 form-control-static">
+            Author:
+          </div>
+          <div class="col-md-9 form-control-static">
+            <%= @post.author.try(:name) %>
+          </div>
+        </div>
+
         <%= link_to 'Edit', edit_admin_post_path(@post), class: 'btn btn-default pull-right' %>
       </div>
     </div>

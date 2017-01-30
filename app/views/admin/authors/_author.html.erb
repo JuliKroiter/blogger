@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to author.name, '', target: :_blank %></td>
+  <td><%= author.description %></td>
+  <td><%= author.fb_link %></td>
+  <td><%= image_tag(author.picture_url(:small_thumb)) %></td>
+  <td><%= author.created_at %></td>
+  <td>
+    <%= link_to 'Show', admin_author_path(author) %>
+    <%= link_to 'Edit', edit_admin_author_path(author) %>
+    <%= link_to 'Destroy', admin_author_path(author), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </td>
+</tr>

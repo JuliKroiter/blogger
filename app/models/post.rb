@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   belongs_to :category
   belongs_to :topic
+  belongs_to :author
 
   mount_uploader :image, ImageUploader
 

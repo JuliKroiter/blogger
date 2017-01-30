@@ -43,6 +43,7 @@
             <hr class="article-hr" role="presentation">
             <figure class="post-image mobile"> <%= image_tag post.image_url(:thumb) %> </figure>
              <div class='ttl'> <%= post.content.html_safe %></div>
+             <div class = 'author' <%= 'hidden' if post.author.try(:name).blank? %>> Автор: <%= post.author.try(:name) %> </div>
           </div>
              <div class= "social-panel mobile">
             <ul>

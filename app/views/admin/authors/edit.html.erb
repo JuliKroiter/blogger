@@ -1,0 +1,22 @@
+<%= content_for :header do %>
+  Edit Author
+<% end %>
+<%= content_for :create_button do %>
+  <%= link_to 'New Author', new_admin_author_path, class: 'btn btn-outline btn-success' %>
+<% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= @author.name %>
+      </div>
+
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

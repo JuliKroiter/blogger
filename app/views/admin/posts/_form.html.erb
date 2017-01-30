@@ -40,6 +40,11 @@
       <%= f.select :category_id, options_from_collection_for_select(@post.topic.try(:categories) || [], :id, :title, @post.category.try(:id)), {}, class: 'form-control' %>
     </div>
 
+    <div class="form-group">
+      <%= f.label :author %>
+      <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name, @post.author.try(:id)), {}, class: 'form-control' %>
+    </div>
+
     <%= f.submit class: 'btn btn-success' %>
   <% end %>
 </div>

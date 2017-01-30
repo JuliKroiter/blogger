@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :comments
     resources :books
+    resources :authors
     resources :categories do
       collection do
         get 'topic_categories' => 'categories#topic_categories'
