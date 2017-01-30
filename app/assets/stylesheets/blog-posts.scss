@@ -1,6 +1,6 @@
 .article-text{
 	position: relative;
-	margin-left: 25%;
+	margin-left: 30%;
 	max-width: 800px;
 	
 	h1.title{
@@ -211,12 +211,40 @@
 
 .infinite-table{
 	position: relative;
-	.about-sv{
-		position: absolute;
-		top: 0;
-		right: 50px;
-		width: 15%;
+	.about-fm{
+	    position: absolute;
+	    top: 42px;
+	    left: 8%;
+	    width: 18%;
+	    max-width: 250px;
+	    padding-bottom: 20px;
+	}
 
+	.about-fm-img{
+		width: 100%;	
+	}
+
+	.about-fm-text{
+	    padding-top: 40px;
+	    font-size: 16px;
+	    padding: 18px 30px 30px 30px;
+	    z-index: 1;
+	    background-color: #fff;
+	    box-shadow: 0 10px 33px 8px rgba(0,0,0,0.05);
+
+	    em{
+    	    font-family: "PTSans-Italic";
+	    	display: inline;
+		    font-size: 45px;
+		    line-height: 1.24;
+		    // border-bottom: 16px solid #eee;
+		    white-space: normal;
+		    box-shadow: inset 0 -16px 0 0 #eee;
+	    }
+
+	    p{
+	    	padding: 1em 0;
+	    }
 	}
 }
 
@@ -225,6 +253,11 @@
 
 
 @media (max-width: 800px){
+
+	.about-fm{
+		display: none;
+	}
+
 	.article-text{
 		padding: 0 30px;
 		margin-left: 0;
