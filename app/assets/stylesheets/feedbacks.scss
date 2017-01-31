@@ -17,3 +17,16 @@
     }
   }
 }
+
+#feedbackModal{
+  .modal-content{
+    padding: 30px;
+    .modal-image{
+      padding: 10px 20px 5px 0;
+      float: left;
+      img{
+        width: 200px;
+      }
+    }
+  }
+}

@@ -4539,6 +4539,7 @@ figure.post-image {
 }
 
 #all-feedbacks{
-  float: right;
-   margin: 670px -70px 0 0;
+  margin: 650px 0 0 520px;
+  z-index: 99999;
+  position: absolute;
 }
