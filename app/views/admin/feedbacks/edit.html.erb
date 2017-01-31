@@ -1,1 +1,23 @@
+<%= content_for :header do %>
+  Edit Feedback
+<% end %>
+<%= content_for :create_button do %>
+  <%= link_to 'New Feedback', new_admin_feedback_path, class: 'btn btn-outline btn-success' %>
+<% end %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= @feedback.commenter_name %>
+      </div>
+
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
