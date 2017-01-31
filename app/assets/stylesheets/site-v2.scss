@@ -89,6 +89,7 @@ $mainColor: #000;
 
     .btn{
     	border-color: #000;
+    	font-size: 14px;
     }
 
 	.circ {
@@ -121,6 +122,10 @@ $mainColor: #000;
 	    background-color: #fe777d;
     }
 
+    .btn{
+    	font-size: 14px;
+    }
+
     .image{
     	position: absolute;
 	    top: 23px;
@@ -146,6 +151,7 @@ $mainColor: #000;
 		position: relative;
 		color: $mainColor;
 		font-size: 18px;
+		text-align: left;
 		line-height: 1.84;
 		max-width: 600px;
 		margin: 40px 0;
@@ -161,13 +167,13 @@ $mainColor: #000;
 	    padding: 0;
 	    margin: 0;
 	    width: auto;
+	    font-size: 14px;
 	    display: inline-block;
 	    font-weight: normal;
 
 	    &:after{
-    	    content: '\e804';
+    	    content: '❯';
 		    display: inline-block;
-		    font-family: fontello;
 		    font-variant: normal;
 		    line-height: 1em;
 		    margin-left: .2em;
@@ -184,7 +190,14 @@ $mainColor: #000;
 
 	    &:hover:after{
 	    	margin-left: .5em;
+	    	color: #000;
 	    }
+	}
+
+	.b-carousel{
+	    background-color: #fff;
+	    width: auto;
+	    border-top: 1px solid #000;
 	}
 }
 
