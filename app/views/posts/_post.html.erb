@@ -8,9 +8,9 @@
     <div class="tags">
       <div class="tag">#<%= post.category.try(:title) %></div>
     </div>
-    <p style = 'word-break: break-word;'>
-      <%= post.content %>
-    </p>
+   <p style = 'word-break: break-word;'>
+      <%= truncate ActionView::Base.full_sanitizer.sanitize(post.content), length: 160 %>
+      </p>
     <div class="stats">
       <div class="stat">
         <%= image_tag('ico-com.png') %>

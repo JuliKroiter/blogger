@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  impressionist actions: [:show]
+  impressionist actions: [:show_posts]
 
   def index
     all_posts = Post.all.includes(:category, :comments, :topic)
