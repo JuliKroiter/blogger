@@ -1,9 +1,11 @@
+$mainColor: #000;
+
 .s-slide-main .socket, .s-slide-main .cell{
 	width: auto;
 }
 
 .b-slide-text .text {
-    color: #000;
+    color: $mainColor;
     margin-bottom: 28px;
     max-width: 440px;
     font-size: 18px;
@@ -22,6 +24,74 @@
     padding: 1.125rem;
     background-image: asset-url('hi.jpg');
     position: relative;
+
+    .socket{
+    	height: 100%;
+    }
+
+    .b-quote.right{
+    	right: 56px;
+    }
+
+    .q{
+	    top: -93px;
+	    right: 80px;
+	    z-index: 0;
+	    background-image: none;
+	    left: auto;
+	    color: #000;
+	    font-size: 245px;
+	    font-style: italic;
+	    line-height: 1;
+	    font-weight: 400;
+    }
+
+    .b-quote{
+    	bottom: 84px;
+	    top: auto;
+	    width: 40%;
+	    padding: 68px 67px 70px 60px;
+
+	    p{
+	    	color: $mainColor;
+	    	font-size: 18px;
+	    	margin-bottom: 2em;
+	    }
+    }
+
+    .btn{
+    	border-color: #000;
+    }
+
+	.circ {
+	    right: 125px;
+	    bottom: 40px;
+	    top: auto;
+	}
+}
+
+.s-book{
+    height: 550px;
+    margin-bottom: 110px;
+    background-color: #ffeded;
+    z-index: 1;
+    padding-top: 50px;
+
+    .socket{
+    	width: 1124px;
+    }
+
+    .text{
+    	font-size: 18px;
+	    line-height: 1.84;
+	    width: 450px;
+    }
+
+    .circ{
+    	top: 64px;
+	    right: -7px;
+	    background-color: #fe777d;
+    }
 }
 
 
