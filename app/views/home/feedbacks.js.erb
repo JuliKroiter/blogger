@@ -1,20 +1,30 @@
 $('.infinite-table').append('<%= escape_javascript render partial: 'feedbacks' %>')
 $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@feedbacks, '', :id=>'load-more-link'))%>");
-var mediaItemContainer = $( '.infinite-table' );
-mediaItemContainer.imagesLoaded( function() {
-  mediaItemContainer.masonry({
-    itemSelector: '.box'
-  })
-  $( mediaItemContainer ).masonry( 'reload' );
-});
+// var mediaItemContainer = $( '.infinite-table' );
+// mediaItemContainer.imagesLoaded( function() {
+//   mediaItemContainer.masonry({
+//     itemSelector: '.box'
+//   })
+//   $( mediaItemContainer ).masonry( 'reload' );
+// });
 
- $('.open-modal').off('click').on('click', function(){
+
+ $('.add-feedback').off('click').on('click', function(){
     id = $(this).attr('id');
+    el = $(this).parent();
     $.ajax({
        type: 'GET',
        url: 'get_feedback?id=' + id,
        dataType: 'json',
        success: function(data){
+        $('#feedback-content').remove();
+        $('<%= escape_javascript render partial: 'expanded_feedback' %>').insertAfter(el);
+         $('#close-feedback').click(function(){
+          $('#feedback-content').remove();
+        })
+        $('html, body').animate({
+         scrollTop: $("#feedback-content").offset().top
+        }, 800);
         var picture = data.commenter_picture.url
         var long_desc = data.long_desc
         var short_desc = data.short_desc
@@ -23,7 +33,6 @@ mediaItemContainer.imagesLoaded( function() {
         $('.modal-name h3').html('<h3>' + data.commenter_name + '</h3>');
         $('.modal-short-desc h5').html('<h5>' + data.short_desc+ '<h5>');
         $('.modal-long-desc p').html('<p>' + data.long_desc + '<p>');
-        $("#feedbackModal").modal()
        }
     })
   });

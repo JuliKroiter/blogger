@@ -1,5 +1,5 @@
 <% @feedbacks.each_with_index do |feedback, index| %>
-  <div class="box single-feedback">
+  <div class="box single-feedback box-<%= index %>">
     <div class = 'feedback-image' >
       <%= image_tag(feedback.commenter_picture.try(:url)) %>
     </div>
@@ -10,9 +10,12 @@
       <h5><%= feedback.short_desc %></h5>
     </div>
 
-    <div class = 'long-desc'>
-      <p><%= truncate feedback.long_desc, length: 100  %></p>
-    </div>
-      <button type="button" class="btn btn-default open-modal" id = <%= feedback.id %>>читать больше</button>
+<!--     <div class = 'long-desc'>
+      <p><%= truncate feedback.long_desc, length: 20  %></p>
+    </div> -->
+      <%= link_to "#", id: feedback.id, class: 'add-feedback' do %>
+        <p>читать больше <i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+
+      <% end %>
   </div>
 <% end %>

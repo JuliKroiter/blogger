@@ -42,25 +42,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.open-modal').click(function(){
-        id = $(this).attr('id');
-        $.ajax({
-           type: 'GET',
-           url: 'get_feedback?id=' + id,
-           dataType: 'json',
-           success: function(data){
-            var picture = data.commenter_picture.url
-            var long_desc = data.long_desc
-            var short_desc = data.short_desc
-            var name = data.commenter_name
-            $('.modal-image img').replaceWith('<img src='+ picture + '></img>')
-            $('.modal-name h3').html('<h3>' + data.commenter_name + '</h3>');
-            $('.modal-short-desc h5').html('<h5>' + data.short_desc+ '<h5>');
-            $('.modal-long-desc p').html('<p>' + data.long_desc + '<p>');
-            $("#feedbackModal").modal()
-           }
-        })
-  });
 
     // $(".order-book").on("click", function(e){
     //     var book_id = $(this).attr('id');
@@ -177,11 +158,13 @@ $(function() {
     }
   });
 
-    var $container = $('.infinite-table');
-    $container.imagesLoaded( function () {
-      $container.masonry({
-        columnWidth: '.box',
-        itemSelector: '.box'
-      });
-    });
+    // var $container = $('.infinite-table');
+    // $container.imagesLoaded( function () {
+    //   $container.masonry({
+    //     itemSelector: '.box',
+    //     percentPosition: true
+    //   });
+    // });
+
+
 });

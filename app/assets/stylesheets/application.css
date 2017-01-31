@@ -28,6 +28,7 @@
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
  *= require main-2
+ *= require 'jquery.jMosaic'
  *= require feedbacks
  *= require blog-posts
  *= require normalize
