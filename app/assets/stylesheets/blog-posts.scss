@@ -575,11 +575,13 @@
 		    left: 0;
 		    height: auto;
 		    padding-top: 80px;
+	        background-repeat: no-repeat !important;
+		    background-position: center bottom !important;
 		}
 
 		.image-8-text{
 			position: relative;
-			padding: 0px 30px 150px;
+			padding: 0px 30px 480px;
 		    margin: 0;
 		    width: auto;
 		    height: auto;
@@ -587,7 +589,7 @@
 			p{
 				text-align: left;
 				font-size: 16px;
-				color: #888;
+				color: #000;
 			}
 		}
 	}
