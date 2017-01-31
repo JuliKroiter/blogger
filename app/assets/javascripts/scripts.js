@@ -176,11 +176,11 @@ $('.open-modal').off('click').on('click', function(){
     })
   });
 
-    // var $container = $('.masonry-container');
-    // $container.imagesLoaded( function () {
-    //   $container.masonry({
-    //     columnWidth: '.box',
-    //     itemSelector: '.box'
-    //   });
-    // });
+    var $container = $('.infinite-table');
+    $container.imagesLoaded( function () {
+      $container.masonry({
+        columnWidth: '.box',
+        itemSelector: '.box'
+      });
+    });
 });

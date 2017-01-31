@@ -1,5 +1,5 @@
-<% @feedbacks.each do |feedback| %>
-  <div class="box single-feedback col-lg-3">
+<% @feedbacks.each_with_index do |feedback, index| %>
+  <div class="box single-feedback">
     <div class = 'feedback-image' >
       <%= image_tag(feedback.commenter_picture.try(:url)) %>
     </div>

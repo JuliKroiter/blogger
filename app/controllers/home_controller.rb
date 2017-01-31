@@ -40,7 +40,7 @@ class HomeController < ApplicationController
   end
 
   def feedbacks
-    @feedbacks = Feedback.all.page(params[:page]).per(3)
+    @feedbacks = Feedback.all.page(params[:page]).per(4)
   end
 
   def get_feedback
