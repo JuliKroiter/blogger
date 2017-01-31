@@ -4,8 +4,8 @@ $mainColor: #000;
 	width: auto;
 }
 
-.menu li.is-current a{
-	letter-spacing: 0.15em;
+.menu li a{
+	letter-spacing: 0.12em;
 	color: #000;
 
 	&:hover{
@@ -99,7 +99,7 @@ $mainColor: #000;
 }
 
 .s-book{
-    height: 550px;
+    height: 650px;
     margin-bottom: 110px;
     background-color: #ffeded;
     z-index: 1;

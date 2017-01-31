@@ -61,41 +61,44 @@
 
  <div class="b-slider-mobile"></div>
 
-      <div class="title-h-center">
-          <div class="title-d">
-              <div><span>Полиграфия</span></div>
-          </div>
-          <div class="text polygraphy">Получите ежедневное вдохновение, идеи и мотивацию в
-                            моих книгах-бестселлерах для мам. Кстати, кроме книг у меня есть
-                            еще календарь и планнер для мам. Вы уже их видели?</div>
-      </div>
-      <%= link_to 'УЗНАТЬ БОЛЬШЕ', polygraphy_path, class: "btn btn-2 btn-center" %>
+ <div class="s-publish">
+    <div class="title-h-center">
+        <div class="title-d">
+            <div><span>Полиграфия</span></div>
+        </div>
+        <div class="text polygraphy">Получите ежедневное вдохновение, идеи и мотивацию в
+                          моих книгах-бестселлерах для мам. Кстати, кроме книг у меня есть
+                          еще календарь и планнер для мам. Вы уже их видели?</div>
+    </div>
+    <%= link_to 'УЗНАТЬ БОЛЬШЕ', polygraphy_path, class: "btn btn-2 btn-center" %>
 
-      <div class="b-carousel b-carousel-p">
-          <div class="jcarousel">
-              <ul>
-                <li>
-                  <% Book.all.each do |book| %>
-                      <div class="b-polygraphy shadow">
-                          <h3><%= book.title %></h3>
-                          <div class="book" id=<%= "book-#{book.id}" %>>
-                              <%= image_tag(book.image.url) %>
-                              <div class="circ circ-f"><%= book.price %> грн.</div>
-                          </div>
-                          <div class="text-b">краткое описание</div>
-                          <p> <%= book.content %></p>
-                          <%= link_to 'заказать книгу', polygraphy_path, class: "btn btn-3 btn-more", id: book.id %>
-                      </div>
-                  <% end %>
-                <li>
-              </ul>
-          </div>
-         <!--  <div class="jcarousel-items"></div>
-          <div class="jcarousel-panel"></div>
-          <div class="jcarousel-pagination"></div>
-          <a href="#" class="jcarousel-control-prev"></a>
-          <a href="#" class="jcarousel-control-next"></a> -->
-      </div>
+    <div class="b-carousel b-carousel-p">
+        <div class="jcarousel">
+            <ul>
+              <li>
+                <% Book.all.each do |book| %>
+                    <div class="b-polygraphy shadow">
+                        <h3><%= book.title %></h3>
+                        <div class="book" id=<%= "book-#{book.id}" %>>
+                            <%= image_tag(book.image.url) %>
+                            <div class="circ circ-f"><%= book.price %> грн.</div>
+                        </div>
+                        <div class="text-b">краткое описание</div>
+                        <p> <%= book.content %></p>
+                        <%= link_to 'заказать книгу', polygraphy_path, class: "btn btn-3 btn-more", id: book.id %>
+                    </div>
+                <% end %>
+              <li>
+            </ul>
+        </div>
+       <!--  <div class="jcarousel-items"></div>
+        <div class="jcarousel-panel"></div>
+        <div class="jcarousel-pagination"></div>
+        <a href="#" class="jcarousel-control-prev"></a>
+        <a href="#" class="jcarousel-control-next"></a> -->
+    </div>
+ </div>
+
 
       <div class="b-slider-p-mobile"></div>
 
