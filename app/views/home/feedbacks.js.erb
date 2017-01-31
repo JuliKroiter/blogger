@@ -11,7 +11,8 @@ $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@feedb
 
  $('.add-feedback').off('click').on('click', function(){
     id = $(this).attr('id');
-    el = $(this).parent();
+    el = $(this).parent().nextAll('.row-feedback:first');
+    return_el = $(this).parent()
     $.ajax({
        type: 'GET',
        url: 'get_feedback?id=' + id,
@@ -21,6 +22,9 @@ $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@feedb
         $('<%= escape_javascript render partial: 'expanded_feedback' %>').insertAfter(el);
          $('#close-feedback').click(function(){
           $('#feedback-content').remove();
+           $('html, body').animate({
+              scrollTop: $(return_el).offset().top
+            }, 800);
         })
         $('html, body').animate({
          scrollTop: $("#feedback-content").offset().top
