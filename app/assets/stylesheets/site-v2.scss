@@ -4,6 +4,19 @@ $mainColor: #000;
 	width: auto;
 }
 
+.menu li.is-current a{
+	letter-spacing: 0.15em;
+	color: #000;
+
+	&:hover{
+		color: #d3215d;
+	}
+}
+
+.header-title img{
+	height: 36px;
+}
+
 .b-slide-text .text {
     color: $mainColor;
     margin-bottom: 28px;
@@ -106,6 +119,15 @@ $mainColor: #000;
     	top: 64px;
 	    right: -7px;
 	    background-color: #fe777d;
+    }
+
+    .image{
+    	position: absolute;
+	    top: 23px;
+	    border: 0;
+	    left: 600px;
+	    z-index: 1;
+	    box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
     }
 }
 
