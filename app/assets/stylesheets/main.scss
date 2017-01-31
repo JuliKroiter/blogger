@@ -5,6 +5,9 @@
   border-radius: 50%;
 }
 
+$mainColor: #656565;
+
+
 .ps, .menu-drop > li.is-current a span:before, .btn-menu span::before,
 .btn-menu span::after, .menu li:after, .menu li.is-current a:after, .play:after,  .w-popup:after, .b-popup .close:after, .checkbox .custom-checkbox:before, .quote:before, .filter-item.is-active span:after, .b-load div:after {
   content: "";
@@ -88,7 +91,7 @@ h5 {
 .ttl, a.ttl {
   display: block;
   font-size: 15px;
-  color: #656565;
+  color: $mainColor;
   line-height: 25px;
 }
 .ttl:hover, a.ttl:hover {
@@ -115,13 +118,13 @@ a:hover {
 }
 
 .text, p {
-  font-size: 15px;
-  line-height: 27px;
-  color: #656565;
+  font-size: 16px;
+  line-height: 1.84;
+  color: $mainColor;
   letter-spacing: 0.3px;
 }
 .text a, p a {
-  color: #656565;
+  color: $mainColor;
   text-decoration: none;
 }
 .text a:hover, p a:hover {
@@ -132,7 +135,7 @@ a:hover {
   font-size: 12px;
   font-family: "PTSans-Bold";
   text-transform: uppercase;
-  color: #656565;
+  color: $mainColor;
 }
 
 @font-face {
@@ -310,22 +313,22 @@ html, body {
 }
 .b-search input[type="text"]::-webkit-input-placeholder {
   text-transform: uppercase;
-  color: #656565;
+  color: $mainColor;
   font-family: "PTSans-Bold";
 }
 .b-search input[type="text"]:-moz-placeholder {
   text-transform: uppercase;
-  color: #656565;
+  color: $mainColor;
   font-family: "PTSans-Bold";
 }
 .b-search input[type="text"]::-moz-placeholder {
   text-transform: uppercase;
-  color: #656565;
+  color: $mainColor;
   font-family: "PTSans-Bold";
 }
 .b-search input[type="text"]:-ms-input-placeholder {
   text-transform: uppercase;
-  color: #656565;
+  color: $mainColor;
   font-family: "PTSans-Bold";
 }
 .b-search button {
@@ -607,16 +610,16 @@ html, body {
   right: 56px;
 }
 .b-quote.right:before {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 12px 12px 12px 0;
-  border-color: transparent #fff transparent transparent;
-  content: "";
-  display: block;
-  position: absolute;
-  left: -12px;
-  top: 68px;
+  // width: 0;
+  // height: 0;
+  // border-style: solid;
+  // border-width: 12px 12px 12px 0;
+  // border-color: transparent #fff transparent transparent;
+  // content: "";
+  // display: block;
+  // position: absolute;
+  // left: -12px;
+  // top: 68px;
 }
 .b-quote.left {
   left: 118px;
@@ -638,7 +641,7 @@ html, body {
 }
 .b-quote p a {
   text-decoration: none;
-  color: #656565;
+  color: $mainColor;
 }
 .b-quote p a:hover {
   text-decoration: underline;
@@ -650,6 +653,7 @@ html, body {
   width: 64px;
   height: 50px;
 }
+
 
 /* Carousel*/
 .b-carousel {
@@ -824,7 +828,7 @@ html, body {
   height: 100%;
 }
 .avatar .text {
-  color: #656565;
+  color: $mainColor;
 }
 
 .name {
@@ -862,7 +866,7 @@ html, body {
   margin-bottom: 50px;
 }
 .title-h-center .title-d {
-  margin-bottom: 19px;
+  margin-bottom: 29px;
 }
 
 .shadow {
@@ -1131,21 +1135,22 @@ html, body {
   font-family: "PTSans-Bold";
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.15em;
+  border-radius: 0;
 }
 .btn.btn-2 {
   height: 50px;
   line-height: 48px;
   font-size: 11px;
   padding: 0 33px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.15em;
 }
 .btn.btn-3 {
   height: 40px;
   line-height: 38px;
   font-size: 12px;
   padding: 0 25px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.15em;
 }
 .btn.btn-4 {
   color: #fff;
@@ -1477,8 +1482,12 @@ html, body {
   margin-bottom: 11px;
 }
 .b-slide-text .text {
-  color: #4a4a4a;
+  color: $mainColor;
+  font-size: 18px;
+  max-width: 390px;
   margin-bottom: 28px;
+  line-height: 1.84;
+  margin-top: 1.6em;
 }
 
 .quote {
@@ -1518,20 +1527,41 @@ html, body {
 }
 
 .s-intro {
-  height: 890px;
+  // height: 890px;
+  min-height: 66vw;
+  margin-top: 0;
+  background-position: center bottom; 
+  background-image: url('hi.jpg');
+  background-position: center center;
+  background-size: cover;
+  min-height: 177vw;
+  overflow: hidden;
+  padding: 1.125rem;
+  position: relative;
 }
 .s-intro .socket {
   padding-top: 90px;
+  position: relative;
+  height: 100%;
+  width: auto;
 }
 .s-intro .image {
+  display: none;
   margin-left: 100px;
 }
 .s-intro .circ {
   right: 125px;
-  top: 564px;
+  bottom: 40px;
+  top: auto;
+  bottom: 84px;
 }
 .s-intro .b-quote {
   top: 284px;
+  padding: 68px 67px 70px 60px;
+  right: auto;
+  left: 418px;
+  width: 359px;
+  box-shadow: 0 0 32px 2px rgba(0,0,0, 0.23);
 }
 .s-intro .q {
   top: 246px;
@@ -1539,10 +1569,48 @@ html, body {
   z-index: 0;
 }
 
+.s-book{
+  height: 550px;
+  margin-bottom: 60px;
+  background-color: #ffeded;
+
+  .socket{
+    width: 1120px;
+    margin: 0 auto;
+  }
+
+  .title-d div>span span{
+    border-bottom: 16px solid #fe777d;
+  }
+
+  .input{
+    border-bottom: 2px solid #000;
+  }
+
+  .input input::-webkit-input-placeholder {
+    color: #000;
+  }
+  .input input:-moz-placeholder {
+    color: #000;
+  }
+  .input input::-moz-placeholder {
+    color: #000;
+  }
+  .input input:-ms-input-placeholder {
+    color: #000;
+  }
+
+  .btn.btn-2{
+    border-color: #000;
+  }
+  
+}
+
 .s-book, .s-quote {
   height: 509px;
   background-color: #f6f5f6;
   z-index: 1;
+  padding-top: 50px;
 }
 .s-book .image, .s-quote .image {
   position: absolute;
@@ -1554,7 +1622,8 @@ html, body {
   margin-bottom: 16px;
 }
 .s-book .text, .s-quote .text {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1.84;
 }
 .s-book .circ, .s-quote .circ {
   top: 64px;
