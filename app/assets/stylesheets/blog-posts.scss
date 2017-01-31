@@ -58,6 +58,7 @@
 	    line-height: 1.76;
 	    color: #000;	
 	    background-color: #fff;
+	    float: none;
 	}
 
 	p, .ttl{
@@ -119,6 +120,10 @@
 			display: inline-block;
 			vertical-align: baseline;
 		}
+	}
+
+	.social-panel{
+		z-index: 101;
 	}
 
 	blockquote{
@@ -211,9 +216,8 @@
 
 .infinite-table{
 	position: relative;
-	.about-fm.affix-top{
-	    position: absolute;
-	    top: 42px;
+
+	.about-fm{
 	    left: 8%;
 	    width: 18%;
 	    min-width: 196px;
@@ -221,6 +225,12 @@
 	    padding-bottom: 20px;
 	    z-index: 1000;
 	}
+
+	.about-fm.affix-top{
+	    position: absolute;
+	    top: 42px;
+	}
+
 
 	.about-fm-img{
 		position: relative;	
@@ -241,7 +251,7 @@
 	    em{
     	    font-family: "PTSans-Italic";
 	    	display: inline;
-		    font-size: 45px;
+		    font-size: 32px;
 		    line-height: 1.24;
 		    // border-bottom: 16px solid #eee;
 		    white-space: normal;
@@ -303,8 +313,8 @@
     background-color: #fff;
 }
 
-#main-quote {
-    width: 590px;
+.s-item #main-quote {
+    width: 590px !important;
     left: 270px;
     top: -20px;
 
@@ -317,9 +327,48 @@
 }
 
 .top-text {
-    padding: 290px 10px 100px 0px;
+    padding: 300px 10px 100px 0px;
 }
 
+.img-no-hair-2{
+	margin-left: 30px;
+    margin-right: -130px;
+}
+
+.about-text-4{
+	padding-left: 30px;
+	padding-bottom: 50px;
+}
+
+.section-8{
+	padding-top: 440px;
+	margin-bottom: 100px;
+
+	.image-8{
+		margin-bottom: 0;
+	}
+
+	.image-8-text{
+	    padding: 50px 60px;
+	}
+}
+
+.carousel-section{
+	position: relative;
+	min-height: 600px;
+	.text-carousel{
+		padding: 100px 0 20px 30px;
+		margin-left: 40%;
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
+
+	.slides{
+		top: 20px;
+	    left: 40%;
+	    margin-left: -310px;
+	}
+}
 
 
 
@@ -327,6 +376,14 @@
 @media (max-width: 800px){
 
 	.about-fm{
+		display: none;
+	}
+
+	.mobile{
+		display: block;
+	}
+
+	.desc{
 		display: none;
 	}
 
@@ -412,4 +469,44 @@
 	    	margin-bottom: 12px;
 	    }
 	}
+
+	.q{
+	    width: 64px;
+	    z-index: 101;
+	    height: 50px;
+	    left: 242px;
+	    top: 20px;
+	}
+
+	.s-item {
+		#main-quote{
+		    width: 100% !important;
+		    right: 0;
+		    margin-top: -64px;
+
+		    p{
+		    	font-size: 18px;
+		    }
+	    }
+
+	    .top-text{
+	    	text-align: left;
+	    	color: #000;
+	    	font-size: 16px;
+
+	    }
+	}
+
+	.img-no-hair-1{
+	    width: 100%;
+	    margin: 0;
+	    height: auto;
+	    float: none;
+	    clear: both;
+	}
+	.img-no-hair-2{
+		
+	}
+
+
 }
