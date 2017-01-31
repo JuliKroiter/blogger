@@ -216,6 +216,7 @@
 	    top: 42px;
 	    left: 8%;
 	    width: 18%;
+	    min-width: 196px;
 	    max-width: 250px;
 	    padding-bottom: 20px;
 	    z-index: 1000;
@@ -249,6 +250,10 @@
 
 	    p{
 	    	padding: 1em 0;
+	    }
+
+	    a{
+	    	margin-left: -12px;
 	    }
 	}
 
