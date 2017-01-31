@@ -21,7 +21,6 @@ $(document).ready(function() {
   })
 
   $('.category').click(function(){
-    debugger;
       var category = $(this).find('input').val() == undefined ? '' : $(this).find('input').val()
       var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
       $('.category').removeClass('active-category');
@@ -34,7 +33,6 @@ $(document).ready(function() {
   })
 
   $('.chosen-drop').click(function(){
-    debugger;
     var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val();
     var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
     var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'

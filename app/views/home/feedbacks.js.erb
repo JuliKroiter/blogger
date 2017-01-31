@@ -1,5 +1,13 @@
 $('.infinite-table').append('<%= escape_javascript render partial: 'feedbacks' %>')
 $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@feedbacks, '', :id=>'load-more-link'))%>");
+var mediaItemContainer = $( '.infinite-table' );
+mediaItemContainer.imagesLoaded( function() {
+  mediaItemContainer.masonry({
+    itemSelector: '.box'
+  })
+  $( mediaItemContainer ).masonry( 'reload' );
+});
+
  $('.open-modal').off('click').on('click', function(){
     id = $(this).attr('id');
     $.ajax({
@@ -20,12 +28,4 @@ $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@feedb
     })
   });
 
-var mediaItemContainer = $( '.infinite-table' );
-mediaItemContainer.imagesLoaded( function() {
-  mediaItemContainer.masonry({
-    itemSelector: '.box'
-  })
-  $( mediaItemContainer ).masonry( 'reloadItems' );
-  $( mediaItemContainer ).masonry( 'layout' );
-});
 
