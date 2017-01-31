@@ -4,10 +4,16 @@
   border-radius: 10px;
   .feedback-outer{
     padding: 10px 75px;
+    @media screen and (max-width : 700px) {
+       padding: 10px 20px 0 10px;
+     }
    }
   .box{
     background-color: white;
     width: 24%;
+      @media screen and (max-width : 700px) {
+        width: 100%;
+     }
     .feedback-image{
       width: 100%;
       height: initial;
@@ -22,6 +28,10 @@
     .modal-image{
       padding: 10px 20px 5px 0;
       float: left;
+      @media screen and (max-width : 700px) {
+        padding: 0;
+        float: none;
+     }
       img{
         width: 200px;
       }
