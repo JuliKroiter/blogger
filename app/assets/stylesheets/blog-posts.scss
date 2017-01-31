@@ -480,7 +480,7 @@
 
 	.s-item {
 		.main{
-			margin-left: 0 15px;
+			margin: 0 15px;
 		}
 
 		.mobile-about{
@@ -510,22 +510,49 @@
 		    text-align: left;
 	    	color: #000;
 	    	font-size: 16px;
+	    	position: relative;
+		    margin-top: 70px;
 	    }
 	}
 
 	.img-no-hair-1{
-	    width: 100%;
+	    width: 50%;
 	    margin: 0;
-	    height: auto;
-	    float: none;
+	    height: 240px;
+	    float: right;
 	    clear: both;
+	    left: 0px;
+	    margin-bottom: 50px;
+	    padding: 0 65px;
+	    margin-top: 50px;
+	    background-position: center 40% !important;
 	}
 	.img-no-hair-2{
+		margin-left: 0;
+	    margin-right: 0;
+	    width: 50%;
+	    height: 240px;
+	    position: relative;
+	    display: block;
+	    float: right;
+	    margin-bottom: 40px;
+	    margin-top: 50px;
+	}
 
+	.image-4{
+	    margin: 0;
+	    float: none;
+	    margin-right: 0px;
+	    position: relative;
+	    clear: both;
+	    width: 100%;
 	}
 
 	.about-text-4{
-
+	    padding: 50px 15px 50px;
+	    text-align: left;
+	    font-size: 16px;
+	    color: #000;
 	}
 
 	.about-5-image{
@@ -533,8 +560,36 @@
 	}
 
 	.section-8{
-		padding-top: 800px;
-		padding-bottom: 100px;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		
+		.image-8{
+			margin-bottom: 0;
+		    margin: 0 -15px;
+		    width: auto;
+		    margin-bottom: 0;
+		    width: auto;
+		    clear: both;
+		    position: relative;
+		    left: 0;
+		    height: auto;
+		    padding-top: 80px;
+		}
+
+		.image-8-text{
+			position: relative;
+			padding: 0px 30px 150px;
+		    margin: 0;
+		    width: auto;
+		    height: auto;
+
+			p{
+				text-align: left;
+				font-size: 16px;
+				color: #888;
+			}
+		}
 	}
 
 	.about-text-6{
@@ -547,24 +602,28 @@
 	    font-size: 16px;
 	}
 
-	.image-8-text{
-		position: relative;
-		text-align: left;
-		font-size: 16px;
-		color: #888;
+
+	.carousel-section{
+		.slides{
+		    top: 20px;
+		    left: 50%;
+		    margin-left: -116px;
+		}
+
+		.text-carousel{
+			padding: 0;
+			margin: 0;
+		}
+
+		.text-carousel p{
+			padding: 40px 15px;
+			text-align: left;
+			font-size: 16px;
+			color: #000;
+		}
 	}
 
-	.slides{
-	    top: 20px;
-	    left: 50%;
-	    margin-left: -116px;
-	}
 
-	.text-carousel p{
-		padding: 40px 15px;
-		text-align: left;
-		font-size: 16px;
-	}
 
 
 }
