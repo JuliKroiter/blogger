@@ -211,9 +211,8 @@
 
 .infinite-table{
 	position: relative;
-	.about-fm.affix-top{
-	    position: absolute;
-	    top: 42px;
+
+	.about-fm{
 	    left: 8%;
 	    width: 18%;
 	    min-width: 196px;
@@ -221,6 +220,12 @@
 	    padding-bottom: 20px;
 	    z-index: 1000;
 	}
+
+	.about-fm.affix-top{
+	    position: absolute;
+	    top: 42px;
+	}
+
 
 	.about-fm-img{
 		position: relative;	
@@ -241,7 +246,7 @@
 	    em{
     	    font-family: "PTSans-Italic";
 	    	display: inline;
-		    font-size: 45px;
+		    font-size: 32px;
 		    line-height: 1.24;
 		    // border-bottom: 16px solid #eee;
 		    white-space: normal;
@@ -303,8 +308,8 @@
     background-color: #fff;
 }
 
-#main-quote {
-    width: 590px;
+.s-item #main-quote {
+    width: 590px !important;
     left: 270px;
     top: -20px;
 
@@ -317,9 +322,33 @@
 }
 
 .top-text {
-    padding: 290px 10px 100px 0px;
+    padding: 300px 10px 100px 0px;
 }
 
+.img-no-hair-2{
+	margin-left: 30px;
+    margin-right: -130px;
+}
+
+.about-text-4{
+	padding-left: 30px;
+	padding-bottom: 50px;
+}
+
+.section-8{
+	padding-top: 440px;
+
+	.image-8{
+		margin-bottom: 0;
+	}
+}
+
+.section-carousel{
+	.text-carousel{
+		padding-top: 100px;
+		margin-top: 0;
+	}
+}
 
 
 
