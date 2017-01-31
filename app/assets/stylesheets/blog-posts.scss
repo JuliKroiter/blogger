@@ -263,6 +263,63 @@
 	}
 }
 
+.about-text-6{
+    max-width: 632px;
+    margin: 100px auto;
+    line-height: 32px;
+
+    p{
+    	line-height: 32px;
+    }
+}
+
+.text-carousel{
+	position: relative;
+	max-width: 570px;
+    line-height: 32px;
+    text-align: left;
+
+    p{
+	    line-height: 32px;
+    }
+}
+
+.q{
+	width: 64px;
+    z-index: 101;
+    height: 50px;
+    left: 310px;
+    top: -10px;
+}
+
+.main{
+    position: relative;
+    margin: 0 30px;
+}
+
+.s-main{
+	max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+}
+
+#main-quote {
+    width: 590px;
+    left: 270px;
+    top: -20px;
+
+    p{
+	    margin: 0;
+	    color: #000;
+	    font-size: 20px;
+	    line-height: 1.96;
+    }
+}
+
+.top-text {
+    padding: 290px 10px 100px 0px;
+}
+
 
 
 
