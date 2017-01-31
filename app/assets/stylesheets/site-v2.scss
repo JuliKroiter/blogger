@@ -132,6 +132,63 @@ $mainColor: #000;
 }
 
 
+
+.s-publish{
+	position: relative;
+	padding: 0 80px;
+
+
+	.title-d div>span span{
+		border-color: transparent;
+	}
+
+	.polygraphy{
+		position: relative;
+		color: $mainColor;
+		font-size: 18px;
+		line-height: 1.84;
+		max-width: 600px;
+		margin: 40px 0;
+	}
+
+	.title-h-center{
+		text-align: left;
+	}
+
+	.btn{
+	    border: 0;
+	    font-size: 18px;
+	    padding: 0;
+	    margin: 0;
+	    width: auto;
+	    display: inline-block;
+	    font-weight: normal;
+
+	    &:after{
+    	    content: '\e804';
+		    display: inline-block;
+		    font-family: fontello;
+		    font-variant: normal;
+		    line-height: 1em;
+		    margin-left: .2em;
+		    margin-right: .2em;
+		    speak: none;
+		    text-align: center;
+		    text-decoration: inherit;
+		    text-transform: none;
+		    width: 1em;
+		    position: relative;
+		    transition: margin-left .25s;
+
+	    }
+
+	    &:hover:after{
+	    	margin-left: .5em;
+	    }
+	}
+}
+
+
 .btn {
   letter-spacing: 0.15em;
   border-radius: 0;
