@@ -49,14 +49,29 @@ $mainColor: #000;
     .b-quote{
     	bottom: 84px;
 	    top: auto;
+	    left: auto;
 	    width: 40%;
+	    right: 56px;
 	    padding: 68px 67px 70px 60px;
 
 	    p{
 	    	color: $mainColor;
 	    	font-size: 18px;
+    	    line-height: 1.84;
 	    	margin-bottom: 2em;
 	    }
+
+	    &:before{
+	    	content: none;
+	    }
+    }
+
+    .title-d{
+    	margin-bottom: 29px;
+
+    	div>span span{
+    		border-bottom: 16px solid #fe777d;
+    	}
     }
 
     .btn{
