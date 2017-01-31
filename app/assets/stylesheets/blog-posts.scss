@@ -469,4 +469,44 @@
 	    	margin-bottom: 12px;
 	    }
 	}
+
+	.q{
+	    width: 64px;
+	    z-index: 101;
+	    height: 50px;
+	    left: 242px;
+	    top: 20px;
+	}
+
+	.s-item {
+		#main-quote{
+		    width: 100% !important;
+		    right: 0;
+		    margin-top: -64px;
+
+		    p{
+		    	font-size: 18px;
+		    }
+	    }
+
+	    .top-text{
+	    	text-align: left;
+	    	color: #000;
+	    	font-size: 16px;
+
+	    }
+	}
+
+	.img-no-hair-1{
+	    width: 100%;
+	    margin: 0;
+	    height: auto;
+	    float: none;
+	    clear: both;
+	}
+	.img-no-hair-2{
+		
+	}
+
+
 }
