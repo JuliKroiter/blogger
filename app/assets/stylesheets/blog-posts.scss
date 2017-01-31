@@ -479,6 +479,14 @@
 	}
 
 	.s-item {
+		.main{
+			margin-left: 0 15px;
+		}
+
+		.mobile-about{
+			width: auto;
+			margin: 0 -30px;
+		}
 		#main-quote{
 		    width: 100% !important;
 		    right: 0;
@@ -493,7 +501,15 @@
 	    	text-align: left;
 	    	color: #000;
 	    	font-size: 16px;
+	    	padding: 20px 30px 20px 30px;
+		    margin: -311px -30px 0;
+	    }
 
+	    .slide-1-text{
+	    	padding: 0 0px;
+		    text-align: left;
+	    	color: #000;
+	    	font-size: 16px;
 	    }
 	}
 
@@ -505,7 +521,29 @@
 	    clear: both;
 	}
 	.img-no-hair-2{
-		
+
+	}
+
+	.about-text-4{
+
+	}
+
+	.about-5-image{
+		margin-bottom: 170px;
+	}
+
+	.section-8{
+		padding-top: 1500px;
+	}
+
+	.about-text-6{
+		    max-width: 632px;
+		    margin-top: 50px auto;
+		    line-height: 32px;
+		    padding: 0 30px;
+		    text-align: left;
+		    color: #000;
+		    font-size: 16px;
 	}
 
 
