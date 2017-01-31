@@ -533,17 +533,37 @@
 	}
 
 	.section-8{
-		padding-top: 1500px;
+		padding-top: 800px;
+		padding-bottom: 100px;
 	}
 
 	.about-text-6{
-		    max-width: 632px;
-		    margin-top: 50px auto;
-		    line-height: 32px;
-		    padding: 0 30px;
-		    text-align: left;
-		    color: #000;
-		    font-size: 16px;
+	    max-width: 632px;
+	    margin-top: 50px auto;
+	    line-height: 32px;
+	    padding: 0 30px;
+	    text-align: left;
+	    color: #000;
+	    font-size: 16px;
+	}
+
+	.image-8-text{
+		position: relative;
+		text-align: left;
+		font-size: 16px;
+		color: #888;
+	}
+
+	.slides{
+	    top: 20px;
+	    left: 50%;
+	    margin-left: -116px;
+	}
+
+	.text-carousel p{
+		padding: 40px 15px;
+		text-align: left;
+		font-size: 16px;
 	}
 
 
