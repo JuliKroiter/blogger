@@ -140,7 +140,7 @@ $mainColor: #000;
 
 .s-publish{
 	position: relative;
-	padding: 0 80px;
+	padding: 80px 80px 0;
 
 
 	.title-d div>span span{
@@ -194,10 +194,23 @@ $mainColor: #000;
 	    }
 	}
 
+	.btn.btn-2.btn-center{
+		font-size: 18px;
+		margin-bottom: 150px;
+	}
+
 	.b-carousel{
 	    background-color: #fff;
 	    width: auto;
 	    border-top: 1px solid #000;
+	}
+
+	.block-img{
+		position: absolute;
+	    right: 200px;
+	    top: -50px;
+	    width: 420px;
+
 	}
 }
 
