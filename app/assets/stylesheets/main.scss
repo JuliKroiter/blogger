@@ -1483,6 +1483,8 @@ html, body {
 }
 .b-slide-text .text {
   color: $mainColor;
+  margin-bottom: 28px;
+  max-width: 440px;
   font-size: 18px;
   max-width: 390px;
   margin-bottom: 28px;
@@ -1622,6 +1624,7 @@ html, body {
   margin-bottom: 16px;
 }
 .s-book .text, .s-quote .text {
+  color: #000;
   font-size: 18px;
   line-height: 1.84;
 }

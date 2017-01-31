@@ -1,0 +1,55 @@
+.s-slide-main .socket, .s-slide-main .cell{
+	width: auto;
+}
+
+.b-slide-text .text {
+    color: #000;
+    margin-bottom: 28px;
+    max-width: 440px;
+    font-size: 18px;
+    max-width: 390px;
+    margin-bottom: 28px;
+    line-height: 1.84;
+    margin-top: 1.6em;
+}
+
+.s-intro{
+	background-position: center center;
+    background-size: cover;
+    min-height: 66vw;
+    overflow: hidden;
+    position: relative;
+    padding: 1.125rem;
+    background-image: asset-url('hi.jpg');
+    position: relative;
+}
+
+
+.btn {
+  letter-spacing: 0.15em;
+  border-radius: 0;
+}
+.btn.btn-2 {
+  letter-spacing: 0.15em;
+  border-radius: 0;
+}
+.btn.btn-3 {
+  letter-spacing: 0.15em;
+}
+.btn.btn-4 {
+  color: #fff;
+  background-color: #d3215d;
+  border-color: #d3215d;
+  letter-spacing: 0.15em;
+}
+.btn.btn-4:hover {
+  color: #212121;
+  border-color: #e0dfe3;
+  background-color: #fff;
+}
+.btn.btn-g {
+  color: #212121;
+}
+.btn:hover {
+  border-color: #d3215d;
+}

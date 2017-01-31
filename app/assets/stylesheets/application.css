@@ -30,6 +30,7 @@
  *= require main-2
  *= require 'jquery.jMosaic'
  *= require feedbacks
+ *= require site-v2
  *= require blog-posts
  *= require normalize
  *= require_self
