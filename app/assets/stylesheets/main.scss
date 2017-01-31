@@ -1531,7 +1531,7 @@ html, body {
   min-height: 66vw;
   margin-top: 0;
   background-position: center bottom; 
-  background-image: url('hi.jpg');
+  background-image: asset-url('hi.jpg');
   background-position: center center;
   background-size: cover;
   min-height: 177vw;
@@ -1608,7 +1608,7 @@ html, body {
 
 .s-book, .s-quote {
   height: 509px;
-  background-color: #f6f5f6;
+  background-color: #ffeded;
   z-index: 1;
   padding-top: 50px;
 }
