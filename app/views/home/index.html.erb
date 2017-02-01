@@ -76,12 +76,32 @@
       <%= image_tag('ipad-2.png', class: 'image') %>
     </div>
 
-    <div class="b-carousel b-carousel-p">
+    <div class="b-books desc">
+      <div class="container">
+        <div class="row">
+          <% Book.all.each do |book| %>
+              <div class="b-polygraphy col-md-6" id=<%= "book-wrapper-#{book.id}" %>
+                  <div class="cover">
+                      <%= image_tag(book.image.url) %>
+                  </div>
+                  <div class="price">
+                      <%= book.price %> грн.
+                  </div>
+                  <h3><%= book.title %></h3>
+                  <p> <%= book.content %></p>
+                  <%= link_to 'заказать книгу', polygraphy_path, class: "btn btn-3 btn-more", id: book.id %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="b-carousel b-carousel-p mobile">
         <div class="jcarousel">
             <ul>
               <li>
                 <% Book.all.each do |book| %>
-                    <div class="b-polygraphy shadow">
+                    <div class="b-polygraphy shadow" id=<%= "book-wrapper-#{book.id}" %>
                         <h3><%= book.title %></h3>
                         <div class="book" id=<%= "book-#{book.id}" %>>
                             <%= image_tag(book.image.url) %>
