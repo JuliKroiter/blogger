@@ -401,8 +401,15 @@ $mainColor: #000;
 
 
 .s-feedback{
+    margin-top: 150px;
+    margin-bottom: 220px;
 
 	.column-t{
+		position: absolute;
+	    top: 65px;
+	    left: 70px;
+	    width: 430px;
+
 		.text{
 			text-transform: uppercase;
 		    font-size: 12px;
@@ -431,6 +438,9 @@ $mainColor: #000;
     }
 
     .avatar{
+    	width: 80px;
+    	height: 80px;
+
     	.name{
     		font-size: 28px;
     		margin-bottom: 10px;
@@ -449,6 +459,16 @@ $mainColor: #000;
 		    line-height: 1;
 		    font-weight: 400;
 	}
+
+	.quote{
+	    position: absolute;
+	    top: 143px;
+	    left: 450px;
+	    z-index: 1000;
+	    width: 530px;
+	    padding: 40px 80px 40px 100px;
+	}
+
 
 	.quote-text{
 		position: relative;
@@ -480,6 +500,47 @@ $mainColor: #000;
 			color: #000;
 		}
 	}
+}
+
+.main-quote{
+	position: relative;
+	margin-bottom: 5vw;
+
+	.photo{
+		float: left;
+	    height: 49.3vw;
+	    margin-bottom: 30px;
+	    margin-left: -34.6%;
+	    width: 91.6%;
+
+	    img{
+	    	height: 100%;
+	    }
+	}
+
+	.quote-side{
+		position: relative;
+		float: right;
+	    height: 49.3vw;
+	    padding: 4vw 5vw 0;
+	    width: 63%;
+	    background: #fff3f2;
+	    padding: 8vw 10vw 0;
+	    position: relative;
+	    z-index: 999;
+	}
+
+	.q-weapper{
+		position: relative;
+	}
+
+	.avatar{
+		font-size: 12px;
+	}
+}
+
+#footer{
+
 }
 
 .btn {
