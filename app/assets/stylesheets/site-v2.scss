@@ -75,7 +75,7 @@ $mainColor: #000;
 	    }
 
 	    a{
-	    	color: #fe777d;
+	    	color: #d3215d;
 	    }
 
 	    &:before{
@@ -168,9 +168,13 @@ $mainColor: #000;
 
 		}
 
+		.btn{
+			font-size: 24px;
+		}
+
 		h3{
 			position: relative;
-			margin-bottom: 28px;
+			margin-bottom: 42px;
 		}
 
 		&#book-wrapper-1{
@@ -208,7 +212,7 @@ $mainColor: #000;
 		    padding-right: 330px;
 
 		    p{
-		    	max-height: 280px;
+		    	max-height: 390px;
 		    	overflow: hidden;
 		    }
 
@@ -244,9 +248,10 @@ $mainColor: #000;
 	    text-transform: uppercase;
 	    letter-spacing: 0.05em;
 	}
+	
 	p{
 		padding: 0px;
-	    margin-bottom: 1em;
+	    margin-bottom: 3em;
 	    // overflow: hidden;
 	    font-size: 18px;
 	    text-align: left;
@@ -256,6 +261,9 @@ $mainColor: #000;
 	}
 }
 
+.text, p{
+	color: #000;
+}
 
 .s-publish{
 	position: relative;
@@ -393,19 +401,74 @@ $mainColor: #000;
 
 
 .s-feedback{
+
+	.column-t{
+		.text{
+			text-transform: uppercase;
+		    font-size: 12px;
+		    letter-spacing: 0.2em;
+		    margin-left: 11px;
+		}
+	}
 	
 	#all-feedbacks{
-	    position: absolute;
+        position: absolute;
 	    background-color: #d7356b;
 	    color: #fff;
 	    border: 2px solid #fff;
+	    font-size: 18px;
+	    width: auto;
+	    height: auto;
+	    padding: 4px 20px;
 	}
 
-	.qoute-text{
+	.title-d{
+    	margin-bottom: 29px;
+
+    	div>span span{
+    		border-bottom: 16px solid #fe777d;
+    	}
+    }
+
+    .avatar{
+    	.name{
+    		font-size: 28px;
+    		margin-bottom: 10px;
+    	}
+    }
+
+	.q{
+		    top: -12px;
+		    right: 40px;
+		    z-index: 0;
+		    background-image: none;
+		    left: auto;
+		    color: #d3215d;
+		    font-size: 205px;
+		    font-style: italic;
+		    line-height: 1;
+		    font-weight: 400;
+	}
+
+	.quote-text{
+		position: relative;
+		border-top: 0;
+
+		&:before{
+			content: ' ';
+			position: absolute;
+			left: 0;
+			right: 40px;
+			top: 0;
+			height: 1px;
+			background-color: #000;
+		}
+
 		p{
 		    color: #000;
 		    font-size: 18px;
 		    line-height: 1.96;
+
 		}
 
 		.name{
