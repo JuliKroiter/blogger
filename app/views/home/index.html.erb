@@ -100,7 +100,7 @@
         <div class="jcarousel">
             <ul>
               <li>
-                <% Book.all.each do |book| %>
+                <% Book.order(:id).all.each do |book| %>
                     <div class="b-polygraphy shadow" id=<%="book-wrapper-#{book.id}"%>
                         <h3><%= book.title %></h3>
                         <div class="book" id="<%= "book-#{book.id}" %>">
