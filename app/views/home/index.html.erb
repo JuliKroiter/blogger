@@ -80,7 +80,7 @@
       <div class="container">
         <div class="row">
           <% Book.all.each do |book| %>
-              <div class="b-polygraphy col-md-6" id=<%= "book-wrapper-#{book.id}" %>
+              <div class="b-polygraphy col-md-6" id="<%= "book-wrapper-#{book.id}" %>">
                   <div class="cover">
                       <%= image_tag(book.image.url) %>
                   </div>
@@ -101,9 +101,9 @@
             <ul>
               <li>
                 <% Book.all.each do |book| %>
-                    <div class="b-polygraphy shadow" id=<%= "book-wrapper-#{book.id}" %>
+                    <div class="b-polygraphy shadow" id=<%="book-wrapper-#{book.id}"%>
                         <h3><%= book.title %></h3>
-                        <div class="book" id=<%= "book-#{book.id}" %>>
+                        <div class="book" id="<%= "book-#{book.id}" %>">
                             <%= image_tag(book.image.url) %>
                             <div class="circ circ-f"><%= book.price %> грн.</div>
                         </div>
