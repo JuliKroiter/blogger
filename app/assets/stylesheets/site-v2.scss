@@ -244,6 +244,7 @@ $mainColor: #000;
 	    text-transform: uppercase;
 	    letter-spacing: 0.05em;
 	}
+	
 	p{
 		padding: 0px;
 	    margin-bottom: 1em;
@@ -256,6 +257,9 @@ $mainColor: #000;
 	}
 }
 
+.text, p{
+	color: #000;
+}
 
 .s-publish{
 	position: relative;
@@ -392,32 +396,32 @@ $mainColor: #000;
 }
 
 
-.s-feedback{
+// .s-feedback{
 	
-	#all-feedbacks{
-	    position: absolute;
-	    background-color: #d7356b;
-	    color: #fff;
-	    border: 2px solid #fff;
-	}
+// 	#all-feedbacks{
+// 	    position: absolute;
+// 	    background-color: #d7356b;
+// 	    color: #fff;
+// 	    border: 2px solid #fff;
+// 	}
 
-	.qoute-text{
-		p{
-		    color: #000;
-		    font-size: 18px;
-		    line-height: 1.96;
-		}
+// 	.qoute-text{
+// 		p{
+// 		    color: #000;
+// 		    font-size: 18px;
+// 		    line-height: 1.96;
+// 		}
 
-		.name{
-			font-family: "PTSans-Regular";
-		    font-size: 28px;
-		}
+// 		.name{
+// 			font-family: "PTSans-Regular";
+// 		    font-size: 28px;
+// 		}
 
-		.text{
-			color: #000;
-		}
-	}
-}
+// 		.text{
+// 			color: #000;
+// 		}
+// 	}
+// }
 
 .btn {
   letter-spacing: 0.15em;
