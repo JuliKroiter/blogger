@@ -137,9 +137,49 @@ $mainColor: #000;
 }
 
 .b-books{
-	border: 1px solid #000;
+	border-top: 1px solid #000;
 	background-color: #fff;
 	position: relative;
+
+	.b-polygraphy{
+		position: relative;
+		padding: 30px 40px;
+	}
+
+
+	.cover{
+		position: relative;
+		text-align: center;
+
+		img{
+			display: block;
+			width: 260px;
+		    border: 1px solid #eee;
+		    box-shadow: 0 4px 32px rgba(0,0,0,0.14);
+
+		    margin: 0 auto 50px;
+		}
+
+		h3{
+		    line-height: 34px;
+		    font-size: 42px;
+		    line-height: 1.28;
+		    text-align: left;
+		    /* font-family: 'Pt Sans Narrow'; */
+		    text-transform: uppercase;
+		    letter-spacing: 0.1em;
+		}
+		p{
+			padding: 0px;
+		    margin-bottom: 1em;
+		    // overflow: hidden;
+		    font-size: 18px;
+		    text-align: left;
+		    line-height: 1.96;
+		    // height: 147px;
+		    color: #000;
+		}
+	}
 }
 
 
