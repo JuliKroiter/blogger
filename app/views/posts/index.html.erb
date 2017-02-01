@@ -27,7 +27,7 @@
           <script>
             $("#topic-<%=topic.id %>").next('.def').next('.act').show();
             $("#topic-<%=topic.id %>").next('.def').hide();
-            $("#topic-<%=topic.id %>").parents('.i-topic').addClass('is-active');
+            $("#topic-<%=topic.id %>").parents('.i-topic').addClass('is-active active-topic');
             $("#topic-<%=topic.id %>").parent().next().css('color', '#d3215d');
           </script>
         <% end %>
