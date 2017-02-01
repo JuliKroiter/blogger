@@ -138,14 +138,13 @@ $mainColor: #000;
 
 .b-books{
 	border-top: 1px solid #000;
-	background-color: #f5f5f5;
-	margin: 20px 10px;
 	position: relative;
 
 	.b-book{
 		position: relative;
+		background-color: #f5f5f5;
+		margin: 20px 10px;
 		padding: 30px 40px;
-		width: auto;
 	}
 
 
@@ -162,25 +161,25 @@ $mainColor: #000;
 		    margin: 0 auto 50px;
 		}
 
-		h3{
-		    line-height: 34px;
-		    font-size: 42px;
-		    line-height: 1.28;
-		    text-align: left;
-		    /* font-family: 'Pt Sans Narrow'; */
-		    text-transform: uppercase;
-		    letter-spacing: 0.1em;
-		}
-		p{
-			padding: 0px;
-		    margin-bottom: 1em;
-		    // overflow: hidden;
-		    font-size: 18px;
-		    text-align: left;
-		    line-height: 1.96;
-		    // height: 147px;
-		    color: #000;	
-		}
+	}
+	h3{
+	    line-height: 34px;
+	    font-size: 42px;
+	    line-height: 1.28;
+	    text-align: left;
+	    /* font-family: 'Pt Sans Narrow'; */
+	    text-transform: uppercase;
+	    letter-spacing: 0.1em;
+	}
+	p{
+		padding: 0px;
+	    margin-bottom: 1em;
+	    // overflow: hidden;
+	    font-size: 18px;
+	    text-align: left;
+	    line-height: 1.96;
+	    // height: 147px;
+	    color: #000;	
 	}
 }
 
