@@ -401,6 +401,15 @@ $mainColor: #000;
 
 
 .s-feedback{
+
+	.column-t{
+		.text{
+			text-transform: uppercase;
+		    font-size: 12px;
+		    letter-spacing: 0.2em;
+		    margin-left: 11px;
+		}
+	}
 	
 	#all-feedbacks{
         position: absolute;
@@ -412,6 +421,14 @@ $mainColor: #000;
 	    height: auto;
 	    padding: 4px 20px;
 	}
+
+	.title-d{
+    	margin-bottom: 29px;
+
+    	div>span span{
+    		border-bottom: 16px solid #fe777d;
+    	}
+    }
 
 	.q{
 		    top: -18px;
@@ -444,7 +461,7 @@ $mainColor: #000;
 		    color: #000;
 		    font-size: 18px;
 		    line-height: 1.96;
-		    
+
 		}
 
 		.name{
