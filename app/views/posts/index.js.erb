@@ -1,7 +1,9 @@
 $('.column').html('<%= escape_javascript render partial: 'posts_part' %>');
 $('.filter-row').replaceWith('<%= escape_javascript render partial: 'filter_row' %>');
 $('#load-more-link').replaceWith("<%= escape_javascript(link_to_next_page(@posts, 'посмотреть больше статей', :id=>'load-more-link'))%>");
+$(".filter-select select").val("<%= params[:order] == 'desc' ? 'Самые новые' : 'Самые старые'%>").trigger("change");
 $(".filter-select").length && $(".filter-select select").chosen();
+
 $('#load-more-link').click(function(e) {
   e.preventDefault();
   var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val()
@@ -18,7 +20,7 @@ $('#load-more-link').click(function(e) {
  $('.chosen-drop').click(function(){
   var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val();
   var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
-  var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
+  var order = $('.chosen-single span').text() == 'Самые новые' ? 'desc' : 'asc'
   $.ajax({
     type: 'GET',
     url: '/posts?topic=' + topic + '&category=' + category + '&order=' + order,

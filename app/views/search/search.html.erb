@@ -43,6 +43,29 @@
   <% end %>
 </ul>
 
+<ul class="search_results">
+  <% @categories.try(:each) do |category| %>
+    <li>
+     <div class="text-b">
+        <%= highlight((link_to category.title, posts_path(topic: category.topic_id,
+          category: category.id, anchor: "i-#{category.topic_id}"), target: '_blank'), params[:term], sanitize: false) %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<ul class="search_results">
+  <% @feedbacks.try(:each) do |feedback| %>
+    <li>
+     <div class="text-b">
+        <%= highlight((link_to feedback.commenter_name, feedbacks_path, target: '_blank'),
+        params[:term], sanitize: false) %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+
 
 <ul class="search_results">
   <% @books.try(:each) do |book| %>

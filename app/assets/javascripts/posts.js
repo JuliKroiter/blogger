@@ -35,13 +35,14 @@ $(document).ready(function() {
   $('.chosen-drop').click(function(){
     var category = $('.active-category').find('input').val() == undefined ? '' : $('.active-category').find('input').val();
     var topic = $('.active-topic').find('input').val() == undefined ? '' : $('.active-topic').find('input').val();
-    var order = $('.result-selected').data('option-array-index') == 0 ? 'asc' : 'desc'
+    var order = $('.chosen-single span').text() == 'Самые новые' ? 'desc' : 'asc'
     $.ajax({
       type: 'GET',
       url: '/posts?topic=' + topic + '&category=' + category + '&order=' + order,
       dataType: 'script'
     })
   })
+
 
   $('#load-more-link').click(function(e) {
     e.preventDefault();
