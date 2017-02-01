@@ -616,6 +616,7 @@ $mainColor: #000;
 #footer{
 	background-color: #000;
 	color: #fff;
+	border: 0;
 
 	.b-social{
 
@@ -624,6 +625,19 @@ $mainColor: #000;
 
 .s-articles{
 	padding-bottom: 0;
+
+	.title-d{
+
+    	div>span span{
+    		border-bottom: 16px solid #fe777d;
+    	}
+    }
+
+    .text{
+    	font-size: 18px;
+    	line-height: 1.96;
+    }
+
 	.blog-socket{
 		width: auto;	
 	    padding: 45px 0px 0;
@@ -634,7 +648,58 @@ $mainColor: #000;
 			margin: 0;
 			box-shadow: none;
 			overflow: hidden;
+			padding-top: 0;
+
+			.name{
+				font-size: 32px;
+				color: rgba(255,255,255,1);
+			}
+
+			.text{
+				font-size: 18px;
+				color: #fff;
+			}
+
+			.btn{
+			    border: 0;
+			    font-size: 18px;
+			    padding: 0;
+			    margin: 0;
+			    width: auto;
+			    font-size: 14px;
+			    display: inline-block;
+			    font-weight: normal;
+
+			    &:after{
+		    	    content: '❯';
+				    display: inline-block;
+				    font-variant: normal;
+				    line-height: 1em;
+				    margin-left: .2em;
+				    margin-right: .2em;
+				    speak: none;
+				    text-align: center;
+				    text-decoration: inherit;
+				    text-transform: none;
+				    width: 1em;
+				    position: relative;
+				    transition: margin-left .25s;
+
+			    }
+
+			    &:hover:after{
+			    	margin-left: .5em;
+			    	color: #000;
+			    }
+			}
 		}	
+	}
+	.linked-topic{
+	    display: block;
+	    padding: 40px;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0,0,0,.44);
 	}
 
 	.topic-1{
@@ -656,7 +721,7 @@ $mainColor: #000;
 	}
 
 	.topi-4{
-		background-image: asset-url('pasion.jpg');
+		background-image: asset-url('passion.jpg');
 		background-position: center center;
 		background-size: 100%;
 	}
