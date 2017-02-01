@@ -13,8 +13,35 @@ $mainColor: #000;
 	}
 }
 
+.header-title{
+	margin: 0
+}
+
+.s-header-top 
+	.socket{
+		padding: 0 80px;
+	}
+
+	.b-search{
+		right: 80px;
+	}
+}
+
+.s-header-btn{
+    position: absolute;
+    width: 1100px;
+    margin: auto;
+    height: 60px;
+    top: 0px;
+    left: 50%;
+    margin-left: -550px;
+}
+
 .header-title img{
 	height: 36px;
+    position: relative;
+    top: 3px;
+}
 }
 
 .b-slide-text .text {
