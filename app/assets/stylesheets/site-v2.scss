@@ -669,6 +669,7 @@ $mainColor: #000;
 			    font-size: 14px;
 			    display: inline-block;
 			    font-weight: normal;
+			    color: #fff;
 
 			    &:after{
 		    	    content: '❯';
@@ -700,6 +701,13 @@ $mainColor: #000;
 	    width: 100%;
 	    height: 100%;
 	    background-color: rgba(0,0,0,.44);
+	    transition: background-color 0.15s;
+
+
+	    &:hover{
+	    	background-color: rgba(0,0,0,0);
+	    }
+
 	}
 
 	.topic-1{
