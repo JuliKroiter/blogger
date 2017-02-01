@@ -15,12 +15,14 @@ $mainColor: #000;
 }
 
 .header-title{
-	margin: 0
+	margin: 0;
+	text-align: left;
 }
 
 .s-header-top {
 	.socket{
 		padding: 0 80px;
+		width: auto;
 	}
 
 	.b-search{
@@ -28,14 +30,14 @@ $mainColor: #000;
 	}
 }
 
-.s-header-btn{
+.s-header-btm{
     position: absolute;
-    width: 1100px;
+    
     margin: auto;
     height: 60px;
     top: 0px;
-    left: 50%;
-    margin-left: -550px;
+    left: 200px;
+    right: 200px;
 }
 
 .header-title img{
@@ -429,8 +431,8 @@ $mainColor: #000;
 
 
 .s-feedback{
-    margin-top: 150px;
-    margin-bottom: 220px;
+    margin-top: 50px;
+    margin-bottom: 80px;
     background-color: #fff;
 
 	.column-t{
@@ -540,7 +542,7 @@ $mainColor: #000;
 
 .main-quote{
 	position: relative;
-	margin-bottom: 5vw;
+	margin-bottom: 1vw;
 	background-color: #fff3f2;
 
 	.photo{
@@ -596,10 +598,13 @@ $mainColor: #000;
 			width: 50px;
 			height: 50px;
 		}
+		.cell{
+			height: 50px;
+		}
 		.name{
 			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			font-size: 18px;
+			letter-spacing: 0.125em;
+			font-size: 16px;
 
 		    span{
 		    	font-family: "PTSans-Regular";
