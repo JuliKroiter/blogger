@@ -158,6 +158,11 @@ $mainColor: #000;
 
 		}
 
+		h3{
+			position: relative;
+			margin-bottom: 20px;
+		}
+
 		&#book-wrapper-1{
 		    background-color: #e1eaec;
 		    width: 31%;
@@ -177,14 +182,14 @@ $mainColor: #000;
 
 		&#book-wrapper-3{
 		    background-color: #fff;
-		    border: 1px solid #000;
+		    border: 1px solid #eee;
 		    width: 60%;
 
-		    padding-left: 320px;
+		    padding-right: 320px;
 
 		    .cover{
 		    	position: absolute;
-		    	left: 40px;
+		    	right: 40px;
 		    	top: 40px;
 		    }
 		}
