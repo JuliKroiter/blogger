@@ -626,31 +626,39 @@ $mainColor: #000;
 	padding-bottom: 0;
 	.blog-socket{
 		width: auto;	
+	    padding: 45px 0px 0;
 	}
 	.b-articles{
 		.article{
 			width: 25%;
 			margin: 0;
 			box-shadow: none;
-			overflow: hidde;
+			overflow: hidden;
 		}	
 	}
 
 	.topic-1{
 		background-image: asset-url('order.jpg');
-		
+		background-position: center top;
+	    background-size: 100%;
 	}
 
 	.topic-2{
 		background-image: asset-url('love.jpg');
+		background-position: center top;
+	    background-size: 140%;
 	}
 
 	.topic-3{
 		background-image: asset-url('health.jpg');
+		background-position: center center;
+		background-size: 100%;
 	}
 
 	.topi-4{
-		background-image: asset-url('target.jpg');
+		background-image: asset-url('pasion.jpg');
+		background-position: center center;
+		background-size: 100%;
 	}
 }
 

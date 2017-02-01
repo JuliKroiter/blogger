@@ -249,13 +249,15 @@
         <div class="b-articles">
           <%- Topic.all.each_with_index do |topic, index| %>
             <div class="article topic-<%= "#{index + 1}" %>">
+              <%= link_to posts_path(topic: topic.id), class: "linked-topik" do %>
               <div class="bg"></div>
               <div class="ico-a">
                  <%= image_tag("ico-#{index + 1 }.png") %>
               </div>
               <div class="name"><%= topic.title %></div>
               <div class="text"> <%= topic.posts.count %> <%= pluralize_article(topic.posts.count) %></div>
-              <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(topic: topic.id), class: "btn btn-2 btn-g btn-read" %>
+                <span class="btn btn-2 btn-g btn-read">ЧИТАТЬ СТАТЬИ</span>
+              <% end %>
            </div>
           <% end %>
         </div>
