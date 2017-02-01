@@ -403,10 +403,14 @@ $mainColor: #000;
 .s-feedback{
 	
 	#all-feedbacks{
-	    position: absolute;
+        position: absolute;
 	    background-color: #d7356b;
 	    color: #fff;
 	    border: 2px solid #fff;
+	    font-size: 18px;
+	    width: auto;
+	    height: auto;
+	    padding: 4px 20px;
 	}
 
 	.q{
@@ -416,15 +420,16 @@ $mainColor: #000;
 		    background-image: none;
 		    left: auto;
 		    color: #d3215d;
-		    font-size: 222px;
+		    font-size: 205px;
 		    font-style: italic;
 		    line-height: 1;
 		    font-weight: 400;
 	}
 
-	.qoute-text{
+	.quote-text{
 		position: relative;
 		border-top: 0;
+
 		&:before{
 			content: ' ';
 			position: absolute;
@@ -434,10 +439,12 @@ $mainColor: #000;
 			height: 1px;
 			background-color: #000;
 		}
+
 		p{
 		    color: #000;
 		    font-size: 18px;
 		    line-height: 1.96;
+		    
 		}
 
 		.name{
