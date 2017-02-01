@@ -166,7 +166,7 @@ $mainColor: #000;
 		&#book-wrapper-2{
 		    background-color: #e1eaec;
 		    width: 60%;
-		    padding-left: 250px;
+		    padding-left: 320px;
 
 		    .cover{
 		    	position: absolute;
@@ -175,9 +175,17 @@ $mainColor: #000;
 		    }
 		}
 
-		&#book-wrapper-2{
+		&#book-wrapper-3{
 		    background-color: #e1eaec;
 		    width: 60%;
+
+		    padding-left: 320px;
+
+		    .cover{
+		    	position: absolute;
+		    	left: 40px;
+		    	top: 40px;
+		    }
 		}
 	}
 
