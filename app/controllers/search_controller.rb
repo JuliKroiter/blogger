@@ -1,9 +1,6 @@
 class SearchController < ApplicationController
   def search
     term = params[:term]
-    Feedback.reindex
-    Category.reindex
-    Topic.reindex
     @posts = Post.search term
     @comments = Comment.search term
     @feedbacks = Feedback.search term

@@ -7,7 +7,7 @@
   <% @posts.try(:each) do |post| %>
     <li>
       <div class="text-b">
-        <%= highlight((link_to post.title, show_posts_path(id: post.id)), params[:term], sanitize: false)%>
+        <%= highlight((link_to post.title, show_posts_path(id: post.id), target: '_blank'), params[:term], sanitize: false)%>
       </div>
       <p>
         <%=  highlight((truncate ActionView::Base.full_sanitizer.sanitize(post.content), length: 160),
