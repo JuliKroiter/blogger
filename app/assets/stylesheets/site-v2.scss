@@ -622,6 +622,39 @@ $mainColor: #000;
 	}
 }
 
+.s-articles{
+	padding-bottom: 0;
+	.blog-socket{
+		width: auto;	
+	}
+	.b-articles{
+		.article{
+			width: 25%;
+			margin: 0;
+			box-shadow: none;
+			overflow: hidde;
+		}	
+	}
+
+	.topic-1{
+		background-image: asset-url('order.jpg');
+		
+	}
+
+	.topic-2{
+		background-image: asset-url('love.jpg');
+	}
+
+	.topic-3{
+		background-image: asset-url('health.jpg');
+	}
+
+	.topi-4{
+		background-image: asset-url('target.jpg');
+	}
+}
+
+
 .btn {
   letter-spacing: 0.15em;
   border-radius: 0;

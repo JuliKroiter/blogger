@@ -246,18 +246,19 @@
 
       <div class="blog-socket">
 
-      <div class="b-articles">
-        <%- Topic.all.each_with_index do |topic, index| %>
-          <div class="article">
-            <div class="ico-a">
-               <%= image_tag("ico-#{index + 1 }.png") %>
-            </div>
-            <div class="name"><%= topic.title %></div>
-            <div class="text"> <%= topic.posts.count %> <%= pluralize_article(topic.posts.count) %></div>
-            <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(topic: topic.id), class: "btn btn-2 btn-g btn-read" %>
-         </div>
-        <% end %>
-      </div>
+        <div class="b-articles">
+          <%- Topic.all.each_with_index do |topic, index| %>
+            <div class="article topic-<%= "#{index + 1}" %>">
+              <div class="bg"></div>
+              <div class="ico-a">
+                 <%= image_tag("ico-#{index + 1 }.png") %>
+              </div>
+              <div class="name"><%= topic.title %></div>
+              <div class="text"> <%= topic.posts.count %> <%= pluralize_article(topic.posts.count) %></div>
+              <%= link_to 'ЧИТАТЬ СТАТЬИ', posts_path(topic: topic.id), class: "btn btn-2 btn-g btn-read" %>
+           </div>
+          <% end %>
+        </div>
   </div>
             <!-- / CONTENT -->
  </div><!-- / MAIN -->
