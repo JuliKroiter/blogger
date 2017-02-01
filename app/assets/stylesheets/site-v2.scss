@@ -145,6 +145,40 @@ $mainColor: #000;
 		background-color: #f5f5f5;
 		margin: 20px 10px;
 		padding: 30px 40px;
+
+		.price{
+			font-size: 52px;
+		    position: absolute;
+		    white-space: nowrap;
+		    /* font-weight: bold; */
+		    bottom: 28px;
+		    right: 20px;
+		    font-family: "PTSerif-Reg";
+		    box-shadow: inset 0 -16px 0 0 rgba(255,255,255,0.9);
+
+		}
+
+		&#book-wrapper-1{
+		    background-color: #e1eaec;
+		    width: 31%;
+		}
+
+		&#book-wrapper-2{
+		    background-color: #e1eaec;
+		    width: 60%;
+		    padding-left: 250px;
+
+		    .cover{
+		    	position: absolute;
+		    	left: 40px;
+		    	top: 40px;
+		    }
+		}
+
+		&#book-wrapper-2{
+		    background-color: #e1eaec;
+		    width: 60%;
+		}
 	}
 
 
