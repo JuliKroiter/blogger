@@ -79,7 +79,7 @@
     <div class="b-books desc">
       <div class="container-fluid">
         <div class="row">
-          <% Book.order(id :asc).all.each do |book| %>
+          <% Book.order(:id).all.each do |book| %>
               <div class="b-book col-md-4" id="<%= "book-wrapper-#{book.id}" %>">
                   <div class="cover">
                       <%= image_tag(book.image.url) %>
@@ -100,7 +100,7 @@
         <div class="jcarousel">
             <ul>
               <li>
-                <% Book.order(id :asc).all.each do |book| %>
+                <% Book.order(:id).all.each do |book| %>
                     <div class="b-polygraphy shadow" id=<%="book-wrapper-#{book.id}"%>
                         <h3><%= book.title %></h3>
                         <div class="book" id="<%= "book-#{book.id}" %>">
