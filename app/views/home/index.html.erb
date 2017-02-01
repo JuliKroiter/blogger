@@ -80,7 +80,7 @@
       <div class="container">
         <div class="row">
           <% Book.all.each do |book| %>
-              <div class="b-polygraphy col-md-6" id="<%= "book-wrapper-#{book.id}" %>">
+              <div class="b-book col-md-4" id="<%= "book-wrapper-#{book.id}" %>">
                   <div class="cover">
                       <%= image_tag(book.image.url) %>
                   </div>
