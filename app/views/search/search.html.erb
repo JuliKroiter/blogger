@@ -33,15 +33,16 @@
 </ul>
 
 <ul class="search_results">
-  <% @categories.try(:each) do |category| %>
+  <% @topics.try(:each) do |topic| %>
     <li>
      <div class="text-b">
-        <%= highlight((link_to category.title, posts_path(category: category.id,
-        anchor: "i-#{category.id}"), target: '_blank'), params[:term], sanitize: false) %>
+        <%= highlight((link_to topic.title, posts_path(topic: topic.id,
+        anchor: "i-#{topic.id}"), target: '_blank'), params[:term], sanitize: false) %>
       </div>
     </li>
   <% end %>
 </ul>
+
 
 <ul class="search_results">
   <% @books.try(:each) do |book| %>
