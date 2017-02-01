@@ -544,8 +544,8 @@ $mainColor: #000;
 
 	.photo{
 	    height: 49.3vw;
-	    margin-bottom: 30px;
-	    widows: auto;
+	    margin-bottom: 0px;
+	    
 
 	    img{
 	    	height: 100%;
@@ -572,6 +572,43 @@ $mainColor: #000;
 
 	.avatar{
 		font-size: 12px;
+	}
+
+	h2{
+		font-size: 61px;
+	    line-height: 1.45;
+	    text-indent: -0.4em;
+	}
+
+	.text{
+		font-size: 24px;
+	    line-height: 2;
+	    margin-top: 4em;
+	    padding-bottom: 5em;
+	    border-bottom: 1px solid #000;
+	    margin-bottom: 2em;
+	}
+
+	.b-person{
+		padding-left: 62px;
+
+		.avatar{
+			width: 50px;
+			height: 50px;
+		}
+		.name{
+			font-size: 24px;
+		    line-height: 2;
+		    margin-top: 4em;
+		    padding-bottom: 5em;
+		    border-bottom: 1px solid #000;
+		    margin-bottom: 2em;
+		    font-family: "PTSans-Bold";
+
+		    span{
+		    	font-family: "PTSans-Regular";
+		    }
+		}
 	}
 }
 
