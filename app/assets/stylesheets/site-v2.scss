@@ -434,8 +434,8 @@ $mainColor: #000;
 
 	.column-t{
 		position: absolute;
-	    top: 65px;
-	    left: 70px;
+	    top: 155px;
+	    left: 600px;
 	    width: 430px;
 
 		.text{
@@ -455,6 +455,8 @@ $mainColor: #000;
 	    width: auto;
 	    height: auto;
 	    padding: 4px 20px;
+	    left: 58px;
+	    top: 10px;
 	}
 
 	.title-d{
@@ -465,14 +467,19 @@ $mainColor: #000;
     	}
     }
 
+    .b-person{
+    	padding-left: 96px;
+    	padding-top: 7px;
+
+    	.name{
+		    font-size: 36px;
+		    margin-bottom: 11px;
+    	}
+    }
+
     .avatar{
     	width: 80px;
     	height: 80px;
-
-    	.name{
-    		font-size: 28px;
-    		margin-bottom: 10px;
-    	}
     }
 
 	.q{
@@ -533,13 +540,12 @@ $mainColor: #000;
 .main-quote{
 	position: relative;
 	margin-bottom: 5vw;
+	background-color: #fff3f2;
 
 	.photo{
-		float: left;
 	    height: 49.3vw;
 	    margin-bottom: 30px;
-	    margin-left: -34.6%;
-	    width: 91.6%;
+	    widows: auto;
 
 	    img{
 	    	height: 100%;
@@ -547,8 +553,10 @@ $mainColor: #000;
 	}
 
 	.quote-side{
-		position: relative;
-		float: right;
+		position: absolute;
+		right: 0%;
+		top: 0;
+		bottom: 0;
 	    height: 49.3vw;
 	    padding: 4vw 5vw 0;
 	    width: 63%;
