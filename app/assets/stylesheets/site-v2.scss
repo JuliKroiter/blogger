@@ -75,7 +75,7 @@ $mainColor: #000;
 	    }
 
 	    a{
-	    	color: #fe777d;
+	    	color: #d3215d;
 	    }
 
 	    &:before{
@@ -168,9 +168,13 @@ $mainColor: #000;
 
 		}
 
+		.btn{
+			font-size: 24px;
+		}
+
 		h3{
 			position: relative;
-			margin-bottom: 28px;
+			margin-bottom: 42px;
 		}
 
 		&#book-wrapper-1{
@@ -208,7 +212,7 @@ $mainColor: #000;
 		    padding-right: 330px;
 
 		    p{
-		    	max-height: 280px;
+		    	max-height: 390px;
 		    	overflow: hidden;
 		    }
 
@@ -247,7 +251,7 @@ $mainColor: #000;
 	
 	p{
 		padding: 0px;
-	    margin-bottom: 1em;
+	    margin-bottom: 3em;
 	    // overflow: hidden;
 	    font-size: 18px;
 	    text-align: left;
@@ -396,32 +400,56 @@ $mainColor: #000;
 }
 
 
-// .s-feedback{
+.s-feedback{
 	
-// 	#all-feedbacks{
-// 	    position: absolute;
-// 	    background-color: #d7356b;
-// 	    color: #fff;
-// 	    border: 2px solid #fff;
-// 	}
+	#all-feedbacks{
+	    position: absolute;
+	    background-color: #d7356b;
+	    color: #fff;
+	    border: 2px solid #fff;
+	}
 
-// 	.qoute-text{
-// 		p{
-// 		    color: #000;
-// 		    font-size: 18px;
-// 		    line-height: 1.96;
-// 		}
+	.q{
+		    top: -18px;
+		    right: 40px;
+		    z-index: 0;
+		    background-image: none;
+		    left: auto;
+		    color: #d3215d;
+		    font-size: 222px;
+		    font-style: italic;
+		    line-height: 1;
+		    font-weight: 400;
+	}
 
-// 		.name{
-// 			font-family: "PTSans-Regular";
-// 		    font-size: 28px;
-// 		}
+	.qoute-text{
+		position: relative;
+		border-top: 0;
+		&:before{
+			content: ' ';
+			position: absolute;
+			left: 0;
+			right: 40px;
+			top: 0;
+			height: 1px;
+			background-color: #000;
+		}
+		p{
+		    color: #000;
+		    font-size: 18px;
+		    line-height: 1.96;
+		}
 
-// 		.text{
-// 			color: #000;
-// 		}
-// 	}
-// }
+		.name{
+			font-family: "PTSans-Regular";
+		    font-size: 28px;
+		}
+
+		.text{
+			color: #000;
+		}
+	}
+}
 
 .btn {
   letter-spacing: 0.15em;
